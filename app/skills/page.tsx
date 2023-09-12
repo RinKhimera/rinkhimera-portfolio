@@ -135,151 +135,147 @@ const Skills = () => {
 
   return (
     <>
-      <div className="">
-        <div className="">
-          <div className="">
-            <div className="">
-              <div className="max-w-2xl">
-                <p className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-                  Technologies I use, software I love, and other things I
-                  recommend.
-                </p>
-                <p className="mt-6 text-base leading-loose text-zinc-600 dark:text-zinc-400">
-                  The main tools I use to carry out my various projects.
-                </p>
-              </div>
-              <div className="mt-16 sm:mt-20">
-                <div className="md:border-l md:border-zinc-300 md:pl-6 md:dark:border-zinc-500/40">
-                  <div className="flex max-w-3xl flex-col space-y-16">
-                    <section className="md:grid md:grid-cols-4 md:items-baseline">
-                      <div className="group relative flex flex-col items-start md:col-span-3">
-                        <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
-                        <div className="relative z-10 order-first mb-3 flex items-center pl-3.5 text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100 md:hidden">
-                          <span
-                            className="absolute inset-y-0 left-0 flex items-center"
-                            aria-hidden="true"
-                          >
-                            <span className="h-4 w-0.5 rounded-full bg-zinc-800 dark:bg-zinc-100"></span>
-                          </span>
-                          Languages and main frameworks
-                        </div>
-                        <div className="flex flex-col items-start gap-2">
-                          <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-                            Whenever I need to implement or improve the UI/UX of
-                            an application.
-                          </p>
-                          <div className="grid grid-cols-5 gap-x-6 gap-y-6 p-2 md:grid-cols-6 lg:grid-cols-7">
-                            {frontendIcons.map((icon, index) => (
-                              <Link
-                                href={icon.href}
-                                target="_blank"
-                                rel="noreferrer"
-                                key={index}
-                              >
-                                <div className="flex flex-col items-center gap-1">
-                                  <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                                    {icon.icon}
-                                  </div>
-                                  <h2 className="relative z-10 text-sm text-zinc-600 dark:text-zinc-400">
-                                    {icon.name}
-                                  </h2>
-                                </div>
-                              </Link>
-                            ))}
+      <div className="mt-10 min-h-full sm:mt-16 lg:mt-20">
+        <div className="max-w-2xl">
+          <p className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+            Technologies I use, software I love, and other things I recommend.
+          </p>
+          <p className="mt-6 text-base leading-loose text-zinc-600 dark:text-zinc-400">
+            The main tools I use to carry out my various projects.
+          </p>
+        </div>
+
+        <div className="mt-16 sm:mt-20">
+          <div className="md:border-l md:border-zinc-300 md:pl-6 md:dark:border-zinc-500/40">
+            <div className="flex max-w-3xl flex-col space-y-16">
+              <section className="md:grid md:grid-cols-4 md:items-baseline">
+                <div className="group relative flex flex-col items-start md:col-span-3">
+                  <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
+                  <div className="relative z-10 order-first mb-3 flex items-center pl-3.5 text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100 md:hidden">
+                    <span
+                      className="absolute inset-y-0 left-0 flex items-center"
+                      aria-hidden="true"
+                    >
+                      <span className="h-4 w-0.5 rounded-full bg-zinc-800 dark:bg-zinc-100"></span>
+                    </span>
+                    Languages and main frameworks
+                  </div>
+                  <div className="flex flex-col items-start gap-2">
+                    <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                      Whenever I need to implement or improve the UI/UX of an
+                      application.
+                    </p>
+                    <div className="grid grid-cols-5 gap-x-6 gap-y-6 p-2 md:grid-cols-6 lg:grid-cols-7">
+                      {frontendIcons.map((icon, index) => (
+                        <Link
+                          href={icon.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          key={index}
+                        >
+                          <div className="flex flex-col items-center gap-1">
+                            <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                              {icon.icon}
+                            </div>
+                            <h2 className="relative z-10 text-sm text-zinc-600 dark:text-zinc-400">
+                              {icon.name}
+                            </h2>
                           </div>
-                        </div>
-                      </div>
-                      <div className="relative z-10 order-first mb-3 mt-1 hidden items-center text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100 md:block">
-                        Languages and main frameworks
-                      </div>
-                    </section>
-                    <section className="md:grid md:grid-cols-4 md:items-baseline">
-                      <div className="group relative flex flex-col items-start md:col-span-3">
-                        <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
-                        <div className="relative z-10 order-first mb-3 flex items-center pl-3.5 text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100 md:hidden">
-                          <span
-                            className="absolute inset-y-0 left-0 flex items-center"
-                            aria-hidden="true"
-                          >
-                            <span className="h-4 w-0.5 rounded-full bg-zinc-800 dark:bg-zinc-100"></span>
-                          </span>
-                          Backend techs
-                        </div>
-                        <div className="flex flex-col items-start gap-2">
-                          <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-                            Regarding the management and use of databases,
-                            RESTful APIs, authentication, and authorization,
-                            here are my tools.
-                          </p>
-                          <div className="grid grid-cols-5 gap-x-6 gap-y-6 p-2 md:grid-cols-6 lg:grid-cols-7">
-                            {backendIcons.map((icon, index) => (
-                              <a
-                                href={icon.href}
-                                target="_blank"
-                                rel="noreferrer"
-                                key={index}
-                              >
-                                <div className="flex flex-col items-center gap-1">
-                                  <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                                    {icon.icon}
-                                  </div>
-                                  <h2 className="relative z-10 text-sm text-zinc-600 dark:text-zinc-400">
-                                    {icon.name}
-                                  </h2>
-                                </div>
-                              </a>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                      <div className="relative z-10 order-first mb-3 mt-1 hidden items-center text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100 md:block">
-                        Backend techs
-                      </div>
-                    </section>
-                    <section className="md:grid md:grid-cols-4 md:items-baseline">
-                      <div className="group relative flex flex-col items-start md:col-span-3">
-                        <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
-                        <div className="relative z-10 order-first mb-3 flex items-center pl-3.5 text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100 md:hidden">
-                          <span
-                            className="absolute inset-y-0 left-0 flex items-center"
-                            aria-hidden="true"
-                          >
-                            <span className="h-4 w-0.5 rounded-full bg-zinc-800 dark:bg-zinc-100"></span>
-                          </span>
-                          Other tools
-                        </div>
-                        <div className="flex flex-col items-start gap-2">
-                          <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-                            For the design and version control system.
-                          </p>
-                          <div className="grid grid-cols-5 gap-x-6 gap-y-6 p-2 md:grid-cols-6 lg:grid-cols-7">
-                            {designIcons.map((icon, index) => (
-                              <a
-                                href={icon.href}
-                                target="_blank"
-                                rel="noreferrer"
-                                key={index}
-                              >
-                                <div className="flex flex-col items-center gap-1">
-                                  <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                                    {icon.icon}
-                                  </div>
-                                  <h2 className="relative z-10 text-sm text-zinc-600 dark:text-zinc-400">
-                                    {icon.name}
-                                  </h2>
-                                </div>
-                              </a>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                      <div className="relative z-10 order-first mb-3 mt-1 hidden items-center text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100 md:block">
-                        Other tools
-                      </div>
-                    </section>
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
+                <div className="relative z-10 order-first mb-3 mt-1 hidden items-center text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100 md:block">
+                  Languages and main frameworks
+                </div>
+              </section>
+
+              <section className="md:grid md:grid-cols-4 md:items-baseline">
+                <div className="group relative flex flex-col items-start md:col-span-3">
+                  <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
+                  <div className="relative z-10 order-first mb-3 flex items-center pl-3.5 text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100 md:hidden">
+                    <span
+                      className="absolute inset-y-0 left-0 flex items-center"
+                      aria-hidden="true"
+                    >
+                      <span className="h-4 w-0.5 rounded-full bg-zinc-800 dark:bg-zinc-100"></span>
+                    </span>
+                    Backend techs
+                  </div>
+                  <div className="flex flex-col items-start gap-2">
+                    <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                      Regarding the management and use of databases, RESTful
+                      APIs, authentication, and authorization, here are my
+                      tools.
+                    </p>
+                    <div className="grid grid-cols-5 gap-x-6 gap-y-6 p-2 md:grid-cols-6 lg:grid-cols-7">
+                      {backendIcons.map((icon, index) => (
+                        <Link
+                          href={icon.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          key={index}
+                        >
+                          <div className="flex flex-col items-center gap-1">
+                            <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                              {icon.icon}
+                            </div>
+                            <h2 className="relative z-10 text-sm text-zinc-600 dark:text-zinc-400">
+                              {icon.name}
+                            </h2>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <div className="relative z-10 order-first mb-3 mt-1 hidden items-center text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100 md:block">
+                  Backend techs
+                </div>
+              </section>
+
+              <section className="md:grid md:grid-cols-4 md:items-baseline">
+                <div className="group relative flex flex-col items-start md:col-span-3">
+                  <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
+                  <div className="relative z-10 order-first mb-3 flex items-center pl-3.5 text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100 md:hidden">
+                    <span
+                      className="absolute inset-y-0 left-0 flex items-center"
+                      aria-hidden="true"
+                    >
+                      <span className="h-4 w-0.5 rounded-full bg-zinc-800 dark:bg-zinc-100"></span>
+                    </span>
+                    Other tools
+                  </div>
+                  <div className="flex flex-col items-start gap-2">
+                    <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+                      For the design and version control system.
+                    </p>
+                    <div className="grid grid-cols-5 gap-x-6 gap-y-6 p-2 md:grid-cols-6 lg:grid-cols-7">
+                      {designIcons.map((icon, index) => (
+                        <Link
+                          href={icon.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          key={index}
+                        >
+                          <div className="flex flex-col items-center gap-1">
+                            <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                              {icon.icon}
+                            </div>
+                            <h2 className="relative z-10 text-sm text-zinc-600 dark:text-zinc-400">
+                              {icon.name}
+                            </h2>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <div className="relative z-10 order-first mb-3 mt-1 hidden items-center text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100 md:block">
+                  Other tools
+                </div>
+              </section>
             </div>
           </div>
         </div>
