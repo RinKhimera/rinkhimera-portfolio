@@ -68,32 +68,32 @@ const About = () => {
             <ul role="list">
               <li className="mt-4 flex">
                 <Link
-                  className="group flex text-sm font-medium text-zinc-800 transition hover:text-pink-600 dark:text-zinc-200 dark:hover:text-pink-600"
+                  className="group flex text-sm font-medium text-zinc-800 transition hover:text-primary dark:text-zinc-200 dark:hover:text-primary"
                   href="https://github.com/RinKhimera"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <AiFillGithub className="-mt-0.5 h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-pink-600" />
+                  <AiFillGithub className="-mt-0.5 h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-primary" />
                   <span className="ml-4">Follow on GitHub</span>
                 </Link>
               </li>
               <li className="mt-4 flex">
                 <Link
-                  className="group flex text-sm font-medium text-zinc-800 transition hover:text-pink-600 dark:text-zinc-200 dark:hover:text-pink-600"
+                  className="group flex text-sm font-medium text-zinc-800 transition hover:text-primary dark:text-zinc-200 dark:hover:text-primary"
                   href="https://www.linkedin.com/in/samuel-pokam/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <AiFillLinkedin className="-mt-0.5 h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-pink-600" />
+                  <AiFillLinkedin className="-mt-0.5 h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-primary" />
                   <span className="ml-4">Follow on LinkedIn</span>
                 </Link>
               </li>
               <li className="mt-8 flex border-t border-zinc-100 pt-8 dark:border-zinc-700/40">
                 <Link
-                  className="group flex text-sm font-medium text-zinc-800 transition hover:text-pink-600 dark:text-zinc-200 dark:hover:text-pink-600"
+                  className="group flex text-sm font-medium text-zinc-800 transition hover:text-primary dark:text-zinc-200 dark:hover:text-primary"
                   href="mailto:dixiades@gmail.com"
                 >
-                  <AiFillMail className="-mt-0.5 h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-pink-600" />
+                  <AiFillMail className="-mt-0.5 h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-primary" />
                   <span className="ml-4">dixiades@gmail.com</span>
                 </Link>
               </li>
