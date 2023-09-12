@@ -1,6 +1,6 @@
-import { Github, Linkedin, LinkedinIcon, Mail } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
+import { Github, Linkedin, LinkedinIcon, Mail } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -17,40 +17,41 @@ export default function Home() {
             high-quality and innovative digital solutions.
           </p>
           <div className="mt-6">
-            <Link href="/about" legacyBehavior>
-              <a className="flex items-center text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl">
-                Let me introduce myself{" "}
-              </a>
+            <Link
+              href="/about"
+              className="flex items-center text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-3xl"
+            >
+              Let me introduce myself
             </Link>
           </div>
           <div className="mt-6 flex gap-6">
-            <a
+            <Link
               href="https://www.linkedin.com/in/samuel-pokam/"
               target="_blank"
               rel="noopener noreferrer"
               className="group -m-1 p-1"
             >
               <Linkedin className="h-6 w-6 fill-zinc-500 transition group-hover:fill-pink-600 dark:fill-zinc-400 dark:group-hover:fill-pink-600" />
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://github.com/RinKhimera"
               target="_blank"
               rel="noopener noreferrer"
               className="group -m-1 p-1"
             >
               <LinkedinIcon />
-            </a>
-            <a
+            </Link>
+            <Link
               href="mailto:dixiades@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
               className="group -m-1 p-1"
             >
               <Mail className="h-6 w-6 fill-zinc-500 transition group-hover:fill-pink-600 dark:fill-zinc-400 dark:group-hover:fill-pink-600" />
-            </a>
+            </Link>
           </div>
         </div>
       </div>
     </div>
-  );
+  )
 }
