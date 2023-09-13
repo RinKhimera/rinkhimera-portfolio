@@ -2,6 +2,7 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { buttonVariants } from "@/components/ui/button"
+import AvatarLogo from "@/public/assets/images/avatar.webp"
 import { Github, Linkedin } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -23,7 +24,7 @@ const SiteHeader = () => {
       <div className="flex items-center justify-between py-5">
         <Link href="/">
           <Avatar>
-            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+            <AvatarImage src="/assets/images/avatar.webp" alt="@shadcn" />
             <AvatarFallback>SP</AvatarFallback>
           </Avatar>
         </Link>
@@ -33,7 +34,9 @@ const SiteHeader = () => {
             <Link
               key={index}
               href={link.href}
-              className={pathname === link.href ? "text-primary" : ""}
+              className={`transition hover:text-primary ${
+                pathname === link.href && "text-primary"
+              }`}
             >
               {link.text}
             </Link>
