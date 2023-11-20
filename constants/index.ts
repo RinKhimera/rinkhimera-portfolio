@@ -90,3 +90,24 @@ export const projects = [
 
   // add more projects here
 ]
+
+export const Articles = [
+  {
+    title: "Crafting a design system for a multiplanetary future",
+    content:
+      "Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.",
+    date: "September 5, 2022",
+  },
+  {
+    title: "Introducing Animaginary: High performance web animations",
+    content:
+      "When you’re building a website for a company as ambitious as Planetaria, you need to make an impression. I wanted people to visit our website and see animations that looked more realistic than reality itself.",
+    date: "September 2, 2022",
+  },
+  {
+    title: "Rewriting the cosmOS kernel in Rust",
+    content:
+      "When we released the first version of cosmOS last year, it was written in Go. Go is a wonderful programming language with a lot of benefits, but it’s been a while since I’ve seen an article on the front page of Hacker News about rewriting some important tool in Go and I see articles on there about rewriting things in Rust every single week.",
+    date: "July 14, 2022",
+  },
+]
