@@ -2,7 +2,7 @@ import Link from "next/link"
 
 type ArticleCardProps = {
   title: string
-  content: string
+  content: string | null
   date: string
 }
 

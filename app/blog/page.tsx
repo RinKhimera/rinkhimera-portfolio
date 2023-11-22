@@ -1,19 +1,38 @@
 import ArticleCard from "@/components/ArticleCard"
 import { Articles } from "@/constants"
+import prisma from "@/prisma/db"
+import moment from "moment"
 
-const Blog = () => {
+const Blog = async () => {
+  const posts = await prisma.post.findMany()
+  console.log(posts)
+
   return (
     <div className="mt-10 min-h-full sm:mt-16 lg:mt-20">
       <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
         <div className="flex max-w-3xl flex-col space-y-16">
-          {Articles.map((article, index) => (
+          {/* {Articles.map((article, index) => (
             <ArticleCard
               key={index}
               title={article.title}
               content={article.content}
               date={article.date}
             />
-          ))}
+          ))} */}
+
+          {posts.map((post, index) => {
+            const date = moment(post.createdAt).format(
+              "dddd, MMMM Do YYYY, h:mm:ss a",
+            )
+            return (
+              <ArticleCard
+                key={index}
+                title={post.title}
+                content={post.content}
+                date={date}
+              />
+            )
+          })}
 
           {/* <article className="md:grid md:grid-cols-4 md:items-baseline">
             <div className="group relative flex flex-col items-start md:col-span-3">
@@ -70,9 +89,9 @@ const Blog = () => {
             >
               September 2, 2022
             </time>
-          </article>
+          </article> */}
 
-          <article className="md:grid md:grid-cols-4 md:items-baseline">
+          {/* <article className="md:grid md:grid-cols-4 md:items-baseline">
             <div className="group relative flex flex-col items-start md:col-span-3">
               <h2 className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
                 <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
