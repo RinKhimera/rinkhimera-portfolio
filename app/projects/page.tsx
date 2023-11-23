@@ -16,7 +16,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { projects } from "@/constants"
-import { Github } from "lucide-react"
+import { ExternalLink, Github } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -66,7 +66,7 @@ const Projects = () => {
                 </SheetHeader>
 
                 <Image
-                  className="my-5 w-full rounded-lg border object-contain"
+                  className="my-5 w-full rounded-lg border object-contain dark:border-zinc-800"
                   src={project.imageSrc}
                   alt={project.imageAlt}
                   width={1920}
@@ -74,9 +74,7 @@ const Projects = () => {
                 />
 
                 <div className="">
-                  <h3 className="text-lg font-semibold text-foreground">
-                    Stacks
-                  </h3>
+                  <h3 className="text-lg font-semibold text-primary">Stacks</h3>
                   <div className="flex flex-wrap justify-start gap-2 py-3">
                     {project.stacks.map((stack) => (
                       <div
@@ -92,7 +90,7 @@ const Projects = () => {
                 {/* Mobile */}
                 <div className="md:hidden">
                   <div className="my-5">
-                    <h3 className="pb-2 text-lg font-semibold text-foreground">
+                    <h3 className="pb-2 text-lg font-semibold text-primary">
                       Live Project
                     </h3>
                     <Link
@@ -104,12 +102,12 @@ const Projects = () => {
                         size: "icon",
                       })}
                     >
-                      <Github />
+                      <ExternalLink />
                     </Link>
                   </div>
 
                   <div className="my-5">
-                    <h3 className="pb-2 text-lg font-semibold text-foreground">
+                    <h3 className="pb-2 text-lg font-semibold text-primary">
                       GitHub Repo
                     </h3>
                     <Link
@@ -129,7 +127,7 @@ const Projects = () => {
                 {/* Desktop */}
                 <div className="max-md:hidden">
                   <div className="my-5">
-                    <h3 className="pb-2 text-lg font-semibold text-foreground">
+                    <h3 className="pb-2 text-lg font-semibold text-primary">
                       Live Project
                     </h3>
                     <Link
@@ -146,7 +144,7 @@ const Projects = () => {
                   </div>
 
                   <div className="my-5">
-                    <h3 className="pb-2 text-lg font-semibold text-foreground">
+                    <h3 className="pb-2 text-lg font-semibold text-primary">
                       GitHub Repo
                     </h3>
                     <Link

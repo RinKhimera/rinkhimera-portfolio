@@ -22,32 +22,13 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { ToastAction } from "@/components/ui/toast"
 import { toast } from "@/components/ui/use-toast"
+import { formSchema } from "@/lib/validation/formSchema"
 import emailjs from "@emailjs/browser"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Loader2 } from "lucide-react"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
-
-const formSchema = z.object({
-  name: z
-    .string()
-    .min(2, {
-      message: "Name must be at least 2 characters.",
-    })
-    .max(30, {
-      message: "Name must not be longer than 30 characters.",
-    }),
-  email: z.string().email("Please enter a valid email address."),
-  message: z
-    .string()
-    .min(10, {
-      message: "Message must be at least 10 characters.",
-    })
-    .max(160, {
-      message: "Message must not be longer than 30 characters.",
-    }),
-})
 
 const Contact = () => {
   const [submitting, setSubmitting] = useState(false)

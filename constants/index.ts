@@ -4,7 +4,7 @@ export const projects = [
     imageSrc: "/assets/projects/threads237.png",
     imageAlt: "Threads #237",
     description:
-      "A Threads Meta application clone where you create and engage in threads, ongoing conversations that are easy to follow and participate in.",
+      "A Threads Meta application clone where you create and engage in threads and ongoing conversations.",
     demoLink: "https://threads237.vercel.app/",
     githubLink: "https://github.com/RinKhimera/threads-clone",
     stacks: [
