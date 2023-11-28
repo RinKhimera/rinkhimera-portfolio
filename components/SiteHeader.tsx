@@ -3,6 +3,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { buttonVariants } from "@/components/ui/button"
 import AvatarLogo from "@/public/assets/images/avatar.webp"
+import { motion } from "framer-motion"
 import { Github, Linkedin } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -44,7 +45,12 @@ const SiteHeader = () => {
           ))}
         </nav>
 
-        <div className="flex items-center">
+        <motion.div
+          className="flex items-center"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 1 }}
+        >
           <Link
             className={buttonVariants({ variant: "ghost", size: "icon" })}
             target="_blank"
@@ -62,7 +68,7 @@ const SiteHeader = () => {
             <FaLinkedin size={24} />
           </Link>
           <ModeToggle />
-        </div>
+        </motion.div>
       </div>
     </header>
   )
