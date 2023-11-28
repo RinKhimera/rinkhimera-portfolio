@@ -111,3 +111,21 @@ export const Articles = [
     date: "July 14, 2022",
   },
 ]
+
+export const experienceData = [
+  {
+    company: "Quanta Hive",
+    role: "Fullstack Developer",
+    date: "2020 - Present",
+  },
+  {
+    company: "Beyond Technologies LLC",
+    role: "Frontend Developer",
+    date: "2019 - 2020",
+  },
+  {
+    company: "Soldeur SARL",
+    role: "Technical Support Supervisor",
+    date: "2018 - 2019",
+  },
+]
