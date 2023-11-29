@@ -13,7 +13,7 @@ type ArticleCardHeroProps = {
 const ArticleCardHero = ({ title, content, date }: ArticleCardHeroProps) => {
   return (
     <motion.article
-      className="group relative flex flex-col items-start"
+      className="group relative mb-14 flex flex-col items-start"
       initial={{ opacity: 0, x: -60 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ margin: "-200px 0px -100px 0px", once: true }}

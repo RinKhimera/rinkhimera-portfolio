@@ -1,5 +1,3 @@
-"use server"
-
 import ArticleCardHero from "@/components/ArticleCardHero"
 import prisma from "@/prisma/db"
 import moment from "moment"

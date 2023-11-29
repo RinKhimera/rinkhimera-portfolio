@@ -1,3 +1,5 @@
+import { beyondLogo, quantaLogo } from "@/public/assets/logos"
+
 export const projects = [
   {
     name: "Threads #237",
@@ -117,15 +119,18 @@ export const experienceData = [
     company: "Quanta Hive",
     role: "Fullstack Developer",
     date: "2020 - Present",
+    logo: quantaLogo,
   },
   {
     company: "Beyond Technologies LLC",
     role: "Frontend Developer",
     date: "2019 - 2020",
+    logo: beyondLogo,
   },
   {
     company: "Soldeur SARL",
     role: "Technical Support Supervisor",
     date: "2018 - 2019",
+    logo: quantaLogo,
   },
 ]
