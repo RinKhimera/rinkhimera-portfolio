@@ -1,13 +1,6 @@
+import { navigationLinks } from "@/constants"
 import Link from "next/link"
 import { Button } from "./ui/button"
-
-const links = [
-  { href: "/about", text: "About" },
-  { href: "/skills", text: "Skills" },
-  { href: "/projects", text: "Projects" },
-  { href: "/contact", text: "Contact" },
-  { href: "/blog", text: "Blog" },
-]
 
 const SiteFooter = () => {
   const getCurrentYear = () => {
@@ -21,7 +14,7 @@ const SiteFooter = () => {
         <div className="border-t border-zinc-100 py-12 dark:border-zinc-700/40">
           <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
             <div>
-              {links.map((link, index) => (
+              {navigationLinks.map((link, index) => (
                 <Button variant="link" key={index} asChild>
                   <Link
                     href={link.href}

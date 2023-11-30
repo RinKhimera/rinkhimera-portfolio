@@ -2,22 +2,16 @@
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button, buttonVariants } from "@/components/ui/button"
+import { navigationLinks } from "@/constants"
 import { cn } from "@/lib/utils"
 import { motion } from "framer-motion"
-import { Github } from "lucide-react"
+import { Github, Mail } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { FaLinkedin } from "react-icons/fa"
+import MobileMenu from "./MobileMenu"
 import { ModeToggle } from "./theme-toggle"
-
-const navigationLinks = [
-  { href: "/about", text: "About" },
-  { href: "/skills", text: "Skills" },
-  { href: "/projects", text: "Projects" },
-  { href: "/contact", text: "Contact" },
-  { href: "/blog", text: "Blog" },
-]
 
 const SiteHeader = () => {
   const pathname = usePathname()
@@ -41,7 +35,7 @@ const SiteHeader = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <nav className="hidden rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 md:flex">
+        <nav className="rounded-full bg-white/90 px-3 font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 max-lg:hidden ">
           {navigationLinks.map((link) => (
             <Button variant="link" size="navLinks" key={link.href} asChild>
               <Link
@@ -88,7 +82,19 @@ const SiteHeader = () => {
             <FaLinkedin size={24} />
           </Link>
 
+          <Link
+            className={buttonVariants({ variant: "ghost", size: "icon" })}
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/samuel-pokam/"
+          >
+            <Mail />
+          </Link>
+
           <ModeToggle />
+
+          {/* Mobile Menu */}
+          <MobileMenu />
         </motion.div>
       </div>
     </header>

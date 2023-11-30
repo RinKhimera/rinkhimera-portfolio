@@ -26,7 +26,7 @@ import { formSchema } from "@/lib/validation/formSchema"
 import emailjs from "@emailjs/browser"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { motion } from "framer-motion"
-import { Loader2 } from "lucide-react"
+import { Loader2, Send } from "lucide-react"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
@@ -174,7 +174,10 @@ const Contact = () => {
                     Please wait
                   </Button>
                 ) : (
-                  <Button type="submit">Submit</Button>
+                  <Button type="submit">
+                    <Send className="mr-2" size={16} />
+                    Send
+                  </Button>
                 )}
               </form>
             </Form>

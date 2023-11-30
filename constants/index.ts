@@ -1,5 +1,13 @@
 import { beyondLogo, quantaLogo, soldeurLogo } from "@/public/assets/logos"
 
+export const navigationLinks = [
+  { href: "/about", text: "About" },
+  { href: "/skills", text: "Skills" },
+  { href: "/projects", text: "Projects" },
+  { href: "/contact", text: "Contact" },
+  { href: "/blog", text: "Blog" },
+]
+
 export const projects = [
   {
     name: "Threads #237",
