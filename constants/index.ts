@@ -1,4 +1,4 @@
-import { beyondLogo, quantaLogo } from "@/public/assets/logos"
+import { beyondLogo, quantaLogo, soldeurLogo } from "@/public/assets/logos"
 
 export const projects = [
   {
@@ -131,6 +131,6 @@ export const experienceData = [
     company: "Soldeur SARL",
     role: "Technical Support Supervisor",
     date: "2018 - 2019",
-    logo: quantaLogo,
+    logo: soldeurLogo,
   },
 ]

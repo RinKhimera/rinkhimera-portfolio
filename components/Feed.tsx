@@ -1,14 +1,30 @@
-import FetchHeroArticle from "@/lib/actions/fetchHeroArticle"
+import { FetchHeroArticles } from "@/lib/actions/action"
+import moment from "moment"
+import ArticleCardHero from "./ArticleCardHero"
 import ExperienceCard from "./ExperienceCard"
 
-const Feed = () => {
+const Feed = async () => {
+  const posts = await FetchHeroArticles()
+
   return (
     <div className="mt-24 md:mt-28">
       <div className="mx-auto w-full max-w-7xl">
         <div className="relative">
           <div className="mx-auto max-w-2xl lg:max-w-5xl">
             <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
-              <FetchHeroArticle />
+              <div className="flex flex-col gap-12">
+                {posts.map((post, index) => {
+                  const date = moment(post.createdAt).format("MMMM D, YYYY")
+                  return (
+                    <ArticleCardHero
+                      key={index}
+                      title={post.title}
+                      content={post.content}
+                      date={date}
+                    />
+                  )
+                })}
+              </div>
 
               <div className="space-y-10 lg:pl-16 xl:pl-24">
                 <ExperienceCard />
