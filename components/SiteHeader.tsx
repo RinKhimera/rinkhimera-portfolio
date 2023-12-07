@@ -86,7 +86,7 @@ const SiteHeader = () => {
             className={buttonVariants({ variant: "ghost", size: "icon" })}
             target="_blank"
             rel="noopener noreferrer"
-            href="https://www.linkedin.com/in/samuel-pokam/"
+            href="mailto:dixiades@gmail.com"
           >
             <Mail />
           </Link>
