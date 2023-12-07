@@ -1,4 +1,12 @@
 import { beyondLogo, quantaLogo, soldeurLogo } from "@/public/assets/logos"
+import {
+  manageProject,
+  nclcProject,
+  nikeProject,
+  quantaProject,
+  quoteProject,
+  threads237Project,
+} from "@/public/assets/projects"
 
 export const navigationLinks = [
   { href: "/about", text: "About" },
@@ -10,8 +18,17 @@ export const navigationLinks = [
 
 export const projects = [
   {
+    name: "Quanta Hive",
+    imageSrc: quantaProject,
+    imageAlt: "Quanta Hive",
+    description: "Quanta Hive Digital Agency Website.",
+    demoLink: "https://quanta-hive.vercel.app/",
+    githubLink: "https://github.com/RinKhimera/Quanta-Hive",
+    stacks: ["SASS", "JavaScript", "Next.js", "CSS"],
+  },
+  {
     name: "Threads #237",
-    imageSrc: "/assets/projects/threads237.png",
+    imageSrc: threads237Project,
     imageAlt: "Threads #237",
     description:
       "A Threads Meta application clone where you create and engage in threads and ongoing conversations.",
@@ -31,7 +48,7 @@ export const projects = [
   },
   {
     name: "NCLC / CLB Calculator",
-    imageSrc: "/assets/projects/nclc.png",
+    imageSrc: nclcProject,
     imageAlt: "NCLC / CLB Calculator",
     description:
       "Calculation tool for Canadian Language Benchmarks / Outil de calcul des Niveaux de compétence linguistique canadiens.",
@@ -48,38 +65,28 @@ export const projects = [
     ],
   },
   {
-    name: "Bolo Job Search",
-    imageSrc: "/assets/projects/bolo.png",
-    imageAlt: "Project Image",
-    description:
-      "A job search website allowing to apply and post different offers, as well as to offer services.",
-    demoLink: "https://bolo-one.vercel.app/",
-    githubLink: "https://github.com/RinKhimera/bolo",
-    stacks: ["Tailwind CSS", "TypeScript", "Next.js", "Three.js"],
+    name: "Nike",
+    imageSrc: nikeProject,
+    imageAlt: "Nike",
+    description: "Nike landing page website built with Next.js 13.4",
+    demoLink: "https://nike-rin.vercel.app/",
+    githubLink: "https://github.com/RinKhimera/nike",
+    stacks: ["Next.js", "TypeScript", "Tailwind CSS", "E-Commerce"],
   },
   {
     name: "Modern UI/UX Webpage",
-    imageSrc: "/assets/projects/project1.png",
+    imageSrc: manageProject,
     imageAlt: "Project Image",
     description:
       "A modern landing page for a startup company with hero section, CTA button, testimonials and navigation links.",
     demoLink: "https://rinkhimera.github.io/manage-landing-page/",
     githubLink: "https://github.com/RinKhimera/manage-landing-page",
-    stacks: ["React", "Tailwind CSS", "JavaScript"],
+    stacks: ["React", "Tailwind CSS", "TypeScript"],
   },
-  {
-    name: "Promptopia",
-    imageSrc: "/assets/projects/promptopia.png",
-    imageAlt: "Project Image",
-    description:
-      "An open-source AI prompting tool for modern world to discover, create and share creative prompts.",
-    demoLink: "https://promptopia-rinkhimera.vercel.app/",
-    githubLink: "https://github.com/RinKhimera/promptopia",
-    stacks: ["Next.js", "TypeScript", "MongoDB", "Prisma", "NextAuth.js"],
-  },
+
   {
     name: "Random Quote Machine",
-    imageSrc: "/assets/projects/project3.png",
+    imageSrc: quoteProject,
     imageAlt: "Project Image",
     description:
       "A web-based application that generates and displays random quotes to the user.",

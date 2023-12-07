@@ -62,9 +62,6 @@ const Projects = () => {
                         className="w-full rounded-lg object-contain"
                         src={project.imageSrc}
                         alt={project.imageAlt}
-                        blurDataURL={project.imageSrc}
-                        width={1920}
-                        height={1080}
                         placeholder="blur"
                       />
                     </CardHeader>
@@ -86,9 +83,6 @@ const Projects = () => {
                     className="my-5 w-full rounded-lg border object-contain dark:border-zinc-800"
                     src={project.imageSrc}
                     alt={project.imageAlt}
-                    blurDataURL={project.imageSrc}
-                    width={1920}
-                    height={1080}
                     placeholder="blur"
                   />
 
