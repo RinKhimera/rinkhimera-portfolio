@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/sheet"
 import { projects } from "@/constants"
 import { motion } from "framer-motion"
-import { ExternalLink, Github } from "lucide-react"
+import { ExternalLink, Github, Info } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -68,7 +68,9 @@ const Projects = () => {
 
                     <CardContent>
                       <CardTitle>{project.name}</CardTitle>
-                      <CardDescription>Card Description</CardDescription>
+                      <CardDescription>
+                        <Info />
+                      </CardDescription>
                     </CardContent>
                   </Card>
                 </SheetTrigger>
@@ -79,13 +81,18 @@ const Projects = () => {
                     <SheetDescription>{project.description}</SheetDescription>
                   </SheetHeader>
 
-                  <Image
-                    className="my-5 w-full rounded-lg border object-contain dark:border-zinc-800"
-                    src={project.imageSrc}
-                    alt={project.imageAlt}
-                    placeholder="blur"
-                  />
-
+                  <Link
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      className="my-5 w-full rounded-lg border object-contain dark:border-zinc-800"
+                      src={project.imageSrc}
+                      alt={project.imageAlt}
+                      placeholder="blur"
+                    />
+                  </Link>
                   <div className="">
                     <h3 className="text-lg font-semibold text-primary">
                       Stacks
@@ -102,8 +109,7 @@ const Projects = () => {
                     </div>
                   </div>
 
-                  {/* Mobile */}
-                  <div className="md:hidden">
+                  <div>
                     <div className="my-5">
                       <h3 className="pb-2 text-lg font-semibold text-primary">
                         Live Project
@@ -113,7 +119,7 @@ const Projects = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className={buttonVariants({
-                          variant: "outline",
+                          variant: "default",
                           size: "icon",
                         })}
                       >
@@ -130,48 +136,11 @@ const Projects = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className={buttonVariants({
-                          variant: "secondary",
+                          variant: "default",
                           size: "icon",
                         })}
                       >
                         <Github />
-                      </Link>
-                    </div>
-                  </div>
-
-                  {/* Desktop */}
-                  <div className="max-md:hidden">
-                    <div className="my-5">
-                      <h3 className="pb-2 text-lg font-semibold text-primary">
-                        Live Project
-                      </h3>
-                      <Link
-                        href={project.demoLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={buttonVariants({
-                          variant: "secondary",
-                          size: "lg",
-                        })}
-                      >
-                        {project.demoLink}
-                      </Link>
-                    </div>
-
-                    <div className="my-5">
-                      <h3 className="pb-2 text-lg font-semibold text-primary">
-                        GitHub Repo
-                      </h3>
-                      <Link
-                        href={project.githubLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={` max-md:w-44 ${buttonVariants({
-                          variant: "secondary",
-                          size: "lg",
-                        })}`}
-                      >
-                        {project.githubLink}
                       </Link>
                     </div>
                   </div>
