@@ -50,9 +50,15 @@ const Projects = () => {
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.5, delay: 0.15 },
+              }}
+              whileHover={{
+                scale: 1.08,
+              }}
               viewport={{ margin: "-200px 0px -100px 0px", once: true }}
-              transition={{ duration: 0.5, delay: 0.15 }}
             >
               <Sheet>
                 <SheetTrigger>
@@ -68,8 +74,8 @@ const Projects = () => {
 
                     <CardContent>
                       <CardTitle>{project.name}</CardTitle>
-                      <CardDescription>
-                        <Info />
+                      <CardDescription className="mt-1 max-w-xs truncate">
+                        {project.description}
                       </CardDescription>
                     </CardContent>
                   </Card>
