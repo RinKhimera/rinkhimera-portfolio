@@ -22,11 +22,11 @@ const About = () => {
 
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              Hi, I&apos;m Samuel Pokam.
-              <br /> I am a{" "}
-              <span className="text-primary">full-stack developer,</span> with a
-              particular interest in making things simple and automating daily
-              tasks.
+              Navigating the digital realm as a{" "}
+              <span className="text-primary">full-stack developer,</span> I
+              specialize in the art of simplifying the complex and automating
+              the routine for a{" "}
+              <span className="text-primary">seamless digital experience.</span>
             </h1>
             <div className="mt-6 space-y-7 text-base leading-loose text-zinc-600 dark:text-zinc-400">
               <p>

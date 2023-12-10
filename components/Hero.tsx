@@ -8,29 +8,31 @@ const imageSources = [image1, image2, image3, image4, image5]
 
 const Hero = () => {
   return (
-    <div className="mb-[450px] max-w-4xl">
+    <div className="mb-[450px] max-w-4xl max-sm:mb-[370px]">
       <div className="flex w-full flex-col space-y-10">
-        <h1 className="text-8xl font-bold tracking-tight">
+        <h1 className="text-5xl font-bold tracking-tight md:text-8xl">
           <motion.span
             className="block"
             initial={{ opacity: 0, x: -60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.25, delay: 0 }}
           >
-            Hey!
+            Hey! I&apos;m
           </motion.span>
+
           <motion.span
             className="block"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.25, delay: 0 }}
           >
-            I&apos;m <span className="text-primary">Samuel</span>
+            <span className="text-primary">Samuel Pokam</span>
           </motion.span>
         </h1>
+
         <div className="flex flex-row-reverse">
           <motion.h2
-            className="max-w-2xl text-end text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl"
+            className="max-w-2xl text-end text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 md:text-4xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
