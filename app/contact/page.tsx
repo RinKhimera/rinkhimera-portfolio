@@ -99,7 +99,7 @@ const Contact = () => {
       >
         <Card className="mt-8 max-w-2xl">
           <CardHeader>
-            <CardTitle>Information Details</CardTitle>
+            <CardTitle className="text-primary">Information Details</CardTitle>
             <CardDescription>
               Your message is the first step to a great collaboration.
             </CardDescription>

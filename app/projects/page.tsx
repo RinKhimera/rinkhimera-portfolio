@@ -75,7 +75,9 @@ const Projects = () => {
                     </CardHeader>
 
                     <CardContent>
-                      <CardTitle>{project.name}</CardTitle>
+                      <CardTitle className="text-primary">
+                        {project.name}
+                      </CardTitle>
                       <CardDescription className="mx-auto mt-1 max-w-xs truncate">
                         {project.description}
                       </CardDescription>
