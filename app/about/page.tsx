@@ -1,3 +1,6 @@
+"use client"
+
+import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
@@ -6,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
+import { stacks } from "@/constants"
 import { portrait } from "@/public/assets/images"
 import Image from "next/image"
 import Link from "next/link"
@@ -58,7 +62,7 @@ const About = () => {
             <Card className="bg-zinc-50 transition hover:bg-zinc-100 dark:bg-zinc-800/50 dark:hover:bg-zinc-700/50">
               <CardHeader>
                 <CardTitle>
-                  My main <span className="text-primary">stacks</span> and{" "}
+                  My main <span className="text-primary">languages</span> and{" "}
                   <span className="text-primary">frameworks.</span>
                 </CardTitle>
                 <CardDescription>
@@ -66,7 +70,45 @@ const About = () => {
                 </CardDescription>
               </CardHeader>
 
-              <CardContent></CardContent>
+              <CardContent>
+                <div className="flex flex-wrap justify-between gap-5">
+                  {stacks.map((stack, index) => (
+                    <Button
+                      key={index}
+                      variant={"ghost"}
+                      size={"stack"}
+                      className=""
+                      asChild
+                    >
+                      <Link href={stack.href} target="_blank" rel="noreferrer">
+                        <div className="flex flex-col items-center gap-1">
+                          <div className="">{stack.icon}</div>
+                          <h2 className="text-sm text-zinc-600 dark:text-zinc-400">
+                            {stack.name}
+                          </h2>
+                        </div>
+                      </Link>
+                    </Button>
+
+                    // <Link
+                    //   href={stack.href}
+                    //   target="_blank"
+                    //   rel="noreferrer"
+                    //   key={index}
+                    //   className="w-[70px]"
+                    // >
+                    //   <div className="flex flex-col items-center gap-1">
+                    //     <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                    //       {stack.icon}
+                    //     </div>
+                    //     <h2 className="relative z-10 text-sm text-zinc-600 dark:text-zinc-400">
+                    //       {stack.name}
+                    //     </h2>
+                    //   </div>
+                    // </Link>
+                  ))}
+                </div>
+              </CardContent>
             </Card>
           </div>
         </div>

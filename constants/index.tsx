@@ -7,6 +7,9 @@ import {
   quoteProject,
   threads237Project,
 } from "@/public/assets/projects"
+import Image from "next/image"
+
+import icons from "@/public/assets/icons"
 
 export const navigationLinks = [
   { href: "/about", text: "About" },
@@ -108,27 +111,6 @@ export const projects = [
   // add more projects here
 ]
 
-export const Articles = [
-  {
-    title: "Crafting a design system for a multiplanetary future",
-    content:
-      "Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.",
-    date: "September 5, 2022",
-  },
-  {
-    title: "Introducing Animaginary: High performance web animations",
-    content:
-      "When you’re building a website for a company as ambitious as Planetaria, you need to make an impression. I wanted people to visit our website and see animations that looked more realistic than reality itself.",
-    date: "September 2, 2022",
-  },
-  {
-    title: "Rewriting the cosmOS kernel in Rust",
-    content:
-      "When we released the first version of cosmOS last year, it was written in Go. Go is a wonderful programming language with a lot of benefits, but it’s been a while since I’ve seen an article on the front page of Hacker News about rewriting some important tool in Go and I see articles on there about rewriting things in Rust every single week.",
-    date: "July 14, 2022",
-  },
-]
-
 export const experienceData = [
   {
     company: "Quanta Hive",
@@ -147,5 +129,92 @@ export const experienceData = [
     role: "Technical Support Supervisor",
     date: "2018 - 2019",
     logo: soldeurLogo,
+  },
+]
+
+export const stacks = [
+  {
+    name: "TypeScript",
+    href: "https://www.typescriptlang.org/",
+    icon: (
+      <Image src={icons.typescript} alt={"TypeScript"} className="h-7 w-7" />
+    ),
+  },
+  {
+    name: "JavaScript",
+    href: "https://www.javascript.com/",
+    icon: (
+      <Image src={icons.javascript} alt={"JavaScript"} className="h-7 w-7" />
+    ),
+  },
+  {
+    name: "React",
+    href: "https://react.dev/",
+    icon: <Image src={icons.react} alt={"React"} className="h-8 w-8" />,
+  },
+  {
+    name: "Next.js",
+    href: "https://nextjs.org/",
+    icon: (
+      <icons.SiNextdotjs className="h-9 w-9 text-zinc-600 dark:text-zinc-400" />
+    ),
+  },
+  {
+    name: "Tailwind",
+    href: "https://tailwindcss.com/",
+    icon: (
+      <Image src={icons.tailwind} alt={"Tailwind CSS"} className="h-8 w-8" />
+    ),
+  },
+  {
+    name: "Sass",
+    href: "https://sass-lang.com/",
+    icon: <Image src={icons.sass} alt={"Sass"} className="h-9 w-9" />,
+  },
+  {
+    name: "Node.js",
+    href: "https://nodejs.org/en",
+    icon: <Image src={icons.node} alt={"Node.js"} className="h-8 w-8" />,
+  },
+  {
+    name: "MongoDB",
+    href: "https://www.mongodb.com/",
+    icon: <Image src={icons.mongodb} alt={"MongoDB"} className="h-10 w-10" />,
+  },
+  {
+    name: "PostgreSQL",
+    href: "https://www.postgresql.org/",
+    icon: (
+      <Image src={icons.postgresql} alt={"PostgreSQL"} className="h-8 w-8" />
+    ),
+  },
+  {
+    name: "Prisma",
+    href: "https://nodejs.org/en",
+    icon: (
+      <icons.SiPrisma className="h-8 w-8 text-zinc-600 dark:text-zinc-400" />
+    ),
+  },
+  {
+    name: "Git",
+    href: "https://git-scm.com/",
+    icon: <Image src={icons.git} alt={"GitLab"} className="h-8 w-8" />,
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/",
+    icon: (
+      <icons.AiFillGithub className="h-8 w-8 text-zinc-600 dark:text-zinc-400" />
+    ),
+  },
+  {
+    name: "GitLab",
+    href: "https://about.gitlab.com/",
+    icon: <Image src={icons.gitlab} alt={"GitLab"} className="h-8 w-8" />,
+  },
+  {
+    name: "Figma",
+    href: "https://www.figma.com/",
+    icon: <Image src={icons.figma} alt={"Figma"} className="h-8 w-8" />,
   },
 ]
