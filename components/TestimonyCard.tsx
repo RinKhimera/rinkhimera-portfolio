@@ -1,37 +1,53 @@
 import { Quote } from "lucide-react"
+import Link from "next/link"
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
+import { Button } from "./ui/button"
 import { Card } from "./ui/card"
 
-const TestimonyCard = () => {
+type TestimonyCardProps = {
+  image: string
+  fallbackImage: string
+  name: string
+  title: string
+  testimony: string
+  link: string
+}
+
+const TestimonyCard = ({
+  image,
+  fallbackImage,
+  name,
+  title,
+  testimony,
+  link,
+}: TestimonyCardProps) => {
   return (
-    <Card className="mt-10 w-80 bg-zinc-50 p-5 transition hover:bg-zinc-100 dark:bg-zinc-800/50 dark:hover:bg-zinc-700/50">
-      <Quote className="mb-5 text-primary" size={30} />
+    <Card className="flex max-w-[600px] flex-1 flex-col justify-between space-y-3 bg-zinc-50 px-4 py-3 transition hover:bg-zinc-100 dark:bg-zinc-800/50 dark:hover:bg-zinc-700/50">
+      <Quote className="text-primary" size={30} />
 
-      <div className="flex flex-col items-center space-y-4">
-        <p className="text-center text-sm">
-          Working with [Your Name] was a game-changer for my online presence.
-          Their expertise in web development transformed my ideas into a
-          stunning and functional website. The attention to detail, quick
-          turnaround, and seamless communication made the entire process a
-          pleasure. I highly recommend [Your Name] for anyone seeking a skilled
-          and reliable web developer.
-        </p>
+      <p className="text-center leading-relaxed">{testimony}</p>
 
-        <Avatar>
-          <AvatarImage src="/assets/images/avatar.webp" alt="@shadcn" />
-          <AvatarFallback>SP</AvatarFallback>
-        </Avatar>
+      <Button
+        variant={"ghost"}
+        size={"testimony"}
+        className="flex flex-col hover:bg-zinc-200 dark:hover:bg-accent"
+        asChild
+      >
+        <Link href={link} target="_blank" rel="noopener noreferrer">
+          <Avatar className="mx-auto">
+            <AvatarImage src={image} alt={name} />
+            <AvatarFallback>{fallbackImage}</AvatarFallback>
+          </Avatar>
 
-        <div className="text-center">
-          <h3 className="text-lg font-semibold text-primary">
-            Christian Kouakam
-          </h3>
+          <div className="text-center">
+            <h3 className="text-xl font-semibold text-primary">{name}</h3>
 
-          <h4 className="text-sm text-zinc-600 dark:text-zinc-400">
-            CEO | Software Engineer MEAN | MERN | Java | AWS | DevOps
-          </h4>
-        </div>
-      </div>
+            <h4 className="text-sm text-zinc-600 dark:text-zinc-400">
+              {title}
+            </h4>
+          </div>
+        </Link>
+      </Button>
     </Card>
   )
 }

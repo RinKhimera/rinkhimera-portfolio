@@ -28,6 +28,7 @@ const buttonVariants = cva(
         lg: "h-11 rounded-md px-4",
         icon: "h-10 w-10",
         stack: "rounded-md w-[80px] h-[80px]",
+        testimony: "px-4 py-2",
       },
     },
     defaultVariants: {

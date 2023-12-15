@@ -213,30 +213,30 @@ export const stacks = [
 
 export const testimonials = [
   {
-    image: images.kouakam,
+    image: "/assets/images/kouakam.jpeg",
     fallbackImage: "CK",
     name: "Christian Kouakam",
     title: "CEO | Software Engineer MEAN | MERN | Java | AWS | DevOps",
     testimony:
-      "Our experience with Samuel was nothing short of fantastic. They demonstrated a deep understanding of our business needs and translated them into a beautifully crafted website. Responsive, collaborative, and always willing to go the extra mile. I highly recommend their services.",
+      "Our experience with Samuel was nothing short of fantastic. He demonstrated a deep understanding of our business needs and translated them into a beautifully crafted website. Responsive, collaborative, and always willing to go the extra mile. I highly recommend his services.",
     link: "https://www.linkedin.com/in/ing-chris-kouakam/",
   },
   {
-    image: images.bessala,
-    fallbackImage: "AB",
-    name: "Aristide Bessala",
-    title: "C# .NET Developer | Azure | Php Symfony, Laravel | Docker",
-    testimony:
-      "Working with him was a breath of fresh air. His professionalism and expertise turned our outdated website into a modern masterpiece. The project was completed on time, and communication was excellent throughout. We're incredibly pleased with the results.",
-    link: "https://www.linkedin.com/in/aristide-bessala-akogo-8b8368124/",
-  },
-  {
-    image: images.lombat,
+    image: "/assets/images/lombat.jpeg",
     fallbackImage: "HL",
     name: "Hilaire Lombat",
     title: "HR Manager, Employer Brand | SEO & Digital Marketing",
     testimony:
-      "Exceptional collaboration! Translated my vision into a scalable and responsive platform. The speed of development, attention to detail, and problem-solving abilities were beyond impressive",
+      "Exceptional collaboration! Translated my vision into a scalable and responsive platform. The speed of development, attention to detail, and problem-solving abilities were beyond impressive.",
     link: "https://www.linkedin.com/in/hilaire-lombat/",
+  },
+  {
+    image: "/assets/images/bessala.jpeg",
+    fallbackImage: "AB",
+    name: "Aristide Bessala",
+    title: "C# .NET Developer | Azure | PHP Symfony, Laravel | Docker",
+    testimony:
+      "Working with him was a breath of fresh air. His professionalism and expertise turned our outdated website into a modern masterpiece. The project was completed on time, and communication was excellent throughout. We're incredibly pleased with the results.",
+    link: "https://www.linkedin.com/in/aristide-bessala-akogo-8b8368124/",
   },
 ]

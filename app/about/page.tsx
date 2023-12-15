@@ -1,7 +1,6 @@
 "use client"
 
 import TestimonyCard from "@/components/TestimonyCard"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -11,10 +10,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { stacks } from "@/constants"
+import { stacks, testimonials } from "@/constants"
 import images from "@/public/assets/images"
 import { motion } from "framer-motion"
-import { CalendarDays, Quote } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -127,11 +125,24 @@ const About = () => {
       </div>
 
       <div className="mt-14">
-        <h1 className="text-center text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-          Insights into my web development partnerships.
+        <h1 className="mx-auto max-w-3xl text-center text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+          <span className="text-primary">Insights</span> into my web development{" "}
+          <span className="text-primary">partnerships.</span>
         </h1>
 
-        <TestimonyCard />
+        <div className="mt-10 flex gap-5 max-lg:flex-col max-lg:items-center">
+          {testimonials.map((testimony, index) => (
+            <TestimonyCard
+              key={index}
+              image={testimony.image}
+              fallbackImage={testimony.fallbackImage}
+              name={testimony.name}
+              title={testimony.title}
+              testimony={testimony.testimony}
+              link={testimony.link}
+            />
+          ))}
+        </div>
       </div>
     </div>
   )
