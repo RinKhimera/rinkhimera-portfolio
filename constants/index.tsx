@@ -1,15 +1,8 @@
-import { beyondLogo, quantaLogo, soldeurLogo } from "@/public/assets/logos"
-import {
-  manageProject,
-  nclcProject,
-  nikeProject,
-  quantaProject,
-  quoteProject,
-  threads237Project,
-} from "@/public/assets/projects"
-import Image from "next/image"
-
 import icons from "@/public/assets/icons"
+import images from "@/public/assets/images"
+import logos from "@/public/assets/logos"
+import projectsImage from "@/public/assets/projects"
+import Image from "next/image"
 
 export const navigationLinks = [
   { href: "/about", text: "About" },
@@ -21,7 +14,7 @@ export const navigationLinks = [
 export const projects = [
   {
     name: "Quanta Hive",
-    imageSrc: quantaProject,
+    imageSrc: projectsImage.quanta,
     imageAlt: "Quanta Hive",
     description: "Quanta Hive Digital Agency Website.",
     demoLink: "https://quanta-hive.vercel.app/",
@@ -30,7 +23,7 @@ export const projects = [
   },
   {
     name: "Threads #237",
-    imageSrc: threads237Project,
+    imageSrc: projectsImage.threads237,
     imageAlt: "Threads #237",
     description:
       "A Threads Meta application clone where you create and engage in threads and ongoing conversations.",
@@ -50,7 +43,7 @@ export const projects = [
   },
   {
     name: "NCLC / CLB Calculator",
-    imageSrc: nclcProject,
+    imageSrc: projectsImage.nclc,
     imageAlt: "NCLC / CLB Calculator",
     description:
       "Calculation tool for Canadian Language Benchmarks / Outil de calcul des Niveaux de compétence linguistique canadiens.",
@@ -68,7 +61,7 @@ export const projects = [
   },
   {
     name: "Nike",
-    imageSrc: nikeProject,
+    imageSrc: projectsImage.nike,
     imageAlt: "Nike",
     description: "Nike landing page website built with Next.js 13.4",
     demoLink: "https://nike-rin.vercel.app/",
@@ -77,7 +70,7 @@ export const projects = [
   },
   {
     name: "Modern UI/UX Webpage",
-    imageSrc: manageProject,
+    imageSrc: projectsImage.manage,
     imageAlt: "Project Image",
     description:
       "A modern landing page for a startup company with hero section, CTA button, testimonials and navigation links.",
@@ -88,7 +81,7 @@ export const projects = [
 
   {
     name: "Random Quote Machine",
-    imageSrc: quoteProject,
+    imageSrc: projectsImage.quote,
     imageAlt: "Project Image",
     description:
       "A web-based application that generates and displays random quotes to the user.",
@@ -115,19 +108,19 @@ export const experienceData = [
     company: "Quanta Hive",
     role: "Fullstack Developer",
     date: "2020 - Present",
-    logo: quantaLogo,
+    logo: logos.quanta,
   },
   {
     company: "Beyond Technologies LLC",
     role: "Frontend Developer",
     date: "2019 - 2020",
-    logo: beyondLogo,
+    logo: logos.beyond,
   },
   {
     company: "Soldeur SARL",
     role: "Technical Support Supervisor",
     date: "2018 - 2019",
-    logo: soldeurLogo,
+    logo: logos.soldeur,
   },
 ]
 
@@ -215,5 +208,35 @@ export const stacks = [
     name: "Figma",
     href: "https://www.figma.com/",
     icon: <Image src={icons.figma} alt={"Figma"} className="h-8 w-8" />,
+  },
+]
+
+export const testimonials = [
+  {
+    image: images.kouakam,
+    fallbackImage: "CK",
+    name: "Christian Kouakam",
+    title: "CEO | Software Engineer MEAN | MERN | Java | AWS | DevOps",
+    testimony:
+      "Our experience with Samuel was nothing short of fantastic. They demonstrated a deep understanding of our business needs and translated them into a beautifully crafted website. Responsive, collaborative, and always willing to go the extra mile. I highly recommend their services.",
+    link: "https://www.linkedin.com/in/ing-chris-kouakam/",
+  },
+  {
+    image: images.bessala,
+    fallbackImage: "AB",
+    name: "Aristide Bessala",
+    title: "C# .NET Developer | Azure | Php Symfony, Laravel | Docker",
+    testimony:
+      "Working with him was a breath of fresh air. His professionalism and expertise turned our outdated website into a modern masterpiece. The project was completed on time, and communication was excellent throughout. We're incredibly pleased with the results.",
+    link: "https://www.linkedin.com/in/aristide-bessala-akogo-8b8368124/",
+  },
+  {
+    image: images.lombat,
+    fallbackImage: "HL",
+    name: "Hilaire Lombat",
+    title: "HR Manager, Employer Brand | SEO & Digital Marketing",
+    testimony:
+      "Exceptional collaboration! Translated my vision into a scalable and responsive platform. The speed of development, attention to detail, and problem-solving abilities were beyond impressive",
+    link: "https://www.linkedin.com/in/hilaire-lombat/",
   },
 ]

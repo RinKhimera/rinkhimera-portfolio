@@ -12,7 +12,7 @@ import sass from "./sass.svg"
 import tailwind from "./tailwindcss.svg"
 import typescript from "./typescript.svg"
 
-export const icons = {
+const icons = {
   javascript,
   typescript,
   tailwind,

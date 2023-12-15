@@ -1,5 +1,7 @@
-import beyondLogo from "./beyond.png"
-import quantaLogo from "./quanta.png"
-import soldeurLogo from "./soldeur.png"
+import beyond from "./beyond.png"
+import quanta from "./quanta.png"
+import soldeur from "./soldeur.png"
 
-export { beyondLogo, quantaLogo, soldeurLogo }
+const logos = { beyond, quanta, soldeur }
+
+export default logos

@@ -32,11 +32,12 @@ const Projects = () => {
       transition={{ duration: 0.4 }}
     >
       <div className="max-w-2xl">
-        <p className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl md:leading-tight">
+        <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl md:leading-tight">
           A <span className="text-primary">collection</span> of my projects
           designed to make <span className="text-primary">waves</span> in the
           vast digital ocean.
-        </p>
+        </h1>
+
         <p className="mt-6 text-base leading-loose text-zinc-600 dark:text-zinc-400">
           I&apos;ve worked on tons of little projects over the years but these
           are the ones that I&apos;m most proud of. Many of them are
@@ -103,10 +104,12 @@ const Projects = () => {
                       placeholder="blur"
                     />
                   </Link>
-                  <div className="">
+
+                  <div>
                     <h3 className="text-lg font-semibold text-primary">
                       Stacks
                     </h3>
+
                     <div className="flex flex-wrap justify-start gap-2 py-3">
                       {project.stacks.map((stack) => (
                         <div
@@ -124,6 +127,7 @@ const Projects = () => {
                       <h3 className="pb-2 text-lg font-semibold text-primary">
                         Live Project
                       </h3>
+
                       <Link
                         href={project.demoLink}
                         target="_blank"
@@ -141,6 +145,7 @@ const Projects = () => {
                       <h3 className="pb-2 text-lg font-semibold text-primary">
                         GitHub Repo
                       </h3>
+
                       <Link
                         href={project.githubLink}
                         target="_blank"

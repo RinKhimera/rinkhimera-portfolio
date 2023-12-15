@@ -1,15 +1,17 @@
-import manageProject from "./manage.png"
-import nclcProject from "./nclc.png"
-import nikeProject from "./nike.png"
-import quantaProject from "./quantahive.png"
-import quoteProject from "./quote.png"
-import threads237Project from "./threads237.png"
+import manage from "./manage.png"
+import nclc from "./nclc.png"
+import nike from "./nike.png"
+import quanta from "./quantahive.png"
+import quote from "./quote.png"
+import threads237 from "./threads237.png"
 
-export {
-  manageProject,
-  nclcProject,
-  nikeProject,
-  quantaProject,
-  quoteProject,
-  threads237Project,
+const projectsImage = {
+  manage,
+  nclc,
+  nike,
+  quanta,
+  quote,
+  threads237,
 }
+
+export default projectsImage

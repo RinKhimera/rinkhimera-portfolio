@@ -1,5 +1,7 @@
 "use client"
 
+import TestimonyCard from "@/components/TestimonyCard"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -10,8 +12,9 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { stacks } from "@/constants"
-import { portrait } from "@/public/assets/images"
+import images from "@/public/assets/images"
 import { motion } from "framer-motion"
+import { CalendarDays, Quote } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -27,7 +30,7 @@ const About = () => {
         >
           <div className="max-w-xs px-2.5 lg:max-w-none">
             <Image
-              src={portrait}
+              src={images.portrait}
               alt="portrait"
               placeholder="blur"
               className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
@@ -48,6 +51,7 @@ const About = () => {
             routine for a{" "}
             <span className="text-primary">seamless digital experience.</span>
           </motion.h1>
+
           <motion.div
             className="mt-6 space-y-7 text-base leading-loose text-zinc-600 dark:text-zinc-400 max-lg:mt-12"
             initial={{ opacity: 0, x: -25 }}
@@ -60,11 +64,13 @@ const About = () => {
               some way or another led me to work on photo and video editing,
               design, and ultimately to web development.
             </p>
+
             <p>
               As a software engineer, I enjoy bridging the gap between
               engineering and design — combining my technical knowledge with my
               keen eye for design to create a beautiful product.
             </p>
+
             <p>
               When I&apos;m not in front of my coding screen, I&apos;m probably
               watching an anime, hanging out with my family, or carrying my team
@@ -85,6 +91,7 @@ const About = () => {
                 My key <span className="text-primary">languages</span> and{" "}
                 <span className="text-primary">frameworks</span> I rely on.
               </CardTitle>
+
               <CardDescription>
                 The primary resources I leverage to complete my various
                 projects.
@@ -117,6 +124,14 @@ const About = () => {
             </CardContent>
           </Card>
         </motion.div>
+      </div>
+
+      <div className="mt-14">
+        <h1 className="text-center text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+          Insights into my web development partnerships.
+        </h1>
+
+        <TestimonyCard />
       </div>
     </div>
   )

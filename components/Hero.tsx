@@ -1,10 +1,16 @@
 "use client"
 
-import { image1, image2, image3, image4, image5 } from "@/public/assets/images"
+import images from "@/public/assets/images"
 import { motion } from "framer-motion"
 import Image from "next/image"
 
-const imageSources = [image1, image2, image3, image4, image5]
+const imageSources = [
+  images.image1,
+  images.image2,
+  images.image3,
+  images.image4,
+  images.image5,
+]
 
 const Hero = () => {
   return (
