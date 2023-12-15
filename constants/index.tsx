@@ -13,7 +13,6 @@ import icons from "@/public/assets/icons"
 
 export const navigationLinks = [
   { href: "/about", text: "About" },
-  { href: "/skills", text: "Skills" },
   { href: "/projects", text: "Projects" },
   { href: "/contact", text: "Contact" },
   { href: "/blog", text: "Blog" },

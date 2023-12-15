@@ -19,7 +19,7 @@ import {
 } from "@/components/ui/sheet"
 import { projects } from "@/constants"
 import { motion } from "framer-motion"
-import { ExternalLink, Github, Info } from "lucide-react"
+import { ExternalLink, Github } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -55,7 +55,7 @@ const Projects = () => {
               whileInView={{
                 opacity: 1,
                 y: 0,
-                transition: { duration: 0.5, delay: 0.15 },
+                transition: { duration: 0.5, delay: 0.3 },
               }}
               whileHover={{
                 scale: 1.08,

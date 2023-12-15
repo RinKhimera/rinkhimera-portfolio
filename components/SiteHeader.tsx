@@ -26,7 +26,7 @@ const SiteHeader = () => {
       <div className="flex items-center justify-between py-5">
         <Link
           href="/"
-          className={buttonVariants({ variant: "ghost", size: "icon" })}
+          className={buttonVariants({ variant: "ghost", size: "empty" })}
         >
           <Avatar>
             <AvatarImage src="/assets/images/avatar.webp" alt="@shadcn" />
@@ -35,7 +35,7 @@ const SiteHeader = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <nav className="rounded-full bg-white/90 px-3 font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 max-lg:hidden ">
+        <nav className="rounded-full bg-white/90 px-3 font-medium shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10 max-lg:hidden">
           {navigationLinks.map((link) => (
             <Button variant="link" size="navLinks" key={link.href} asChild>
               <Link
@@ -46,7 +46,7 @@ const SiteHeader = () => {
                   "text-primary": pathname === link.href,
                   "blur-[0.7px]":
                     hoveredLink !== null && hoveredLink !== link.href,
-                  "text-gray-400":
+                  "text-gray-500":
                     hoveredLink !== null &&
                     hoveredLink !== link.href &&
                     link.href !== pathname,
