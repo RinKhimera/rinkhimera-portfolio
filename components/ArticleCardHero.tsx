@@ -17,8 +17,8 @@ const ArticleCardHero = ({ title, content, date }: ArticleCardHeroProps) => {
       className="group relative flex flex-col items-start"
       initial={{ opacity: 0, x: -60 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ margin: "-200px 0px -60px 0px", once: true }}
-      transition={{ duration: 0.25, delay: 0 }}
+      viewport={{ margin: "-100px", once: true }}
+      transition={{ duration: 0.25 }}
     >
       <h2 className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
         <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>

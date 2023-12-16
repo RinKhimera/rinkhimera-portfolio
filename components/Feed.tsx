@@ -26,7 +26,7 @@ const Feed = async () => {
                 })}
               </div>
 
-              <div className="space-y-10 lg:pl-16 xl:pl-24">
+              <div className="-mt-[24px] space-y-8 lg:pl-12 xl:pl-20">
                 <ExperienceCard />
                 <ExperienceCard />
               </div>

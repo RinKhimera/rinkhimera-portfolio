@@ -1,6 +1,8 @@
 import { AiFillGithub } from "react-icons/ai"
 import { SiNextdotjs, SiPrisma } from "react-icons/si"
+import docker from "./docker.svg"
 import figma from "./figma.svg"
+import firebase from "./firebase.svg"
 import git from "./git.svg"
 import gitlab from "./gitlab.svg"
 import javascript from "./javascript.svg"
@@ -27,6 +29,8 @@ const icons = {
   SiNextdotjs,
   SiPrisma,
   AiFillGithub,
+  docker,
+  firebase,
 }
 
 export default icons

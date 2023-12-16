@@ -48,7 +48,7 @@ const Projects = () => {
       </div>
 
       <div className="mt-8 sm:mt-10">
-        <ul className="grid grid-cols-1 gap-x-8 gap-y-8 lg:grid-cols-2">
+        <ul className="grid grid-cols-1 gap-x-6 gap-y-6 lg:grid-cols-2">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -56,12 +56,12 @@ const Projects = () => {
               whileInView={{
                 opacity: 1,
                 y: 0,
-                transition: { duration: 0.5, delay: 0.3 },
+                transition: { duration: 0.4, delay: 0 },
               }}
               whileHover={{
-                scale: 1.08,
+                scale: 1.04,
               }}
-              viewport={{ margin: "-200px 0px -100px 0px", once: true }}
+              viewport={{ margin: "-100px", once: true }}
             >
               <Sheet>
                 <SheetTrigger>

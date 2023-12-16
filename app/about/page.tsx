@@ -17,6 +17,21 @@ import Image from "next/image"
 import Link from "next/link"
 
 const About = () => {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.4,
+      },
+    },
+  }
+
+  const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 },
+  }
+
   return (
     <div className="mt-10 min-h-full sm:mt-16 lg:mt-20">
       <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
@@ -85,7 +100,7 @@ const About = () => {
         >
           <Card className="bg-zinc-50 transition hover:bg-zinc-100 dark:bg-zinc-800/50 dark:hover:bg-zinc-700/50">
             <CardHeader>
-              <CardTitle>
+              <CardTitle className="leading-tight">
                 My key <span className="text-primary">languages</span> and{" "}
                 <span className="text-primary">frameworks</span> I rely on.
               </CardTitle>
@@ -108,7 +123,7 @@ const About = () => {
                   >
                     <Link href={stack.href} target="_blank" rel="noreferrer">
                       <div className="flex flex-col items-center space-y-1">
-                        <div className="flex h-10 w-10 items-center justify-center">
+                        <div className="flex h-12 w-12 items-center justify-center">
                           {stack.icon}
                         </div>
                         <h2 className="text-sm text-zinc-600 dark:text-zinc-400">
@@ -130,19 +145,26 @@ const About = () => {
           <span className="text-primary">partnerships.</span>
         </h1>
 
-        <div className="mt-10 flex gap-5 max-lg:flex-col max-lg:items-center">
+        <motion.div
+          className="mt-10 flex gap-5 max-lg:flex-col max-lg:items-center"
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ margin: "-100px" }}
+        >
           {testimonials.map((testimony, index) => (
-            <TestimonyCard
-              key={index}
-              image={testimony.image}
-              fallbackImage={testimony.fallbackImage}
-              name={testimony.name}
-              title={testimony.title}
-              testimony={testimony.testimony}
-              link={testimony.link}
-            />
+            <motion.div key={index} variants={item} className="flex">
+              <TestimonyCard
+                image={testimony.image}
+                fallbackImage={testimony.fallbackImage}
+                name={testimony.name}
+                title={testimony.title}
+                testimony={testimony.testimony}
+                link={testimony.link}
+              />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   )

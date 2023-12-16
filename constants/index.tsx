@@ -142,13 +142,16 @@ export const stacks = [
   {
     name: "React",
     href: "https://react.dev/",
-    icon: <Image src={icons.react} alt={"React"} className="h-8 w-8" />,
+    icon: <Image src={icons.react} alt={"React"} className="h-9 w-9" />,
   },
   {
     name: "Next.js",
     href: "https://nextjs.org/",
     icon: (
-      <icons.SiNextdotjs className="h-9 w-9 text-zinc-600 dark:text-zinc-400" />
+      <icons.SiNextdotjs
+        className="text-zinc-600 dark:text-zinc-400"
+        size={40}
+      />
     ),
   },
   {
@@ -166,12 +169,12 @@ export const stacks = [
   {
     name: "Node.js",
     href: "https://nodejs.org/en",
-    icon: <Image src={icons.node} alt={"Node.js"} className="h-8 w-8" />,
+    icon: <Image src={icons.node} alt={"Node.js"} className="h-10 w-10" />,
   },
   {
     name: "MongoDB",
     href: "https://www.mongodb.com/",
-    icon: <Image src={icons.mongodb} alt={"MongoDB"} className="h-10 w-10" />,
+    icon: <Image src={icons.mongodb} alt={"MongoDB"} className="h-12 w-12" />,
   },
   {
     name: "PostgreSQL",
@@ -182,27 +185,40 @@ export const stacks = [
   },
   {
     name: "Prisma",
-    href: "https://nodejs.org/en",
+    href: "https://www.prisma.io/",
     icon: (
-      <icons.SiPrisma className="h-8 w-8 text-zinc-600 dark:text-zinc-400" />
+      <icons.SiPrisma size={36} className="text-zinc-600 dark:text-zinc-400" />
     ),
+  },
+  {
+    name: "Firebase",
+    href: "https://firebase.google.com/",
+    icon: <Image src={icons.firebase} alt={"Firebase"} className="h-12 w-12" />,
   },
   {
     name: "Git",
     href: "https://git-scm.com/",
-    icon: <Image src={icons.git} alt={"GitLab"} className="h-8 w-8" />,
+    icon: <Image src={icons.git} alt={"GitLab"} className="h-12 w-10" />,
   },
   {
     name: "GitHub",
     href: "https://github.com/",
     icon: (
-      <icons.AiFillGithub className="h-8 w-8 text-zinc-600 dark:text-zinc-400" />
+      <icons.AiFillGithub
+        className="text-zinc-600 dark:text-zinc-400"
+        size={40}
+      />
     ),
   },
   {
     name: "GitLab",
     href: "https://about.gitlab.com/",
-    icon: <Image src={icons.gitlab} alt={"GitLab"} className="h-8 w-8" />,
+    icon: <Image src={icons.gitlab} alt={"GitLab"} className="h-10 w-10" />,
+  },
+  {
+    name: "Docker",
+    href: "https://www.docker.com/",
+    icon: <Image src={icons.docker} alt={"Docker"} className="h-12 w-12" />,
   },
   {
     name: "Figma",
