@@ -37,23 +37,24 @@ const SiteHeader = () => {
         {/* Desktop Menu */}
         <nav className="rounded-full bg-white/90 px-3 font-medium shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10 max-lg:hidden">
           {navigationLinks.map((link) => (
-            <Button variant="link" size="navLinks" key={link.href} asChild>
-              <Link
-                href={link.href}
-                onMouseEnter={() => handleLinkHover(link.href)}
-                onMouseLeave={() => setHoveredLink(null)}
-                className={cn("transition", {
-                  "text-primary": pathname === link.href,
-                  "blur-[0.7px]":
-                    hoveredLink !== null && hoveredLink !== link.href,
-                  "text-gray-500":
-                    hoveredLink !== null &&
-                    hoveredLink !== link.href &&
-                    link.href !== pathname,
-                })}
-              >
-                {link.text}
-              </Link>
+            <Button
+              key={link.href}
+              variant="link"
+              size="navLinks"
+              onMouseEnter={() => handleLinkHover(link.href)}
+              onMouseLeave={() => setHoveredLink(null)}
+              className={cn("transition", {
+                "text-primary": pathname === link.href,
+                "blur-[0.7px]":
+                  hoveredLink !== null && hoveredLink !== link.href,
+                "text-gray-500":
+                  hoveredLink !== null &&
+                  hoveredLink !== link.href &&
+                  link.href !== pathname,
+              })}
+              asChild
+            >
+              <Link href={link.href}>{link.text}</Link>
             </Button>
           ))}
         </nav>

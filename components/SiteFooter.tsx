@@ -1,5 +1,6 @@
 import { navigationLinks } from "@/constants"
 import Link from "next/link"
+import HoveredCard from "./HoveredCard"
 import { Button } from "./ui/button"
 
 const SiteFooter = () => {
@@ -9,29 +10,28 @@ const SiteFooter = () => {
   const currentYear = getCurrentYear()
 
   return (
-    <>
-      <footer className="mt-20">
-        <div className="border-t border-zinc-100 py-12 dark:border-zinc-700/40">
-          <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-            <div>
-              {navigationLinks.map((link, index) => (
-                <Button variant="link" key={index} asChild>
-                  <Link
-                    href={link.href}
-                    className="transition hover:text-primary"
-                  >
-                    {link.text}
-                  </Link>
-                </Button>
-              ))}
-            </div>
-            <p className="text-sm text-zinc-400 dark:text-zinc-500">
-              © {currentYear} Samuel Pokam. All rights reserved.
-            </p>
+    <footer className="mt-20">
+      <div className="border-t border-zinc-100 py-10 dark:border-zinc-700/40">
+        <div className="flex flex-col items-center justify-between gap-3">
+          <div>
+            {navigationLinks.map((link, index) => (
+              <Button
+                variant="link"
+                key={index}
+                className="text-lg transition hover:text-primary"
+                asChild
+              >
+                <Link href={link.href}>{link.text}</Link>
+              </Button>
+            ))}
           </div>
+          <p className="text-muted-foreground">
+            © {currentYear} <HoveredCard />{" "}
+            <span className="text-primary">|</span> All rights reserved.
+          </p>
         </div>
-      </footer>
-    </>
+      </div>
+    </footer>
   )
 }
 

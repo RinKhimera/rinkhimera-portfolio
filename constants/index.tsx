@@ -180,7 +180,7 @@ export const stacks = [
     name: "PostgreSQL",
     href: "https://www.postgresql.org/",
     icon: (
-      <Image src={icons.postgresql} alt={"PostgreSQL"} className="h-8 w-8" />
+      <Image src={icons.postgresql} alt={"PostgreSQL"} className="h-9 w-9" />
     ),
   },
   {
@@ -198,7 +198,7 @@ export const stacks = [
   {
     name: "Git",
     href: "https://git-scm.com/",
-    icon: <Image src={icons.git} alt={"GitLab"} className="h-12 w-10" />,
+    icon: <Image src={icons.git} alt={"GitLab"} className="h-12 w-12" />,
   },
   {
     name: "GitHub",
