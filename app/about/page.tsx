@@ -87,7 +87,7 @@ const About = () => {
             <p>
               When I&apos;m not in front of my coding screen, I&apos;m probably
               watching an anime, hanging out with my family, or carrying my team
-              in the <b>Summoner&apos;s Rift</b> .
+              in the <b>Summoner&apos;s Rift.</b>
             </p>
           </motion.div>
         </div>
