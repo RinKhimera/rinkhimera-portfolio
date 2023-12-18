@@ -2,7 +2,7 @@ const TestComp = () => {
   return (
     <div className="max-w-2xl">
       <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-        Let&apos;s <span className="text-primary">connect</span> and discuss
+        Let&apos;s <span className="text-primary">SLEEEPL</span> and discuss
         your project ideas.
       </h1>
 
