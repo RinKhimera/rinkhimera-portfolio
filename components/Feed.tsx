@@ -2,6 +2,7 @@ import { FetchHeroArticles } from "@/lib/actions/action"
 import moment from "moment"
 import ArticleCardHero from "./ArticleCardHero"
 import ExperienceCard from "./ExperienceCard"
+import NewsletterCard from "./NewsletterCard"
 
 const Feed = async () => {
   const posts = await FetchHeroArticles()
@@ -27,7 +28,7 @@ const Feed = async () => {
               </div>
 
               <div className="-mt-[24px] space-y-8 lg:pl-12 xl:pl-20">
-                <ExperienceCard />
+                <NewsletterCard />
                 <ExperienceCard />
               </div>
             </div>

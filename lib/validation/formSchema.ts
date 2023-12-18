@@ -1,6 +1,6 @@
 import * as z from "zod"
 
-export const formSchema = z.object({
+export const contactValidation = z.object({
   name: z
     .string()
     .min(2, {
@@ -18,4 +18,8 @@ export const formSchema = z.object({
     .max(160, {
       message: "Message must not be longer than 30 characters.",
     }),
+})
+
+export const newsletterValidation = z.object({
+  email: z.string().email("Please enter a valid email address."),
 })

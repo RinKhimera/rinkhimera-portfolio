@@ -22,7 +22,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { ToastAction } from "@/components/ui/toast"
 import { toast } from "@/components/ui/use-toast"
-import { formSchema } from "@/lib/validation/formSchema"
+import { contactValidation } from "@/lib/validation/formSchema"
 import emailjs from "@emailjs/browser"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { motion } from "framer-motion"
@@ -34,8 +34,8 @@ import * as z from "zod"
 const Contact = () => {
   const [submitting, setSubmitting] = useState(false)
 
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof contactValidation>>({
+    resolver: zodResolver(contactValidation),
     defaultValues: {
       name: "",
       email: "",
@@ -43,7 +43,7 @@ const Contact = () => {
     },
   })
 
-  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+  const onSubmit = async (values: z.infer<typeof contactValidation>) => {
     console.log(values)
     setSubmitting(true)
     try {

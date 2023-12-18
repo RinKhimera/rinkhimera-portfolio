@@ -6,7 +6,7 @@ import { Briefcase, Download } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "./ui/button"
-import { Card } from "./ui/card"
+import { Card, CardHeader, CardTitle } from "./ui/card"
 
 const ExperienceCard = () => {
   return (
@@ -17,12 +17,14 @@ const ExperienceCard = () => {
       transition={{ duration: 0.25 }}
     >
       <Card className="max-w-2xl bg-zinc-50 p-6 transition hover:bg-zinc-100 dark:bg-zinc-800/50 dark:hover:bg-zinc-700/50">
-        <h2 className="flex font-semibold text-zinc-900 dark:text-zinc-100">
-          <Briefcase />
-          <span className="ml-3">Work</span>
-        </h2>
+        <CardHeader className="p-1">
+          <CardTitle className="flex items-center font-semibold text-zinc-900 dark:text-zinc-100 max-sm:text-lg">
+            <Briefcase />
+            <span className="ml-3">Work</span>
+          </CardTitle>
+        </CardHeader>
 
-        <ol className="mt-6 space-y-3">
+        <ol className="mt-4 space-y-3">
           {experienceData.map((item, index) => (
             <li className="flex gap-4" key={index}>
               <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
@@ -56,8 +58,7 @@ const ExperienceCard = () => {
         </ol>
 
         <Button
-          className="mt-7 w-full bg-primary text-base hover:bg-primary/50"
-          variant="outline"
+          className="mt-7 h-9 w-full bg-primary/90 text-base hover:bg-primary"
           asChild
         >
           <Link
@@ -66,7 +67,7 @@ const ExperienceCard = () => {
             rel="noopener noreferrer"
           >
             Download CV
-            <Download className="ml-2" />
+            <Download className="ml-2" size={20} />
           </Link>
         </Button>
       </Card>
