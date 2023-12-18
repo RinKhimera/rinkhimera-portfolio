@@ -28,6 +28,9 @@ yarn-error.log*
 .env*.local
 .env
 
+# contentlayer
+.contentlayer
+
 # vercel
 .vercel
 
