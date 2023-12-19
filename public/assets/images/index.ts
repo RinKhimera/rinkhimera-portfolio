@@ -7,7 +7,7 @@ import image4 from "./image-4.webp"
 import image5 from "./image-5.webp"
 import kouakam from "./kouakam.jpeg"
 import lombat from "./lombat.jpeg"
-import portrait from "./portrait.webp"
+import portrait from "./portrait.jpg"
 
 const images = {
   avatar,

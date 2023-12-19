@@ -123,7 +123,7 @@ const NewsletterCard = () => {
                   type="submit"
                 >
                   <Send className="mr-2" size={16} />
-                  Send
+                  Join
                 </Button>
               )}
             </form>

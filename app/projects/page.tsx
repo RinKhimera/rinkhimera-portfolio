@@ -33,7 +33,7 @@ const Projects = () => {
     >
       <div className="max-w-2xl">
         <motion.h1
-          className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl md:leading-tight"
+          className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl"
           // initial={{ opacity: 0, y: 15 }}
           // animate={{ opacity: 1, y: 0 }}
           // transition={{ duration: 0.4 }}
