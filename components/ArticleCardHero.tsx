@@ -12,7 +12,12 @@ type ArticleCardHeroProps = {
 }
 
 const ArticleCardHero = ({ title, content, date }: ArticleCardHeroProps) => {
-  const formattedTitle = title.toLowerCase().replace(/\s+/g, "-")
+  const formattedTitle = title
+    // Remove non-alphanumeric characters and convert to lowercase
+    .replace(/[^a-zA-Z0-9\s]/g, "")
+    .toLowerCase()
+    // Replace spaces with hyphens
+    .replace(/\s+/g, "-")
 
   return (
     <motion.article

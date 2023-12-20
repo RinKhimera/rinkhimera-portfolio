@@ -1,5 +1,9 @@
+"use client"
+
+import { motion } from "framer-motion"
 import { ChevronRight } from "lucide-react"
 import Link from "next/link"
+import { buttonVariants } from "./ui/button"
 
 type ArticleCardProps = {
   title: string
@@ -8,15 +12,29 @@ type ArticleCardProps = {
 }
 
 const ArticleCard = ({ title, content, date }: ArticleCardProps) => {
-  const formattedTitle = title.toLowerCase().replace(/\s+/g, "-")
+  const formattedTitle = title
+    // Remove non-alphanumeric characters and convert to lowercase
+    .replace(/[^a-zA-Z0-9\s]/g, "")
+    .toLowerCase()
+    // Replace spaces with hyphens
+    .replace(/\s+/g, "-")
 
   return (
-    <article className="md:grid md:grid-cols-4 md:items-baseline">
+    <motion.article
+      className="md:grid md:grid-cols-4 md:items-baseline"
+      initial={{ opacity: 0, x: -60 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ margin: "-100px" }}
+      transition={{ duration: 0.25, delay: 0.3 }}
+    >
       <div className="group relative flex flex-col items-start md:col-span-3">
-        <h2 className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
+        <h2 className="text-xl font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
           <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl"></div>
 
-          <Link href={`/blog/${formattedTitle}`}>
+          <Link
+            href={`/blog/${formattedTitle}`}
+            className={buttonVariants({ variant: "ghostLink", size: "empty" })}
+          >
             <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
             <span className="relative z-10">{title}</span>
           </Link>
@@ -53,7 +71,7 @@ const ArticleCard = ({ title, content, date }: ArticleCardProps) => {
       >
         {date}
       </time>
-    </article>
+    </motion.article>
   )
 }
 

@@ -1,10 +1,7 @@
 ---
-title: Samuel
-date: November 23, 2023
+title: From Markdown to Masterpiece - Styling Magic with Tailwind CSS
+date: December 21, 2023
 ---
-
-import Button from "../components/ui/button.tsx"
-import TestComp from "../components/TestComp.tsx"
 
 Until now, trying to style an article, document, or blog post with Tailwind has been a tedious task that required a keen eye for typography and a lot of complex custom CSS.
 
@@ -106,54 +103,29 @@ I think most people are going to use [highlight.js](https://highlightjs.org/) or
 Here's what a default `tailwind.config.js` file looks like at the time of writing:
 
 ```typescript
-const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
-    defaultValues: {
-      name: "",
-      email: "",
-      message: "",
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: ["class"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
+  theme: {
+    container: {
+      center: true,
+      padding: "2rem",
+      screens: {
+        "2xl": "1400px",
+      },
     },
-  })
-
-  const onSubmit = async (values: z.infer<typeof formSchema>) => {
-    console.log(values)
-    setSubmitting(true)
-    try {
-      const response = await emailjs.send(
-        "service_iv2dsuu",
-        "template_a1d1u5b",
-        values,
-        "lP_ZVVq19Vu28zuwB",
-      )
-      toast({
-        title: "Message Delivered",
-        description:
-          "We've received your message. You'll hear from us shortly. Thanks for contacting us!",
-        action: <ToastAction altText="Hooray">Hooray!</ToastAction>,
-      })
-      form.reset()
-      console.log("Success !!", response)
-    } catch (error: any) {
-      toast({
-        variant: "destructive",
-        title: "Oops! Something went wrong.",
-        description:
-          "We encountered a problem while submitting your information. Please check your network connection and try again.",
-        action: <ToastAction altText="Try again">Try again</ToastAction>,
-      })
-      console.error("Failed !!!", error)
-    } finally {
-      setSubmitting(false)
-    }
-  }
+  },
+  plugins: [require("@tailwindcss/typography")],
+}
 ```
 
 Hopefully that looks good enough to you.
-
-<p className="text-primary text-5xl">Hey There ! Read1111112222211111</p>
-
-<TestComp />
-
 
 ### What about nested lists?
 

@@ -1,0 +1,123 @@
+---
+title: What’s New in Next.js 14?
+date: October 31, 2023
+---
+
+The most recent version of the popular React Framework for building and developing web applications, Next.js 14, was released on October 26th, 2023. It promises to simplify and improve the speed of development making it an excellent choice for any developer out there that wants to begin building fast and scalable web applications.
+
+## Next.js 14 Updates and Improvements.
+
+Next.js 14 includes several updates and improvements which will make the development of web applications a lot faster, let’s look at some of the important updates and improvements:
+
+### Turbopack
+
+One of the major focuses of Next.js 14 was to improve the developer experience and make the development process faster. The Next.js team has been working on optimizing build times and improving Hot Module Replacement (HMR) updates.
+
+In Next.js 14, build times and first page loads are up to 53% faster thanks to the new **“Turbopack”** engine which is built using Rust. Turbopack compiles Next.js projects faster by leveraging multicore processing. Code updates with fast refresh via HMR are also significantly faster at up to 94.7% according to the Next.js team.
+
+While testing on `vercel.com`, a large Next.js application, we've seen:
+
+- Up to **53.3% faster** local server startup
+- Up to **94.7% faster** code updates with Fast Refresh
+
+To use Turbopack, you can run `next dev --turbo` in your terminal. You don’t need to change any code in your existing Next.js project to benefit from Turbopack.
+
+### Stable Server Actions
+
+Server Actions, also known as **Server Side Rendering (SSR) functions**, were introduced in Next.js 13 but they had some bugs and stability issues. In Next.js 14, Server Actions have reached production stability.
+
+You can now trigger server-side code securely with just a function defined in your React component. It simplifies your code and enhances the user experience by reducing the number of network roundtrips needed for data mutations and page re-rendering.
+
+> It’s a win-win for developers and users alike.
+
+```tsx
+// app/page.tsx
+
+export default function Page() {
+  async function create(formData: FormData) {
+    'use server'
+    await db.form.insertOne({ formData })
+  }
+  return (
+    <form action={create}>
+      <input type="text" name="name" />
+      <button type="submit">Submit</button>
+    </form>
+  )
+}
+```
+
+### Partial Prerendering
+
+Partial Prerendering is the new star in the Next.js 14 lineup. In a world where the debate between **SSR** and **SSG** rages on, Next.js brings you the best of both worlds. It provides a fast initial static response while streaming dynamic content based on your React Suspense boundaries.
+
+_The result?_ You get the performance of static sites and the dynamism of server-rendered apps.
+
+Here's how it works. Consider the following ecommerce page:
+
+```tsx
+// app/page.tsx
+
+export default function Page() {
+  return (
+    <main>
+      <header>
+        <h1>My Store</h1>
+        <Suspense fallback={<CartSkeleton />}>
+          <ShoppingCart />
+        </Suspense>
+      </header>
+      <Banner />
+      <Suspense fallback={<ProductListSkeleton />}>
+        <Recommendations />
+      </Suspense>
+      <NewProducts />
+    </main>
+  )
+}
+```
+
+With Partial Prerendering enabled, this page generates a static shell based on your `<Suspense />` boundaries. The `fallback` from React Suspense is prerendered.
+
+Suspense fallbacks in the shell are then replaced with dynamic components, like reading cookies to determine the cart, or showing a banner based on the user.
+
+### Metadata Improvements
+
+Before your page content can be streamed from the server, there’s important metadata about the **viewport**, **color scheme**, and **theme** that need to be sent to the browser first.
+
+Ensuring these `meta` tags are sent with the initial page content helps a smooth user experience, preventing the page from flickering by changing the theme color, or shifting layout due to viewport changes.
+
+In Next.js 14, decoupled blocking and non-blocking metadata. Only a small subset of metadata options are blocking, and Next.js want to ensure non-blocking metadata will not prevent a partially prerendered page from serving the static shell.
+
+The following `metadata` options are now deprecated and will be removed from metadata in a future major version:
+
+- `viewport`: Sets the initial zoom and other properties of the viewport
+- `colorScheme`: Sets the support modes (light/dark) for the viewport
+- `themeColor`: Sets the color the chrome around the viewport should render with
+
+### Next.js Learn
+
+<a href="https://nextjs.org/learn/" target="_blank">Next.js Learn</a> is a new interactive **free** course that teaches you about the foundations of the Next.js. It covers a range of topics, includes:
+
+- The Next.js App Router
+- Styling and Tailwind CSS
+- Optimizing Fonts and Images
+- Creating Layouts and Pages
+- Navigating Between Pages
+- Setting Up Your Postgres Database
+- Fetching Data with Server Components
+- Static and Dynamic Rendering
+- Streaming
+- Partial Prerendering (Optional)
+- Adding Search and Pagination
+- Mutating Data
+- Handling Errors
+- Improving Accessibility
+- Adding Authentication
+- Adding Metadata
+
+### Upgrading Considerations
+
+Next.js 14 is a non-breaking upgrade meaning existing Next.js apps will continue to work without issues after upgrading. However, developers need to update to the latest Next.js and React versions for some new features. The performance improvements are also automatically available without changes.
+
+In conclusion, Next.js 14 builds further on Next.js’ position as the leading choice for building fast, secure and optimized React apps at scale. Most developers should consider upgrading to get the latest developer tools and performance benefits.

@@ -1,7 +1,10 @@
-import { Mdx } from "@/components/mdx-components"
+import ArticleButton from "@/components/ArticleButton"
+import { Button } from "@/components/ui/button"
 import { allPosts } from "contentlayer/generated"
 import { format, parseISO } from "date-fns"
+import { ChevronLeft } from "lucide-react"
 import { useMDXComponent } from "next-contentlayer/hooks"
+import Link from "next/link"
 import { notFound } from "next/navigation"
 
 export async function generateStaticParams() {
@@ -15,25 +18,35 @@ const Article = ({ params }: { params: { articleId: string } }) => {
   const post = allPosts.find(
     (post) => post._raw.flattenedPath === params.articleId,
   )
-
   // 404 if the post does not exist.
   if (!post) notFound()
-
   // Parse the MDX file via the useMDXComponent hook.
   const MDXContent = useMDXComponent(post.body.code)
+
   return (
-    <article className="prose mx-auto max-w-2xl py-8 dark:prose-invert lg:prose-lg">
-      <div className="mb-8">
-        <time dateTime={post.date} className="mb-1 text-xs text-gray-600">
-          {format(parseISO(post.date), "LLLL d, yyyy")}
-        </time>
-        <h1>{post.title}</h1>
-        {/* <Mdx code={post.body.code} /> */}
-        <div className="">
+    <div className="mx-auto max-w-2xl py-8">
+      <ArticleButton />
+      {/* <Button
+        className="mb-6 flex h-12 w-12 rounded-full transition"
+        variant={"secondary"}
+        size={"icon"}
+        asChild
+      >
+        <Link href="/blog">
+          <ChevronLeft />
+        </Link>
+      </Button> */}
+
+      <article className="prose max-w-2xl dark:prose-invert lg:prose-lg">
+        <div className="mb-8">
+          <time dateTime={post.date} className="mb-1">
+            {format(parseISO(post.date), "LLLL d, yyyy")}
+          </time>
+          <h1>{post.title}</h1>
           <MDXContent />
         </div>
-      </div>
-    </article>
+      </article>
+    </div>
   )
 }
 

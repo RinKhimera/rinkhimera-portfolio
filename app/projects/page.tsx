@@ -32,23 +32,13 @@ const Projects = () => {
       transition={{ duration: 0.4 }}
     >
       <div className="max-w-2xl">
-        <motion.h1
-          className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl"
-          // initial={{ opacity: 0, y: 15 }}
-          // animate={{ opacity: 1, y: 0 }}
-          // transition={{ duration: 0.4 }}
-        >
+        <motion.h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
           A <span className="text-primary">collection</span> of my projects
           designed to make <span className="text-primary">waves</span> in the
           vast digital ocean.
         </motion.h1>
 
-        <motion.p
-          className="mt-6 text-base leading-loose text-zinc-600 dark:text-zinc-400"
-          // initial={{ opacity: 0, y: 15 }}
-          // animate={{ opacity: 1, y: 0 }}
-          // transition={{ duration: 0.4, delay: 0.3 }}
-        >
+        <motion.p className="mt-6 text-base leading-loose text-zinc-600 dark:text-zinc-400">
           I&apos;ve worked on tons of little projects over the years but these
           are the ones that I&apos;m most proud of. Many of them are
           open-source, so if you see something that piques your interest, check
@@ -71,7 +61,7 @@ const Projects = () => {
               whileInView={{
                 opacity: 1,
                 y: 0,
-                transition: { duration: 0.4, delay: 0 },
+                transition: { duration: 0.4 },
               }}
               whileHover={{
                 scale: 1.04,
