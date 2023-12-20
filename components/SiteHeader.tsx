@@ -29,7 +29,7 @@ const SiteHeader = () => {
           className={buttonVariants({ variant: "ghost", size: "empty" })}
         >
           <Avatar>
-            <AvatarImage src="/assets/images/avatar.webp" alt="@shadcn" />
+            <AvatarImage src="/assets/images/avatar.jpg" alt="Samuel logo" />
             <AvatarFallback>SP</AvatarFallback>
           </Avatar>
         </Link>
