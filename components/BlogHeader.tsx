@@ -12,11 +12,11 @@ const BlogHeader = () => {
     >
       <p className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
         Thoughts <span className="text-primary">shared</span>, creativity{" "}
-        <span className="text-primary">ignited</span>
+        <span className="text-primary">ignited!</span>
       </p>
       <p className="mt-6 text-base leading-loose text-zinc-600 dark:text-zinc-400">
         Embark on a journey through our blog, where insightful articles and
-        creative musings come together
+        creative musings come together.
       </p>
     </motion.div>
   )

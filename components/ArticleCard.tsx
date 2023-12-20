@@ -24,8 +24,8 @@ const ArticleCard = ({ title, content, date }: ArticleCardProps) => {
       className="md:grid md:grid-cols-4 md:items-baseline"
       initial={{ opacity: 0, x: -60 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ margin: "-100px" }}
-      transition={{ duration: 0.25, delay: 0.3 }}
+      viewport={{ margin: "-50px" }}
+      transition={{ duration: 0.3, delay: 0.3 }}
     >
       <div className="group relative flex flex-col items-start md:col-span-3">
         <h2 className="text-xl font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
