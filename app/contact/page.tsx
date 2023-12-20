@@ -89,7 +89,8 @@ const Contact = () => {
         </h1>
 
         <p className="mt-6 text-base leading-loose text-zinc-600 dark:text-zinc-400">
-          Ready to bring your ideas to life with my full-stack skills.
+          Innovation starts with a conversation. Share your project, and
+          let&apos;s create something extraordinary.
         </p>
       </div>
 
@@ -102,7 +103,7 @@ const Contact = () => {
           <CardHeader>
             <CardTitle className="text-primary">Information Details</CardTitle>
             <CardDescription>
-              Your message is the first step to a great collaboration.
+              Every project has a story. Let&apos;s write yours together!
             </CardDescription>
           </CardHeader>
 
@@ -158,7 +159,7 @@ const Contact = () => {
                       <FormLabel>Message</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="Tell us a little bit about yourself"
+                          placeholder="Tell me a little bit about yourself"
                           disabled
                           className="resize-none"
                           {...field}

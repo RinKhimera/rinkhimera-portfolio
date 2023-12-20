@@ -22,14 +22,14 @@ const Article = ({ params }: { params: { articleId: string } }) => {
   // Parse the MDX file via the useMDXComponent hook.
   const MDXContent = useMDXComponent(post.body.code)
   return (
-    <article className="mx-auto max-w-2xl py-8">
+    <article className="prose mx-auto max-w-2xl py-8 dark:prose-invert lg:prose-lg">
       <div className="mb-8">
         <time dateTime={post.date} className="mb-1 text-xs text-gray-600">
           {format(parseISO(post.date), "LLLL d, yyyy")}
         </time>
         <h1>{post.title}</h1>
         {/* <Mdx code={post.body.code} /> */}
-        <div className="prose dark:prose-invert lg:prose-lg">
+        <div className="">
           <MDXContent />
         </div>
       </div>
