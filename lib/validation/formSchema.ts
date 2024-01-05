@@ -16,7 +16,7 @@ export const contactValidation = z.object({
       message: "Message must be at least 10 characters.",
     })
     .max(160, {
-      message: "Message must not be longer than 30 characters.",
+      message: "Message must not be longer than 160 characters.",
     }),
 })
 
