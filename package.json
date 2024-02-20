@@ -1,5 +1,5 @@
 {
-  "name": "test-nextthemes-shadcnui",
+  "name": "rinkhimera-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,9 +10,10 @@
     "postinstall": "prisma generate"
   },
   "dependencies": {
+    "@auth/prisma-adapter": "^1.4.0",
     "@emailjs/browser": "^3.11.0",
     "@hookform/resolvers": "^3.3.1",
-    "@prisma/client": "^5.6.0",
+    "@prisma/client": "^5.9.1",
     "@radix-ui/react-avatar": "^1.0.3",
     "@radix-ui/react-dialog": "^1.0.4",
     "@radix-ui/react-dropdown-menu": "^2.0.5",
@@ -34,7 +35,8 @@
     "framer-motion": "^10.16.5",
     "lucide-react": "^0.274.0",
     "moment": "^2.29.4",
-    "next": "^14.0.4",
+    "next": "^14.1.0",
+    "next-auth": "5.0.0-beta.4",
     "next-contentlayer": "^0.3.4",
     "next-themes": "^0.2.1",
     "postcss": "^8.4.31",
@@ -57,7 +59,7 @@
     "@tailwindcss/typography": "^0.5.10",
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.4",
-    "prisma": "^5.6.0"
+    "prisma": "^5.9.1"
   },
   "overrides": {
     "next-contentlayer": {
