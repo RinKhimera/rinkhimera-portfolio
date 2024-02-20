@@ -1,11 +1,11 @@
-import { FetchHeroArticles } from "@/lib/actions/action"
+import { fetchHeroArticles } from "@/lib/actions/action"
 import moment from "moment"
 import ArticleCardHero from "./ArticleCardHero"
 import ExperienceCard from "./ExperienceCard"
 import NewsletterCard from "./NewsletterCard"
 
 const Feed = async () => {
-  const posts = await FetchHeroArticles()
+  const posts = await fetchHeroArticles()
 
   return (
     <div className="mt-24 md:mt-28">

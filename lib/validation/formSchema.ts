@@ -23,3 +23,15 @@ export const contactValidation = z.object({
 export const newsletterValidation = z.object({
   email: z.string().email("Please enter a valid email address."),
 })
+
+export const guestbookValidation = z.object({
+  message: z
+    .string()
+    .trim()
+    .min(1, {
+      message: "This input is required.",
+    })
+    .max(160, {
+      message: "Message must not be longer than 160 characters.",
+    }),
+})

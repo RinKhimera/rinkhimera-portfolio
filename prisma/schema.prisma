@@ -19,3 +19,12 @@ model Post {
   updatedAt DateTime @updatedAt
   published Boolean  @default(false)
 }
+
+model Guest {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  image     String?
+  message   String
+  createdAt DateTime @default(now())
+}
