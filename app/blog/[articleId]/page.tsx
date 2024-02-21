@@ -26,17 +26,6 @@ const Article = ({ params }: { params: { articleId: string } }) => {
   return (
     <div className="mx-auto max-w-2xl py-8">
       <ArticleButton />
-      {/* <Button
-        className="mb-6 flex h-12 w-12 rounded-full transition"
-        variant={"secondary"}
-        size={"icon"}
-        asChild
-      >
-        <Link href="/blog">
-          <ChevronLeft />
-        </Link>
-      </Button> */}
-
       <article className="prose max-w-2xl dark:prose-invert lg:prose-lg">
         <div className="mb-8">
           <time dateTime={post.date} className="mb-1">

@@ -14,8 +14,7 @@ import { Input } from "@/components/ui/input"
 import { addSignature } from "@/lib/actions/action"
 import { guestbookValidation } from "@/lib/validation/formSchema"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { signOut } from "next-auth/react"
-import { revalidatePath } from "next/cache"
+import { Loader2, PenLine } from "lucide-react"
 import { useTransition } from "react"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
@@ -33,12 +32,12 @@ const GuestBookForm = () => {
   const onSubmit = async (values: z.infer<typeof guestbookValidation>) => {
     startTransition(() => {
       addSignature(values)
-      // revalidatePath("/guestbook")
+      form.reset()
     })
   }
 
   return (
-    <div>
+    <div className="mb-5">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
           <FormField
@@ -50,14 +49,24 @@ const GuestBookForm = () => {
                 <FormControl>
                   <Input placeholder="Your message..." {...field} />
                 </FormControl>
-                <FormDescription>
-                  This is your public display name.
-                </FormDescription>
+                <FormDescription>Leave a lasting impression!</FormDescription>
                 <FormMessage />
               </FormItem>
             )}
           />
-          <Button type="submit">Sign</Button>
+          <Button type="submit" disabled={isPending}>
+            {isPending ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                Please wait
+              </>
+            ) : (
+              <>
+                <PenLine className="mr-2" size={20} />
+                Sign
+              </>
+            )}
+          </Button>
         </form>
       </Form>
     </div>

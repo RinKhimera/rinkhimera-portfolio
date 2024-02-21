@@ -8,8 +8,11 @@ export const SocialLogin = async () => {
 
   if (session) {
     return (
-      <div className="mb-5">
-        <h2>You are signed in as {session.user?.name}</h2>
+      <div className="mb-5 space-y-1">
+        <h2>
+          You are signed in as{" "}
+          <span className="font-semibold">{session.user?.name}.</span>
+        </h2>
         <form
           action={async () => {
             "use server"
@@ -25,7 +28,7 @@ export const SocialLogin = async () => {
   }
 
   return (
-    <div className="mb-5">
+    <div className="mb-5 space-y-1">
       <h2>Sign In to leave a message!</h2>
 
       <div className="flex gap-2">

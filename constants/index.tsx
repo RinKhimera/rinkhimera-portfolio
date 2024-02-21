@@ -1,5 +1,4 @@
 import icons from "@/public/assets/icons"
-import images from "@/public/assets/images"
 import logos from "@/public/assets/logos"
 import projectsImage from "@/public/assets/projects"
 import Image from "next/image"
@@ -9,6 +8,7 @@ export const navigationLinks = [
   { href: "/projects", text: "Projects" },
   { href: "/contact", text: "Contact" },
   { href: "/blog", text: "Blog" },
+  { href: "/guestbook", text: "Guestbook" },
 ]
 
 export const projects = [

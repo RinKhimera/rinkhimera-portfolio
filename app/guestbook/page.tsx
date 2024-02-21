@@ -3,7 +3,6 @@ import GuestBookForm from "@/components/GuestBookForm"
 import GuestCard from "@/components/GuestCard"
 import { MotionDiv } from "@/components/MotionDiv"
 import { SocialLogin } from "@/components/SocialLogin"
-import { Button } from "@/components/ui/button"
 import { fetchAllSignatures } from "@/lib/actions/action"
 
 const GuestBook = async () => {
@@ -25,24 +24,23 @@ const GuestBook = async () => {
           Leave a lasting impression! Sign my guestbook and let me know you were
           here.
         </p>
-        {/* <div>{JSON.stringify(session)}</div> */}
       </MotionDiv>
 
       <MotionDiv
-        className="mt-8 sm:mt-10"
+        className="mt-8 max-w-3xl sm:mt-10"
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
       >
         <SocialLogin />
         {session && <GuestBookForm />}
-        <div className="flex flex-col space-y-2">
+        <div className="flex flex-col space-y-3">
           {allSignatures.map((signature) => (
             <GuestCard
               key={signature.id}
               name={signature.name}
               image={signature.image}
-              message={""}
+              message={signature.message}
               date={signature.createdAt}
             />
           ))}

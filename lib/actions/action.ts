@@ -2,6 +2,7 @@
 
 import { auth } from "@/auth"
 import prisma from "@/prisma/db"
+import { revalidatePath } from "next/cache"
 import { z } from "zod"
 import { guestbookValidation } from "../validation/formSchema"
 
@@ -30,6 +31,7 @@ export const addSignature = async (
         message: values.message,
       },
     })
+    revalidatePath("/guestbook")
   } catch (error) {
     console.error("Error creating guest signature:", error)
   }
@@ -37,7 +39,10 @@ export const addSignature = async (
 
 export const fetchAllSignatures = async () => {
   try {
-    const allSignatures = await prisma.guest.findMany()
+    const allSignatures = await prisma.guest.findMany({
+      orderBy: { createdAt: "desc" },
+      take: 80,
+    })
 
     return allSignatures
   } catch (error) {

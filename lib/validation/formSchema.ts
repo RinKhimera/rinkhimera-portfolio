@@ -31,7 +31,7 @@ export const guestbookValidation = z.object({
     .min(1, {
       message: "This input is required.",
     })
-    .max(160, {
-      message: "Message must not be longer than 160 characters.",
+    .max(120, {
+      message: "Message must not be longer than 120 characters.",
     }),
 })
