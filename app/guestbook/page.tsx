@@ -1,14 +1,11 @@
-import { auth } from "@/auth"
 import GuestBookForm from "@/components/GuestBookForm"
 import GuestCard from "@/components/GuestCard"
 import { MotionDiv } from "@/components/MotionDiv"
 import { SocialLogin } from "@/components/SocialLogin"
-import { fetchAllSignatures } from "@/lib/actions/action"
+import { Suspense } from "react"
+import Loading from "./loading"
 
-const GuestBook = async () => {
-  const session = await auth()
-  const allSignatures = await fetchAllSignatures()
-
+const GuestBook = () => {
   return (
     <div className="mt-10 min-h-full sm:mt-16 lg:mt-20">
       <MotionDiv
@@ -33,18 +30,10 @@ const GuestBook = async () => {
         transition={{ duration: 0.5, delay: 0.3 }}
       >
         <SocialLogin />
-        {session && <GuestBookForm />}
-        <div className="flex flex-col space-y-3">
-          {allSignatures.map((signature) => (
-            <GuestCard
-              key={signature.id}
-              name={signature.name}
-              image={signature.image}
-              message={signature.message}
-              date={signature.createdAt}
-            />
-          ))}
-        </div>
+        <GuestBookForm />
+        <Suspense fallback={<Loading />}>
+          <GuestCard />
+        </Suspense>
       </MotionDiv>
     </div>
   )
