@@ -11,10 +11,10 @@ const SkeletonItem = () => (
     <Skeleton className="h-12 w-12 rounded-full" />
     <div className="w-full space-y-3">
       <div className="flex justify-between">
-        <Skeleton className="h-4 w-[200px]" />
-        <Skeleton className="h-4 w-[200px]" />
+        <Skeleton className="h-4 w-[140px] md:w-[200px]" />
+        <Skeleton className="h-4 w-[160px] max-sm:hidden" />
       </div>
-      <Skeleton className="h-4 w-[300px]" />
+      <Skeleton className="h-4 w-[240px] md:w-[300px]" />
     </div>
   </div>
 )

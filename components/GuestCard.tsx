@@ -20,8 +20,8 @@ const GuestCard = async () => {
           </div>
           <div className="w-full">
             <div className="flex justify-between text-muted-foreground">
-              <h3 className="">{signature.name}</h3>
-              <time className="italic">
+              <h3>{signature.name}</h3>
+              <time className="italic max-sm:hidden">
                 {format(signature.createdAt, "PPp")}
               </time>
             </div>
