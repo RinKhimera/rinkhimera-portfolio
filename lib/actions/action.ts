@@ -38,6 +38,8 @@ export const addSignature = async (
 }
 
 export const fetchAllSignatures = async () => {
+  // await new Promise((resolve) => setTimeout(resolve, 8000))
+
   try {
     const allSignatures = await prisma.guest.findMany({
       orderBy: { createdAt: "desc" },

@@ -1,11 +1,35 @@
+import { auth } from "@/auth"
 import GuestBookForm from "@/components/GuestBookForm"
 import GuestCard from "@/components/GuestCard"
 import { MotionDiv } from "@/components/MotionDiv"
 import { SocialLogin } from "@/components/SocialLogin"
+import { Skeleton } from "@/components/ui/skeleton"
 import { Suspense } from "react"
-import Loading from "./loading"
 
-const GuestBook = () => {
+const SkeletonItem = () => (
+  <div className="flex items-center space-x-3">
+    <Skeleton className="h-12 w-12 rounded-full" />
+    <div className="w-full space-y-3">
+      <div className="flex justify-between">
+        <Skeleton className="h-4 w-[200px]" />
+        <Skeleton className="h-4 w-[200px]" />
+      </div>
+      <Skeleton className="h-4 w-[300px]" />
+    </div>
+  </div>
+)
+
+const Loading = () => (
+  <div className="flex flex-col space-y-3">
+    {[...Array(4)].map((_, index) => (
+      <SkeletonItem key={index} />
+    ))}
+  </div>
+)
+
+const GuestBook = async () => {
+  const session = await auth()
+
   return (
     <div className="mt-10 min-h-full sm:mt-16 lg:mt-20">
       <MotionDiv
@@ -30,7 +54,7 @@ const GuestBook = () => {
         transition={{ duration: 0.5, delay: 0.3 }}
       >
         <SocialLogin />
-        <GuestBookForm />
+        {session && <GuestBookForm />}
         <Suspense fallback={<Loading />}>
           <GuestCard />
         </Suspense>
