@@ -1,10 +1,7 @@
 import ArticleButton from "@/components/ArticleButton"
-import { Button } from "@/components/ui/button"
 import { allPosts } from "contentlayer/generated"
 import { format, parseISO } from "date-fns"
-import { ChevronLeft } from "lucide-react"
 import { useMDXComponent } from "next-contentlayer/hooks"
-import Link from "next/link"
 import { notFound } from "next/navigation"
 
 export async function generateStaticParams() {
