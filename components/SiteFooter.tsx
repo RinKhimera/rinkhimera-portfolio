@@ -1,7 +1,7 @@
+import HoveredCard from "@/components/HoveredCard"
+import { Button } from "@/components/ui/button"
 import { navigationLinks } from "@/constants"
 import Link from "next/link"
-import HoveredCard from "./HoveredCard"
-import { Button } from "./ui/button"
 
 const SiteFooter = () => {
   const getCurrentYear = () => {
@@ -13,7 +13,7 @@ const SiteFooter = () => {
     <footer className="mt-20">
       <div className="border-t border-zinc-100 py-10 dark:border-zinc-700/40">
         <div className="flex flex-col items-center justify-between gap-3">
-          <div>
+          <div className="flex flex-wrap justify-center">
             {navigationLinks.map((link, index) => (
               <Button
                 variant="link"

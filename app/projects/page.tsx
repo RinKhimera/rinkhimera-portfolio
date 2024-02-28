@@ -47,10 +47,10 @@ const Projects = () => {
         variants={container}
         initial="hidden"
         animate="show"
-        className="mt-8 grid max-w-5xl gap-5 rounded-lg border border-zinc-300 bg-card p-5 text-card-foreground shadow-sm dark:border-zinc-800 md:grid-cols-2 xl:grid-cols-3"
+        className="mt-8 grid max-w-5xl gap-5 rounded-lg border border-zinc-300 p-5 text-card-foreground shadow-sm dark:border-zinc-800 md:grid-cols-2 xl:grid-cols-3"
       >
         {projects.map((project) => (
-          <MotionDiv key={project.name} variants={item} className="grid">
+          <MotionDiv key={project.name} variants={item}>
             <ProjectCard
               name={project.name}
               imageSrc={project.imageSrc}
