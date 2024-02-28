@@ -1,7 +1,7 @@
 "use client"
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Button, buttonVariants } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
 import { navigationLinks } from "@/constants"
 import { cn } from "@/lib/utils"
 import { motion } from "framer-motion"
@@ -14,12 +14,8 @@ import MobileMenu from "./MobileMenu"
 import { ModeToggle } from "./theme-toggle"
 
 const SiteHeader = () => {
-  const pathname = usePathname()
   const [hoveredLink, setHoveredLink] = useState<string | null>(null)
-
-  const handleLinkHover = (index: string | null) => {
-    setHoveredLink(index)
-  }
+  const pathname = usePathname()
 
   return (
     <header>
@@ -35,27 +31,39 @@ const SiteHeader = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <nav className="rounded-full bg-white/90 px-3 font-medium shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10 max-lg:hidden">
+        <nav className="space-x-1 rounded-3xl border border-muted px-3 py-1.5 font-medium max-lg:hidden">
           {navigationLinks.map((link) => (
-            <Button
+            <Link
+              className={cn(
+                "relative transform-gpu px-2 py-1 transition-all",
+                {
+                  "blur-sm": hoveredLink !== null && hoveredLink !== link.href,
+                  "text-gray-500":
+                    hoveredLink !== null &&
+                    hoveredLink !== link.href &&
+                    link.href !== pathname,
+                },
+                buttonVariants({
+                  variant: "ghostLink",
+                  size: "navLinks",
+                }),
+              )}
               key={link.href}
-              variant="link"
-              size="navLinks"
-              onMouseEnter={() => handleLinkHover(link.href)}
+              href={link.href}
+              onMouseEnter={() => setHoveredLink(link.href)}
               onMouseLeave={() => setHoveredLink(null)}
-              className={cn("transition", {
-                "text-primary": pathname === link.href,
-                "blur-[0.7px]":
-                  hoveredLink !== null && hoveredLink !== link.href,
-                "text-gray-500":
-                  hoveredLink !== null &&
-                  hoveredLink !== link.href &&
-                  link.href !== pathname,
-              })}
-              asChild
             >
-              <Link href={link.href}>{link.text}</Link>
-            </Button>
+              {pathname === link.href && (
+                <motion.div
+                  layoutId="active"
+                  className="absolute inset-0 rounded-3xl bg-primary/40 backdrop-blur-sm dark:bg-primary/60"
+                  transition={{ type: "spring", duration: "0.6" }}
+                />
+              )}
+              <span className="relative z-10">{link.text}</span>
+              {/* <div>{link.text}</div> */}
+              {/* <Link href={link.href}>{link.text}</Link> */}
+            </Link>
           ))}
         </nav>
 
