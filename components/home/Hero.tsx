@@ -1,7 +1,5 @@
-"use client"
-
+import { MotionDiv, MotionH1, MotionSpan } from "@/components/MotionFragment"
 import images from "@/public/assets/images"
-import { motion } from "framer-motion"
 import Image from "next/image"
 
 const imageSources = [
@@ -17,27 +15,27 @@ const Hero = () => {
     <div className="mb-[450px] max-w-4xl max-sm:mb-[370px]">
       <div className="flex w-full flex-col space-y-10">
         <h1 className="text-5xl font-bold tracking-tight md:text-8xl">
-          <motion.span
+          <MotionSpan
             className="block"
             initial={{ opacity: 0, x: -60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.25, delay: 0 }}
           >
             Hey! I&apos;m
-          </motion.span>
+          </MotionSpan>
 
-          <motion.span
+          <MotionSpan
             className="block"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.25, delay: 0 }}
           >
             <span className="text-primary">Samuel Pokam</span>
-          </motion.span>
+          </MotionSpan>
         </h1>
 
         <div className="flex flex-row-reverse">
-          <motion.h2
+          <MotionH1
             className="max-w-2xl text-end text-2xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 md:text-4xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -46,12 +44,12 @@ const Hero = () => {
             — a software engineer, web developer, and{" "}
             <span className="text-blue-600">TypeScript </span>
             enthusiast.
-          </motion.h2>
+          </MotionH1>
         </div>
       </div>
 
       <div className="absolute left-0 right-0 mt-16 sm:mt-10">
-        <motion.div
+        <MotionDiv
           className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -72,7 +70,7 @@ const Hero = () => {
               />
             </div>
           ))}
-        </motion.div>
+        </MotionDiv>
       </div>
     </div>
   )

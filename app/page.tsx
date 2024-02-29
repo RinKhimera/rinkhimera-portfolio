@@ -1,6 +1,6 @@
-import Cta from "@/components/Cta"
-import Feed from "@/components/Feed"
-import Hero from "@/components/Hero"
+import Cta from "@/components/home/Cta"
+import Feed from "@/components/home/Feed"
+import Hero from "@/components/home/Hero"
 
 export default function Home() {
   return (

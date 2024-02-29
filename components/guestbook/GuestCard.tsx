@@ -5,6 +5,15 @@ import { format } from "date-fns"
 const GuestCard = async () => {
   const allSignatures = await fetchAllSignatures()
 
+  const createInitials = (name: string): string => {
+    const words = name.split(" ")
+    const initials = words
+      .slice(0, 2)
+      .map((word) => word.charAt(0).toUpperCase())
+      .join("")
+    return initials
+  }
+
   return (
     <div className="flex flex-col space-y-3">
       {allSignatures.map((signature) => (
@@ -15,7 +24,7 @@ const GuestCard = async () => {
                 src={signature.image as string | undefined}
                 alt="Profile picture"
               />
-              <AvatarFallback>XO</AvatarFallback>
+              <AvatarFallback>{createInitials(signature.name)}</AvatarFallback>
             </Avatar>
           </div>
           <div className="w-full">

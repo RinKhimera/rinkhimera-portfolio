@@ -61,8 +61,6 @@ const SiteHeader = () => {
                 />
               )}
               <span className="relative z-10">{link.text}</span>
-              {/* <div>{link.text}</div> */}
-              {/* <Link href={link.href}>{link.text}</Link> */}
             </Link>
           ))}
         </nav>

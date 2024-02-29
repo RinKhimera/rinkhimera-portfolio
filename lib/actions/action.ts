@@ -17,6 +17,16 @@ export const fetchHeroArticles = async () => {
   return posts
 }
 
+export const fetchBlogArticles = async () => {
+  const posts = await prisma.post.findMany({
+    orderBy: {
+      createdAt: "desc",
+    },
+  })
+
+  return posts
+}
+
 export const addSignature = async (
   values: z.infer<typeof guestbookValidation>,
 ) => {

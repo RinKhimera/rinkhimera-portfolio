@@ -1,4 +1,4 @@
-import ArticleButton from "@/components/ArticleButton"
+import ArticleButton from "@/components/blog/ArticleButton"
 import { allPosts } from "contentlayer/generated"
 import { format, parseISO } from "date-fns"
 import { useMDXComponent } from "next-contentlayer/hooks"

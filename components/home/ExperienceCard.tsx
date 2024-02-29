@@ -1,16 +1,14 @@
-"use client"
-
+import { MotionDiv } from "@/components/MotionFragment"
+import { Button } from "@/components/ui/button"
 import { experienceData } from "@/constants"
-import { motion } from "framer-motion"
 import { Briefcase, Download } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { Button } from "./ui/button"
-import { Card, CardHeader, CardTitle } from "./ui/card"
+import { Card, CardHeader, CardTitle } from "../ui/card"
 
 const ExperienceCard = () => {
   return (
-    <motion.div
+    <MotionDiv
       initial={{ opacity: 0, x: 60 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ margin: "-100px", once: true }}
@@ -71,7 +69,7 @@ const ExperienceCard = () => {
           </Link>
         </Button>
       </Card>
-    </motion.div>
+    </MotionDiv>
   )
 }
 

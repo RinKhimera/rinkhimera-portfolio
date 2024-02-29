@@ -1,4 +1,4 @@
-import { MotionDiv } from "@/components/MotionDiv"
+import { MotionDiv } from "@/components/MotionFragment"
 import ProjectCard from "@/components/projects/ProjectCard"
 import { projects } from "@/constants"
 

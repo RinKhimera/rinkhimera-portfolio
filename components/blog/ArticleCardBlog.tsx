@@ -1,17 +1,15 @@
-"use client"
-
-import { motion } from "framer-motion"
+import { MotionArticle } from "@/components/MotionFragment"
+import { buttonVariants } from "@/components/ui/button"
 import { ChevronRight } from "lucide-react"
 import Link from "next/link"
-import { buttonVariants } from "./ui/button"
 
-type ArticleCardProps = {
+type ArticleCardBlogProps = {
   title: string
   content: string | null
   date: string
 }
 
-const ArticleCard = ({ title, content, date }: ArticleCardProps) => {
+const ArticleCardBlog = ({ title, content, date }: ArticleCardBlogProps) => {
   const formattedTitle = title
     // Remove non-alphanumeric characters and convert to lowercase
     .replace(/[^a-zA-Z0-9\s]/g, "")
@@ -20,11 +18,11 @@ const ArticleCard = ({ title, content, date }: ArticleCardProps) => {
     .replace(/\s+/g, "-")
 
   return (
-    <motion.article
+    <MotionArticle
       className="md:grid md:grid-cols-4 md:items-baseline"
       initial={{ opacity: 0, x: -60 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ margin: "-50px" }}
+      viewport={{ margin: "-50px", once: true }}
       transition={{ duration: 0.3, delay: 0.3 }}
     >
       <div className="group relative flex flex-col items-start md:col-span-3">
@@ -71,8 +69,8 @@ const ArticleCard = ({ title, content, date }: ArticleCardProps) => {
       >
         {date}
       </time>
-    </motion.article>
+    </MotionArticle>
   )
 }
 
-export default ArticleCard
+export default ArticleCardBlog

@@ -10,7 +10,7 @@ const Feed = async () => {
   return (
     <div className="mt-24 md:mt-28">
       <div className="mx-auto w-full max-w-7xl">
-        <div className="relative">
+        <div className="">
           <div className="mx-auto max-w-2xl lg:max-w-5xl">
             <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
               <div className="flex flex-col gap-12">

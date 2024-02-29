@@ -1,5 +1,7 @@
 "use client"
 
+import { MotionDiv } from "@/components/MotionFragment"
+import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
@@ -22,12 +24,10 @@ import { toast } from "@/components/ui/use-toast"
 import { newsletterValidation } from "@/lib/validation/formSchema"
 import emailjs from "@emailjs/browser"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { motion } from "framer-motion"
 import { Loader2, Mail, Send } from "lucide-react"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
-import { Button } from "./ui/button"
 
 const NewsletterCard = () => {
   const [submitting, setSubmitting] = useState(false)
@@ -72,7 +72,7 @@ const NewsletterCard = () => {
   }
 
   return (
-    <motion.div
+    <MotionDiv
       initial={{ opacity: 0, x: 60 }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ margin: "-100px", once: true }}
@@ -130,7 +130,7 @@ const NewsletterCard = () => {
           </Form>
         </CardContent>
       </Card>
-    </motion.div>
+    </MotionDiv>
   )
 }
 

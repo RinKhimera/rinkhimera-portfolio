@@ -1,6 +1,4 @@
-"use client"
-
-import { motion } from "framer-motion"
+import { MotionDiv, MotionH1 } from "@/components/MotionFragment"
 import { ArrowDownCircle } from "lucide-react"
 
 const Cta = () => {
@@ -20,14 +18,14 @@ const Cta = () => {
   }
 
   return (
-    <motion.div
+    <MotionDiv
       className="mt-14 flex flex-col items-center space-y-8"
       variants={container}
       initial="hidden"
       whileInView="show"
       viewport={{ margin: "-200px" }}
     >
-      <motion.h1
+      <MotionH1
         className="mx-auto max-w-2xl text-center text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl"
         variants={item}
       >
@@ -35,9 +33,9 @@ const Cta = () => {
         <span className="text-primary">portfolio</span> awaits, offering a
         curated display of my <span className="text-primary">expertise</span>{" "}
         and <span className="text-primary">creative endeavors.</span>
-      </motion.h1>
+      </MotionH1>
 
-      <motion.div
+      <MotionDiv
         className="p-3 transition-colors hover:text-primary"
         variants={item}
         whileHover={{
@@ -47,8 +45,8 @@ const Cta = () => {
         }}
       >
         <ArrowDownCircle size={80} />
-      </motion.div>
-    </motion.div>
+      </MotionDiv>
+    </MotionDiv>
   )
 }
 
