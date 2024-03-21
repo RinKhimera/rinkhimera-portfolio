@@ -46,7 +46,7 @@ const ArticleCardHero = ({ title, content, date }: ArticleCardHeroProps) => {
         {date}
       </time>
 
-      <p className="relative z-10 mt-2 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+      <p className="relative z-10 mt-2 line-clamp-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
         {content}
       </p>
 

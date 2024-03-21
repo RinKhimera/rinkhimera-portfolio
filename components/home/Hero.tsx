@@ -33,7 +33,7 @@ const Hero = () => {
           Welcome to my world, where pixel-perfect craftsmanship meets seamless
           functionality. Specializing in scalable real-time systems and
           networking innovation, I bring your vision to life with precision and
-          flair.
+          flair!
         </p>
       </MotionDiv>
 
