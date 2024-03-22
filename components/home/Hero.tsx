@@ -37,7 +37,7 @@ const Hero = () => {
         </p>
       </MotionDiv>
 
-      {/* <div className="absolute left-0 right-0 mt-16 sm:mt-10">
+      <div className="absolute left-0 right-0 mt-16 sm:mt-10">
         <MotionDiv
           className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8"
           initial={{ opacity: 0, y: 20 }}
@@ -55,12 +55,12 @@ const Hero = () => {
                 src={src}
                 alt={`Image-${index + 1}`}
                 className="absolute inset-0 h-full w-full object-cover"
-                placeholder="blur"
+                priority={true}
               />
             </div>
           ))}
         </MotionDiv>
-      </div> */}
+      </div>
     </div>
   )
 }
