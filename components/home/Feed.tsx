@@ -1,7 +1,8 @@
+import ArticleCardHero from "@/components/home/ArticleCardHero"
 import { CodeActivityCard } from "@/components/home/CodeActivityCard"
 import { fetchHeroArticles } from "@/lib/actions/action"
 import moment from "moment"
-import ArticleCardHero from "./ArticleCardHero"
+import DateCard from "./DateCard"
 import ExperienceCard from "./ExperienceCard"
 import NewsletterCard from "./NewsletterCard"
 
@@ -25,13 +26,15 @@ const Feed = async () => {
           })}
         </div>
 
-        <div className="max-xl:mt-10 max-xl:h-[600px] xl:flex-1">
+        <div className="h-[650px] max-xl:mt-10 xl:h-[700px] xl:flex-1">
           <div className="grid h-full grid-cols-6 grid-rows-6 gap-3">
             <div className="col-span-3 row-span-4">
               <CodeActivityCard />
             </div>
 
-            <div className="col-span-3 row-span-2 bg-blue-50 text-black">2</div>
+            <div className="col-span-3 row-span-2">
+              <DateCard />
+            </div>
 
             <div className="col-span-3 row-span-2 bg-yellow-50 text-black">
               3
