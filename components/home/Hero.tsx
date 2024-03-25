@@ -40,9 +40,9 @@ const Hero = () => {
       <div className="absolute left-0 right-0 mt-16 sm:mt-10">
         <MotionDiv
           className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
+          transition={{ duration: 0.4 }}
         >
           {imageSources.map((src, index) => (
             <div
