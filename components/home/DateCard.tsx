@@ -38,12 +38,12 @@ export const DateCard = () => {
         />
 
         {/* Card content */}
-        <div className="relative z-20 flex h-full flex-col justify-between text-white">
+        <div className="relative z-20 flex h-full flex-col justify-between text-zinc-100">
           <CardHeader className="p-4">
             <CardTitle className="space-y-1.5">
               <div className="flex items-center gap-1">
                 Douala, CMR
-                <MapPin size={20} className="mt-[2px] text-muted-foreground" />
+                <MapPin size={20} className="mt-[2px] text-primary" />
               </div>
               <div>{hydrated ? format(currentTime, "EEE, LLL do") : ""}</div>
             </CardTitle>
@@ -51,7 +51,7 @@ export const DateCard = () => {
 
           <CardFooter className="p-4">
             <div className="flex w-full items-center justify-end text-right text-3xl font-medium">
-              <Clock className="mr-1.5 mt-1 text-muted-foreground" size={20} />
+              <Clock className="mr-1.5 mt-1 text-primary" size={20} />
               {hydrated ? format(currentTime, "HH:mm:ss") : ""}
             </div>
           </CardFooter>

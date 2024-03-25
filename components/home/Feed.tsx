@@ -12,7 +12,7 @@ const Feed = async () => {
 
   return (
     <div className="mx-auto mt-24 w-full md:mt-28">
-      <div className="flex max-xl:flex-col xl:space-x-20">
+      <div className="flex max-xl:flex-col xl:space-x-10">
         <div className="flex flex-col space-y-12 xl:w-2/5">
           {posts.map((post, index) => {
             const date = moment(post.createdAt).format("MMMM D, YYYY")
@@ -28,7 +28,7 @@ const Feed = async () => {
         </div>
 
         <div className="h-[650px] max-xl:mt-10 xl:h-[700px] xl:flex-1">
-          <div className="grid h-full grid-cols-7 grid-rows-6 gap-3">
+          <div className="grid h-full grid-cols-7 grid-rows-6 gap-2">
             <div className="col-span-3 row-span-4">
               <CodeActivityCard />
             </div>
@@ -37,7 +37,7 @@ const Feed = async () => {
               <DateCard />
             </div>
 
-            <div className="col-span-2 row-span-2 bg-yellow-50 text-black">
+            <div className="col-span-2 row-span-2">
               <GithubStats />
             </div>
             <div className="col-span-2 row-span-2 bg-yellow-50 text-black">

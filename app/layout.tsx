@@ -1,12 +1,10 @@
-import { ThemeProvider } from "@/components/theme-provider"
-import type { Metadata } from "next"
-// import { Inter } from "next/font/google"
+import "@/app/globals.css"
 import SiteFooter from "@/components/SiteFooter"
 import SiteHeader from "@/components/SiteHeader"
+import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
-import "./globals.css"
-
-// const inter = Inter({ subsets: ["latin"] })
+import { Analytics } from "@vercel/analytics/react"
+import type { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Samuel Pokam | Web Dev & TypeScript Enthusiast",
@@ -31,6 +29,7 @@ export default function RootLayout({
           </ThemeProvider>
         </div>
         <Toaster />
+        <Analytics />
       </body>
     </html>
   )

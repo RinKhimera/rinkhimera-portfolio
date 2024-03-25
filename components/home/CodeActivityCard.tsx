@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+import { buttonVariants } from "@/components/ui/button"
 import {
   Card,
   CardContent,
@@ -8,16 +8,18 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
+import luffy from "@/public/assets/images/luffy.jpg"
 import { ApiResponseProps } from "@/types/wakatimeApiTypes"
 import { ExternalLink } from "lucide-react"
+import Image from "next/image"
+import Link from "next/link"
 
-async function getData() {
-  const apiKey = "waka_5d0c089c-4cfc-4d7b-9758-435a71677fc9"
+const getData = async () => {
   const res = await fetch(
     "https://wakatime.com/api/v1/users/rinkhimera/stats/last_30_days",
     {
       headers: {
-        Authorization: `Basic ${apiKey}`,
+        Authorization: `Basic ${process.env.WAKATIME_API_KEY}`,
       },
     },
   )
@@ -32,16 +34,25 @@ export const CodeActivityCard = async () => {
 
   return (
     <>
-      <Card className="scrollbar-hide relative h-full overflow-auto bg-zinc-50 dark:bg-zinc-800">
-        <CardHeader className="sticky left-0 right-0 top-0 z-10 bg-gradient-to-t from-transparent to-zinc-50 to-10% p-3 pb-4 dark:to-zinc-800">
-          <CardTitle className="flex justify-between text-xl font-semibold text-zinc-800 dark:text-zinc-100">
+      <Card className="relative flex h-full flex-col justify-between">
+        {/* Background image */}
+        <Image
+          src={luffy}
+          alt="Github lens"
+          priority={true}
+          className="absolute inset-0 z-10 h-full rounded-lg object-cover brightness-[0.7] dark:brightness-[0.5]"
+        />
+
+        {/* Card content */}
+        <CardHeader className="z-20 p-3 text-zinc-100">
+          <CardTitle className="flex justify-between text-xl font-semibold">
             <div>Code Activities</div>
-            <Badge variant="outline">Last 30 days</Badge>
+            <Badge variant="secondary">Last 30 days</Badge>
           </CardTitle>
         </CardHeader>
 
-        <CardContent className="px-3">
-          <div className="flex flex-col space-y-3">
+        <CardContent className="scrollbar-hide z-20 overflow-auto px-3">
+          <div className="flex flex-col space-y-3 text-zinc-200">
             {codingLanguages.map((language) => (
               <div key={language.name} className="flex flex-col space-y-1">
                 <div className="flex justify-between">
@@ -49,27 +60,34 @@ export const CodeActivityCard = async () => {
                     <div className="font-semibold tracking-tight">
                       {language.name}
                     </div>
-                    <div className="font-medium text-muted-foreground">
+                    <div className="font-medium text-zinc-300/90">
                       {language.hours}h{language.minutes}m
                     </div>
                   </div>
 
-                  <div className="font-medium text-muted-foreground">
+                  <div className="font-medium text-zinc-200">
                     {language.percent}%
                   </div>
                 </div>
 
-                <Progress className="h-1.5 bg-white" value={language.percent} />
+                <Progress
+                  className="h-1.5 bg-neutral-400"
+                  value={language.percent}
+                />
               </div>
             ))}
           </div>
         </CardContent>
 
-        <CardFooter className="sticky bottom-0 left-0 right-0 z-10 bg-zinc-50 p-3 dark:bg-zinc-800">
-          <Button className="w-full" variant={"outline"}>
-            See more on WakaTime
-            <ExternalLink size={14} className="ml-2" />
-          </Button>
+        <CardFooter className="z-20 p-3">
+          <Link
+            href="https://wakatime.com/@rinkhimera"
+            rel="noopener noreferrer"
+            target="_blank"
+            className={`${buttonVariants({ variant: "outline" })} w-full`}
+          >
+            See more on WakaTime <ExternalLink size={14} className="ml-2" />
+          </Link>
         </CardFooter>
       </Card>
     </>
