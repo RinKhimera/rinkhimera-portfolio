@@ -129,14 +129,14 @@ export const stacks = [
     name: "TypeScript",
     href: "https://www.typescriptlang.org/",
     icon: (
-      <Image src={icons.typescript} alt={"TypeScript"} className="h-7 w-7" />
+      <Image src={icons.typescript} alt={"TypeScript"} className="h-12 w-12" />
     ),
   },
   {
     name: "JavaScript",
     href: "https://www.javascript.com/",
     icon: (
-      <Image src={icons.javascript} alt={"JavaScript"} className="h-7 w-7" />
+      <Image src={icons.javascript} alt={"JavaScript"} className="h-12 w-12" />
     ),
   },
   {

@@ -32,8 +32,9 @@ export const DateCard = () => {
         {/* Background image */}
         <Image
           src={cat}
-          alt="cat img"
+          alt="Neko"
           priority={true}
+          placeholder="blur"
           className="absolute inset-0 z-10 h-full rounded-lg object-cover brightness-[0.3]"
         />
 

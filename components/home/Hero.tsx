@@ -55,6 +55,7 @@ const Hero = () => {
                 src={src}
                 alt={`Image-${index + 1}`}
                 className="absolute inset-0 h-full w-full object-cover"
+                placeholder="blur"
                 priority={true}
               />
             </div>

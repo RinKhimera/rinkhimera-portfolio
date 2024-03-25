@@ -38,8 +38,9 @@ export const CodeActivityCard = async () => {
         {/* Background image */}
         <Image
           src={luffy}
-          alt="Github lens"
+          alt="Monkey D. Luffy"
           priority={true}
+          placeholder="blur"
           className="absolute inset-0 z-10 h-full rounded-lg object-cover brightness-[0.7] dark:brightness-[0.5]"
         />
 

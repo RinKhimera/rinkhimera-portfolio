@@ -6,6 +6,7 @@ import { fetchHeroArticles } from "@/lib/actions/action"
 import moment from "moment"
 import ExperienceCard from "./ExperienceCard"
 import NewsletterCard from "./NewsletterCard"
+import { SocialCard } from "./SocialCard"
 
 const Feed = async () => {
   const posts = await fetchHeroArticles()
@@ -40,8 +41,8 @@ const Feed = async () => {
             <div className="col-span-2 row-span-2">
               <GithubStats />
             </div>
-            <div className="col-span-2 row-span-2 bg-yellow-50 text-black">
-              4
+            <div className="col-span-2 row-span-2">
+              <SocialCard />
             </div>
 
             <div className="col-span-7 row-span-2 bg-orange-50 text-black">

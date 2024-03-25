@@ -1,30 +1,52 @@
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
-import cat from "@/public/assets/images/cat.jpg"
-import githubLens from "@/public/assets/images/github-lens.jpg"
-import luffy from "@/public/assets/images/luffy.jpg"
+import { Card, CardContent } from "@/components/ui/card"
+import eyes from "@/public/assets/images/eyes.jpg"
 import { GithubUser } from "@/types/githubApitypes"
 import { BookMarked, Star, UserCheck, UserPlus } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
 const getData = async () => {
-  const res = await fetch("https://api.github.com/users/rinkhimera", {
-    headers: {
-      Authorization: `Basic ${process.env.WAKATIME_API_KEY}`,
-    },
-  })
+  const res = await fetch("https://api.github.com/users/rinkhimera")
 
   return res.json()
 }
 
+const geStarredRepos = async (): Promise<number> => {
+  const response = await fetch(
+    "https://api.github.com/users/RinKhimera/starred?per_page=100",
+  )
+
+  const data = await response.json()
+  const numberOfObjects = data.length
+
+  return numberOfObjects
+}
+
+const StatItem = ({
+  icon,
+  label,
+  value,
+}: {
+  icon: JSX.Element
+  label: string
+  value: number
+}) => (
+  <li className="flex items-center gap-1">
+    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-zinc-900/60">
+      {icon}
+    </div>
+    <div className="font-semibold">
+      {label}:{" "}
+      <span className="underline decoration-primary decoration-4 underline-offset-4">
+        {value}
+      </span>
+    </div>
+  </li>
+)
+
 export const GithubStats = async () => {
   const apiResponse: GithubUser = await getData()
+  const starNumber = await geStarredRepos()
 
   return (
     <>
@@ -36,39 +58,36 @@ export const GithubStats = async () => {
         <Card className="relative h-full">
           {/* Background image */}
           <Image
-            src={luffy}
-            alt="Github lens"
+            src={eyes}
+            alt="Anime girl eyes"
             priority={true}
-            className="absolute inset-0 z-10 h-full rounded-lg object-cover brightness-[0.7]"
+            placeholder="blur"
+            className="absolute inset-0 z-10 h-full rounded-lg object-cover brightness-[0.6]"
           />
 
           {/* Card content */}
-          <CardContent className="relative z-20 h-full p-4 text-white">
+          <CardContent className="relative z-20 h-full p-4 px-0 text-zinc-100">
             <ul className="flex h-full flex-col items-center justify-evenly">
-              <li className="flex items-center gap-1">
-                <Star className="text-primary" />
-                <div className="font-semibold lg:text-lg">
-                  Stars: <span>20</span>
-                </div>
-              </li>
-              <li className="flex items-center gap-1">
-                <BookMarked className="text-primary" />
-                <div className="font-semibold lg:text-lg">
-                  Public Repos: <span>{apiResponse.public_repos}</span>
-                </div>
-              </li>
-              <li className="flex items-center gap-1">
-                <UserPlus className="text-primary" />
-                <div className="font-semibold lg:text-lg">
-                  Followers: <span>{apiResponse.followers}</span>
-                </div>
-              </li>
-              <li className="flex items-center gap-1">
-                <UserCheck className="text-primary" />
-                <div className="font-semibold lg:text-lg">
-                  Following: <span>{apiResponse.following}</span>
-                </div>
-              </li>
+              <StatItem
+                icon={<Star className="text-primary" size={20} />}
+                label="Stars"
+                value={starNumber}
+              />
+              <StatItem
+                icon={<BookMarked className="text-primary" size={20} />}
+                label="Repos"
+                value={apiResponse.public_repos}
+              />
+              <StatItem
+                icon={<UserPlus className="text-primary" size={20} />}
+                label="Followers"
+                value={apiResponse.followers}
+              />
+              <StatItem
+                icon={<UserCheck className="text-primary" size={20} />}
+                label="Following"
+                value={apiResponse.following}
+              />
             </ul>
           </CardContent>
         </Card>
