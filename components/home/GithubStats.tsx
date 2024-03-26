@@ -1,7 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card"
 import eyes from "@/public/assets/images/eyes.jpg"
 import { GithubUser } from "@/types/githubApitypes"
-import { BookMarked, Star, UserCheck, UserPlus } from "lucide-react"
+import {
+  BookMarked,
+  ExternalLink,
+  Star,
+  UserCheck,
+  UserPlus,
+} from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -53,6 +59,7 @@ export const GithubStats = async () => {
       <Link
         className="relative h-full "
         href="https://github.com/RinKhimera"
+        rel="noopener noreferrer"
         target="_blank"
       >
         <Card className="relative h-full">
@@ -66,8 +73,13 @@ export const GithubStats = async () => {
           />
 
           {/* Card content */}
-          <CardContent className="relative z-20 h-full p-4 px-0 text-zinc-100">
-            <ul className="flex h-full flex-col items-center justify-evenly">
+          <CardContent className="relative z-20 h-full px-0 py-2 text-zinc-200">
+            <ul className="flex h-full flex-col items-center justify-between">
+              <div className="flex items-center">
+                <span className="text-xl font-semibold underline decoration-primary decoration-4 underline-offset-4">
+                  GitHub Stats
+                </span>
+              </div>
               <StatItem
                 icon={<Star className="text-primary" size={20} />}
                 label="Stars"
