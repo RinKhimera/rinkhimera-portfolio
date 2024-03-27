@@ -13,7 +13,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { ToastAction } from "@/components/ui/toast"
-import { toast } from "@/components/ui/use-toast"
+// import { toast } from "@/components/ui/use-toast"
 import { contactCardValidation } from "@/lib/validation/formSchema"
 import emogirls from "@/public/assets/images/emo-girls.jpg"
 import emailjs from "@emailjs/browser"
@@ -22,6 +22,7 @@ import { Loader2, Send } from "lucide-react"
 import Image from "next/image"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
+import { toast } from "sonner"
 import { z } from "zod"
 
 export const ContactCard = () => {
@@ -45,22 +46,42 @@ export const ContactCard = () => {
         values,
         "lP_ZVVq19Vu28zuwB",
       )
-      toast({
-        title: "Message Delivered",
+
+      toast("Message Delivered", {
         description:
           "We've received your message. You'll hear from us shortly. Thanks for contacting us!",
-        action: <ToastAction altText="Hooray">Hooray!</ToastAction>,
+        action: {
+          label: "Close",
+          onClick: () => console.log("Undo"),
+        },
       })
+
+      // toast({
+      //   title: "Message Delivered",
+      //   description:
+      //     "We've received your message. You'll hear from us shortly. Thanks for contacting us!",
+      //   action: <ToastAction altText="Hooray">Hooray!</ToastAction>,
+      // })
+
       form.reset()
       console.log("Success !!", response)
     } catch (error: any) {
-      toast({
-        variant: "destructive",
-        title: "Oops! Something went wrong.",
+      toast("Oops! Something went wrong.", {
         description:
           "We encountered a problem while submitting your information. Please check your network connection and try again.",
-        action: <ToastAction altText="Try again">Try again</ToastAction>,
+        action: {
+          label: "Close",
+          onClick: () => console.log("Undo"),
+        },
       })
+
+      // toast({
+      //   variant: "destructive",
+      //   title: "Oops! Something went wrong.",
+      //   description:
+      //     "We encountered a problem while submitting your information. Please check your network connection and try again.",
+      //   action: <ToastAction altText="Try again">Try again</ToastAction>,
+      // })
       console.error("Failed !!!", error)
     } finally {
       setSubmitting(false)
