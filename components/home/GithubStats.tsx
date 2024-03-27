@@ -1,13 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card"
 import eyes from "@/public/assets/images/eyes.jpg"
 import { GithubUser } from "@/types/githubApitypes"
-import {
-  BookMarked,
-  ExternalLink,
-  Star,
-  UserCheck,
-  UserPlus,
-} from "lucide-react"
+import { BookMarked, Star, UserCheck, UserPlus } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -57,7 +51,7 @@ export const GithubStats = async () => {
   return (
     <>
       <Link
-        className="relative h-full "
+        className="relative h-full"
         href="https://github.com/RinKhimera"
         rel="noopener noreferrer"
         target="_blank"

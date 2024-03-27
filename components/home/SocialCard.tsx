@@ -1,6 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card"
 import pochita from "@/public/assets/images/pochita.jpg"
-import { ApiResponseProps } from "@/types/wakatimeApiTypes"
 import { Github, Linkedin } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"

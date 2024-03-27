@@ -120,11 +120,7 @@ const Contact = () => {
                     <FormItem>
                       <FormLabel>Full Name</FormLabel>
                       <FormControl>
-                        <Input
-                          placeholder="John Doe"
-                          disabled={submitting}
-                          {...field}
-                        />
+                        <Input placeholder="John Doe" {...field} />
                       </FormControl>
                       <FormDescription />
                       <FormMessage />
@@ -139,11 +135,7 @@ const Contact = () => {
                     <FormItem>
                       <FormLabel>Email Address</FormLabel>
                       <FormControl>
-                        <Input
-                          placeholder="email@domain.xyz"
-                          disabled
-                          {...field}
-                        />
+                        <Input placeholder="email@domain.xyz" {...field} />
                       </FormControl>
                       <FormDescription />
                       <FormMessage />
@@ -160,7 +152,6 @@ const Contact = () => {
                       <FormControl>
                         <Textarea
                           placeholder="Tell me a little bit about yourself"
-                          disabled
                           className="resize-none"
                           {...field}
                         />

@@ -35,3 +35,16 @@ export const guestbookValidation = z.object({
       message: "Message must not be longer than 120 characters.",
     }),
 })
+
+export const contactCardValidation = z.object({
+  email: z.string().trim().email("Please enter a valid email address."),
+  message: z
+    .string()
+    .trim()
+    .min(10, {
+      message: "Message must be at least 10 characters.",
+    })
+    .max(160, {
+      message: "Message must not be longer than 160 characters.",
+    }),
+})

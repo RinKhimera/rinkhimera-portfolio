@@ -4,6 +4,7 @@ import { DateCard } from "@/components/home/DateCard"
 import { GithubStats } from "@/components/home/GithubStats"
 import { fetchHeroArticles } from "@/lib/actions/action"
 import moment from "moment"
+import { ContactCard } from "./ContactCard"
 import ExperienceCard from "./ExperienceCard"
 import NewsletterCard from "./NewsletterCard"
 import { SocialCard } from "./SocialCard"
@@ -28,8 +29,8 @@ const Feed = async () => {
           })}
         </div>
 
-        <div className="h-[650px] max-xl:mt-10 xl:h-[700px] xl:flex-1">
-          <div className="grid h-full grid-cols-7 grid-rows-6 gap-2">
+        <div className="h-[720px] max-xl:mt-10  xl:flex-1">
+          <div className="grid-rows-7 grid h-full grid-cols-7 gap-2">
             <div className="col-span-3 row-span-4">
               <CodeActivityCard />
             </div>
@@ -45,8 +46,11 @@ const Feed = async () => {
               <SocialCard />
             </div>
 
-            <div className="col-span-7 row-span-2 bg-orange-50 text-black">
-              5
+            <div className="col-span-4 row-span-3">
+              <ContactCard />
+            </div>
+            <div className="col-span-3 row-span-3 bg-orange-50 text-black">
+              <div className="size-4 bg-red-500"></div>
             </div>
           </div>
           {/* <NewsletterCard />
