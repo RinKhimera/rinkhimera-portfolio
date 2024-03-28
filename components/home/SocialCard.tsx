@@ -58,12 +58,12 @@ export const SocialCard = async () => {
 
       {/* Card content */}
       <CardContent className="relative z-20 flex h-full flex-col justify-between px-0 py-2 text-zinc-200">
-        <div className="flex h-full flex-col justify-between text-xl font-semibold">
-          <div className="basis-1/3 text-center leading-5 text-zinc-200">
+        <div className="flex h-full flex-col justify-around text-xl font-semibold max-sm:justify-around">
+          <div className=" text-center leading-5 text-zinc-200">
             Last week&apos;s coding hours
           </div>
 
-          <span className="basis-1/3 text-center text-4xl text-zinc-100 underline decoration-primary decoration-8 underline-offset-8">
+          <span className=" text-center text-4xl text-zinc-100 underline decoration-primary decoration-8 underline-offset-8">
             <Suspense fallback={<p>Loading feed...</p>}>
               <div>{codingHours}h</div>
             </Suspense>

@@ -9,55 +9,48 @@ import { useEffect, useState } from "react"
 
 export const DateCard = () => {
   const [currentTime, setCurrentTime] = useState(new Date())
-  const [hydrated, setHydrated] = useState(false)
 
   useEffect(() => {
-    // Update the current time every second
     const intervalId = setInterval(() => {
       setCurrentTime(new Date())
-    }, 1000)
+    }, 1000) // Update every second
 
-    // Cleanup the interval on component unmount
-    return () => clearInterval(intervalId)
-  }, []) // Empty dependency array ensures the effect runs only once
-
-  // Set hydrated to true after first render
-  useEffect(() => {
-    setHydrated(true)
-  }, [])
+    return () => clearInterval(intervalId) // Cleanup on component unmount
+  }, []) // Empty dependency array ensures this effect runs only once on mount
 
   return (
-    <>
-      <Card className="relative h-full">
-        {/* Background image */}
-        <Image
-          src={cat}
-          alt="Neko"
-          priority={true}
-          placeholder="blur"
-          className="absolute inset-0 z-10 h-full rounded-lg object-cover brightness-[0.3]"
-        />
+    <Card className="relative h-full">
+      {/* Background image */}
+      <Image
+        src={cat}
+        alt="Neko"
+        priority={true}
+        placeholder="blur"
+        className="absolute inset-0 z-10 h-full rounded-lg object-cover brightness-[0.3]"
+      />
 
-        {/* Card content */}
-        <div className="relative z-20 flex h-full flex-col justify-between text-zinc-100">
-          <CardHeader className="p-4">
-            <CardTitle className="space-y-1.5">
-              <div className="flex items-center gap-1">
-                Douala, CMR
-                <MapPin size={20} className="mt-[2px] text-primary" />
-              </div>
-              <div>{hydrated ? format(currentTime, "EEE, LLL do") : ""}</div>
-            </CardTitle>
-          </CardHeader>
-
-          <CardFooter className="p-4">
-            <div className="flex w-full items-center justify-end text-right text-3xl font-medium">
-              <Clock className="mr-1.5 mt-1 text-primary" size={20} />
-              {hydrated ? format(currentTime, "HH:mm:ss") : ""}
+      {/* Card content */}
+      <div className="relative z-20 flex h-full flex-col justify-between py-1.5 text-zinc-100">
+        <CardHeader className="px-4 py-0">
+          <CardTitle className="space-y-1.5">
+            <div className="flex items-center gap-1">
+              Douala, CMR
+              <MapPin size={20} className="mt-[2px] text-primary" />
             </div>
-          </CardFooter>
-        </div>
-      </Card>
-    </>
+            <div>{format(currentTime, "EEE, LLL do")}</div>
+          </CardTitle>
+        </CardHeader>
+
+        <CardFooter className="px-4 py-0">
+          <div
+            className="flex w-full items-center justify-end text-right text-3xl font-medium tracking-tight"
+            suppressHydrationWarning
+          >
+            <Clock className="mr-1.5 mt-1 text-primary" size={20} />
+            {format(currentTime, "HH:mm:ss")}
+          </div>
+        </CardFooter>
+      </div>
+    </Card>
   )
 }

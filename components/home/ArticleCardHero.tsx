@@ -22,7 +22,7 @@ const ArticleCardHero = ({ title, content, date }: ArticleCardHeroProps) => {
       className="group relative flex flex-col items-start"
       initial={{ opacity: 0, x: -60 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ margin: "-100px", once: true }}
+      viewport={{ margin: "-50px", once: true }}
       transition={{ duration: 0.25 }}
     >
       <h2 className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">

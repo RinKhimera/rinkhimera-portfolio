@@ -47,8 +47,10 @@ export const CodeActivityCard = async () => {
         {/* Card content */}
         <CardHeader className="z-20 p-3 text-zinc-100">
           <CardTitle className="flex justify-between text-xl font-semibold">
-            <div>Code Activities</div>
-            <Badge variant="secondary">Last 30 days</Badge>
+            <div className="truncate">Code Activities</div>
+            <Badge className="truncate" variant="secondary">
+              Last 30 days
+            </Badge>
           </CardTitle>
         </CardHeader>
 
@@ -87,7 +89,8 @@ export const CodeActivityCard = async () => {
             target="_blank"
             className={`${buttonVariants({ variant: "outline" })} w-full`}
           >
-            See more on WakaTime <ExternalLink size={14} className="ml-2" />
+            <span className="truncate">See more on WakaTime</span>{" "}
+            <ExternalLink size={14} className="ml-2" />
           </Link>
         </CardFooter>
       </Card>

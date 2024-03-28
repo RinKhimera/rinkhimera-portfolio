@@ -13,7 +13,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { ToastAction } from "@/components/ui/toast"
-// import { toast } from "@/components/ui/use-toast"
+import { toast } from "@/components/ui/use-toast"
 import { contactCardValidation } from "@/lib/validation/formSchema"
 import emogirls from "@/public/assets/images/emo-girls.jpg"
 import emailjs from "@emailjs/browser"
@@ -22,7 +22,6 @@ import { Loader2, Send } from "lucide-react"
 import Image from "next/image"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
-import { toast } from "sonner"
 import { z } from "zod"
 
 export const ContactCard = () => {
@@ -47,41 +46,24 @@ export const ContactCard = () => {
         "lP_ZVVq19Vu28zuwB",
       )
 
-      toast("Message Delivered", {
+      toast({
+        title: "Message Delivered",
         description:
           "We've received your message. You'll hear from us shortly. Thanks for contacting us!",
-        action: {
-          label: "Close",
-          onClick: () => console.log("Undo"),
-        },
+        action: <ToastAction altText="Close">Close</ToastAction>,
       })
-
-      // toast({
-      //   title: "Message Delivered",
-      //   description:
-      //     "We've received your message. You'll hear from us shortly. Thanks for contacting us!",
-      //   action: <ToastAction altText="Hooray">Hooray!</ToastAction>,
-      // })
 
       form.reset()
       console.log("Success !!", response)
     } catch (error: any) {
-      toast("Oops! Something went wrong.", {
+      toast({
+        variant: "destructive",
+        title: "Oops! Something went wrong.",
         description:
           "We encountered a problem while submitting your information. Please check your network connection and try again.",
-        action: {
-          label: "Close",
-          onClick: () => console.log("Undo"),
-        },
+        action: <ToastAction altText="Dismiss">Dismiss</ToastAction>,
       })
 
-      // toast({
-      //   variant: "destructive",
-      //   title: "Oops! Something went wrong.",
-      //   description:
-      //     "We encountered a problem while submitting your information. Please check your network connection and try again.",
-      //   action: <ToastAction altText="Try again">Try again</ToastAction>,
-      // })
       console.error("Failed !!!", error)
     } finally {
       setSubmitting(false)
@@ -101,7 +83,7 @@ export const ContactCard = () => {
 
       {/* Card content */}
       <CardContent className="relative z-20 h-full px-4 py-2 text-zinc-200">
-        <div className="mb-1 text-2xl font-medium">
+        <div className="mb-1 truncate text-2xl font-medium tracking-tight">
           Leave me a{" "}
           <span className="underline decoration-primary decoration-4 underline-offset-4">
             message!
@@ -109,12 +91,15 @@ export const ContactCard = () => {
         </div>
 
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-2">
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="space-y-3 max-sm:space-y-1"
+          >
             <FormField
               control={form.control}
               name="email"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="max-sm:space-y-0">
                   {/* Conditionally render FormLabel */}
                   {form.formState.errors.email ? (
                     <FormMessage className="truncate text-zinc-200" />
@@ -138,7 +123,7 @@ export const ContactCard = () => {
               control={form.control}
               name="message"
               render={({ field }) => (
-                <FormItem>
+                <FormItem className="max-sm:space-y-0 max-sm:pb-2">
                   {/* Conditionally render FormLabel */}
                   {form.formState.errors.message ? (
                     <FormMessage className="truncate text-zinc-200" />

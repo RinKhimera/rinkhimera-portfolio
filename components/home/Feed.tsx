@@ -1,13 +1,12 @@
 import ArticleCardHero from "@/components/home/ArticleCardHero"
 import { CodeActivityCard } from "@/components/home/CodeActivityCard"
+import { ContactCard } from "@/components/home/ContactCard"
 import { DateCard } from "@/components/home/DateCard"
+import { ExploreCard } from "@/components/home/ExploreCard"
 import { GithubStats } from "@/components/home/GithubStats"
+import { SocialCard } from "@/components/home/SocialCard"
 import { fetchHeroArticles } from "@/lib/actions/action"
 import moment from "moment"
-import { ContactCard } from "./ContactCard"
-import ExperienceCard from "./ExperienceCard"
-import NewsletterCard from "./NewsletterCard"
-import { SocialCard } from "./SocialCard"
 
 const Feed = async () => {
   const posts = await fetchHeroArticles()
@@ -29,32 +28,32 @@ const Feed = async () => {
           })}
         </div>
 
-        <div className="h-[720px] max-xl:mt-10  xl:flex-1">
-          <div className="grid-rows-7 grid h-full grid-cols-7 gap-2">
-            <div className="col-span-3 row-span-4">
+        <div className="h-[1300px] max-xl:mt-10 sm:h-[720px] xl:flex-1">
+          <div className="grid h-full grid-cols-7 grid-rows-7 gap-1 max-sm:grid-cols-2 max-sm:grid-rows-9">
+            <div className="col-span-3 row-span-4 max-sm:col-span-2 max-sm:row-span-2">
               <CodeActivityCard />
             </div>
 
-            <div className="col-span-4 row-span-2">
+            <div className="col-span-4 row-span-2 max-sm:col-span-2 max-sm:row-span-1">
               <DateCard />
             </div>
 
-            <div className="col-span-2 row-span-2">
+            <div className="col-span-2 row-span-2 max-sm:col-span-1 max-sm:row-span-2">
               <GithubStats />
             </div>
-            <div className="col-span-2 row-span-2">
+
+            <div className="col-span-2 row-span-2 max-sm:col-span-1 max-sm:row-span-2">
               <SocialCard />
             </div>
 
-            <div className="col-span-4 row-span-3">
+            <div className="col-span-4 row-span-3 max-sm:col-span-2 max-sm:row-span-2">
               <ContactCard />
             </div>
-            <div className="col-span-3 row-span-3 bg-orange-50 text-black">
-              <div className="size-4 bg-red-500"></div>
+
+            <div className="col-span-3 row-span-3 max-sm:col-span-2 max-sm:row-span-2">
+              <ExploreCard />
             </div>
           </div>
-          {/* <NewsletterCard />
-          <ExperienceCard /> */}
         </div>
       </div>
     </div>
