@@ -6,9 +6,16 @@ import Image from "next/image"
 export const navigationLinks = [
   { href: "/about", text: "About" },
   { href: "/projects", text: "Projects" },
-  { href: "/contact", text: "Contact" },
+  // { href: "/contact", text: "Contact" },
   { href: "/blog", text: "Blog" },
+  { href: "/miscellaneous", text: "Misc" },
   { href: "/guestbook", text: "Guestbook" },
+]
+
+export const miscLinks = [
+  { href: "/miscellaneous/uses", text: "Misc" },
+  { href: "/miscellaneous/faq", text: "Faqs" },
+  { href: "/miscellaneous/website", text: "Website" },
 ]
 
 export const projects = [

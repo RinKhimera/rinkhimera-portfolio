@@ -4,7 +4,6 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -24,8 +23,6 @@ const MobileMenu = () => {
       <Sheet>
         <SheetTrigger asChild>
           <Button variant="ghost" size="icon">
-            {/* <Menu size={24} /> */}
-
             <MoreHorizontal size={28} />
           </Button>
         </SheetTrigger>
