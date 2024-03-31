@@ -13,7 +13,7 @@ export const navigationLinks = [
 ]
 
 export const miscLinks = [
-  { href: "/miscellaneous/uses", text: "Misc" },
+  { href: "/miscellaneous/uses", text: "Uses" },
   { href: "/miscellaneous/faq", text: "Faqs" },
   { href: "/miscellaneous/website", text: "Website" },
 ]
