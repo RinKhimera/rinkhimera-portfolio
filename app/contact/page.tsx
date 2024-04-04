@@ -48,12 +48,33 @@ const Contact = () => {
     setSubmitting(true)
     try {
 <<<<<<< HEAD
+<<<<<<< HEAD
       const resp = await fetch("http://localhost:3000/api/deposit", {
+=======
+      const resp = await fetch(`https://api.sandbox.pawapay.cloud/deposits`, {
+>>>>>>> parent of 62381d3 (webhook test momo)
         method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization:
+            "eyJraWQiOiIxIiwiYWxnIjoiSFMyNTYifQ.eyJqdGkiOiJkMDc2ODNlMi0yMjBhLTRlYzEtYWE3My01MzMzYTY1OGY4OGQiLCJzdWIiOiIxNDYzIiwiaWF0IjoxNzEyMTM4MTc3LCJleHAiOjIwMjc2NzA5NzcsInBtIjoiREFGLFBBRiIsInR0IjoiQUFUIn0.Cvk3wn2_apieYV3YttYIhLhmnyyB6Uf82O6OhFvx4uE",
+        },
+        body: JSON.stringify({
+          depositId: "trans_237",
+          amount: "100",
+          currency: "XAF",
+          correspondent: "ORANGE_CMR",
+          payer: {
+            type: "MSISDN",
+            address: { value: "237693456789" },
+          },
+          customerTimestamp: "2020-02-21T17:32:28Z",
+          statementDescription: "Note of 4 to 22 chars",
+        }),
       })
 
       const data = await resp.json()
-      console.log(data.data)
+      console.log(data)
     } catch (error) {
       console.error(error)
 =======
