@@ -6,9 +6,16 @@ import Image from "next/image"
 export const navigationLinks = [
   { href: "/about", text: "About" },
   { href: "/projects", text: "Projects" },
-  { href: "/contact", text: "Contact" },
+  // { href: "/contact", text: "Contact" },
   { href: "/blog", text: "Blog" },
+  { href: "/miscellaneous", text: "Misc" },
   { href: "/guestbook", text: "Guestbook" },
+]
+
+export const miscLinks = [
+  { href: "/miscellaneous/uses", text: "Uses" },
+  { href: "/miscellaneous/faq", text: "Faqs" },
+  { href: "/miscellaneous/website", text: "Website" },
 ]
 
 export const projects = [
@@ -129,14 +136,14 @@ export const stacks = [
     name: "TypeScript",
     href: "https://www.typescriptlang.org/",
     icon: (
-      <Image src={icons.typescript} alt={"TypeScript"} className="h-7 w-7" />
+      <Image src={icons.typescript} alt={"TypeScript"} className="h-12 w-12" />
     ),
   },
   {
     name: "JavaScript",
     href: "https://www.javascript.com/",
     icon: (
-      <Image src={icons.javascript} alt={"JavaScript"} className="h-7 w-7" />
+      <Image src={icons.javascript} alt={"JavaScript"} className="h-12 w-12" />
     ),
   },
   {
@@ -224,6 +231,72 @@ export const stacks = [
     name: "Figma",
     href: "https://www.figma.com/",
     icon: <Image src={icons.figma} alt={"Figma"} className="h-8 w-8" />,
+  },
+]
+
+export const siteTechs = [
+  {
+    name: "Framework",
+    description: "Next.js",
+    url: "https://nextjs.org/",
+  },
+  {
+    name: "Styling",
+    description: "Tailwindcss",
+    url: "https://tailwindcss.com/",
+  },
+  {
+    name: "Database",
+    description: "Neon",
+    url: "https://neon.tech/",
+  },
+  {
+    name: "ORM",
+    description: "Prisma",
+    url: "https://www.prisma.io/",
+  },
+  {
+    name: "Authentication",
+    description: "Auth.js",
+    url: "https://authjs.dev/",
+  },
+  {
+    name: "Deployment",
+    description: "Vercel",
+    url: "https://vercel.com/",
+  },
+  {
+    name: "Content",
+    description: "MDX",
+    url: "https://mdxjs.com/",
+  },
+  {
+    name: "Analytics",
+    description: "Vercel Analytics",
+    url: "https://vercel.com/analytics",
+  },
+]
+
+export const siteInspirations = [
+  {
+    name: "spotlight.tailwindui.com",
+    url: "https://spotlight.tailwindui.com/",
+  },
+  {
+    name: "arnvgh.me",
+    url: "https://www.arnvgh.me/",
+  },
+  {
+    name: "leerob.io",
+    url: "https://leerob.io/",
+  },
+  {
+    name: "ui.shadcn.com",
+    url: "https://ui.shadcn.com/",
+  },
+  {
+    name: "honghong.me",
+    url: "https://honghong.me/",
   },
 ]
 

@@ -1,9 +1,7 @@
-"use client"
-
-import { motion } from "framer-motion"
+import { MotionArticle } from "@/components/MotionFragment"
+import { buttonVariants } from "@/components/ui/button"
 import { ChevronRight } from "lucide-react"
 import Link from "next/link"
-import { buttonVariants } from "./ui/button"
 
 type ArticleCardHeroProps = {
   title: string
@@ -20,11 +18,11 @@ const ArticleCardHero = ({ title, content, date }: ArticleCardHeroProps) => {
     .replace(/\s+/g, "-")
 
   return (
-    <motion.article
+    <MotionArticle
       className="group relative flex flex-col items-start"
       initial={{ opacity: 0, x: -60 }}
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ margin: "-100px", once: true }}
+      viewport={{ margin: "-50px", once: true }}
       transition={{ duration: 0.25 }}
     >
       <h2 className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
@@ -48,7 +46,7 @@ const ArticleCardHero = ({ title, content, date }: ArticleCardHeroProps) => {
         {date}
       </time>
 
-      <p className="relative z-10 mt-2 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
+      <p className="relative z-10 mt-2 line-clamp-3 text-base leading-relaxed text-zinc-600 dark:text-zinc-400">
         {content}
       </p>
 
@@ -59,7 +57,7 @@ const ArticleCardHero = ({ title, content, date }: ArticleCardHeroProps) => {
         Read article
         <ChevronRight size={15} className="ml-1" />
       </div>
-    </motion.article>
+    </MotionArticle>
   )
 }
 

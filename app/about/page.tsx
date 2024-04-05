@@ -1,18 +1,15 @@
-"use client"
-
-import TestimonyCard from "@/components/TestimonyCard"
+import { MotionDiv, MotionH1 } from "@/components/MotionFragment"
+import TestimonyCard from "@/components/about/TestimonyCard"
 import { Button } from "@/components/ui/button"
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
 import { stacks, testimonials } from "@/constants"
 import images from "@/public/assets/images"
-import { motion } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -35,7 +32,7 @@ const About = () => {
   return (
     <div className="mt-10 min-h-full sm:mt-16 lg:mt-20">
       <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
-        <motion.div
+        <MotionDiv
           className="lg:pl-20"
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
@@ -49,10 +46,10 @@ const About = () => {
               className="aspect-square rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
             />
           </div>
-        </motion.div>
+        </MotionDiv>
 
         <div className="lg:order-first lg:row-span-2">
-          <motion.h1
+          <MotionH1
             className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl"
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
@@ -63,9 +60,9 @@ const About = () => {
             specialize in the art of simplifying the complex and automating the
             routine for a{" "}
             <span className="text-primary">seamless digital experience.</span>
-          </motion.h1>
+          </MotionH1>
 
-          <motion.div
+          <MotionDiv
             className="mt-6 space-y-7 text-base leading-loose text-zinc-600 dark:text-zinc-400 max-lg:mt-12"
             initial={{ opacity: 0, x: -25 }}
             animate={{ opacity: 1, x: 0 }}
@@ -89,10 +86,10 @@ const About = () => {
               watching an anime, hanging out with my family, or carrying my team
               in the <b>Summoner&apos;s Rift.</b>
             </p>
-          </motion.div>
+          </MotionDiv>
         </div>
 
-        <motion.div
+        <MotionDiv
           className="lg:pl-20"
           initial={{ opacity: 0, x: 15 }}
           animate={{ opacity: 1, x: 0 }}
@@ -136,7 +133,7 @@ const About = () => {
               </div>
             </CardContent>
           </Card>
-        </motion.div>
+        </MotionDiv>
       </div>
 
       <div className="mt-14">
@@ -145,7 +142,7 @@ const About = () => {
           <span className="text-primary">partnerships.</span>
         </h1>
 
-        <motion.div
+        <MotionDiv
           className="mt-10 flex gap-5 max-lg:flex-col max-lg:items-center"
           variants={container}
           initial="hidden"
@@ -153,7 +150,7 @@ const About = () => {
           viewport={{ margin: "-100px" }}
         >
           {testimonials.map((testimony, index) => (
-            <motion.div key={index} variants={item} className="flex">
+            <MotionDiv key={index} variants={item} className="flex">
               <TestimonyCard
                 image={testimony.image}
                 fallbackImage={testimony.fallbackImage}
@@ -162,9 +159,9 @@ const About = () => {
                 testimony={testimony.testimony}
                 link={testimony.link}
               />
-            </motion.div>
+            </MotionDiv>
           ))}
-        </motion.div>
+        </MotionDiv>
       </div>
     </div>
   )

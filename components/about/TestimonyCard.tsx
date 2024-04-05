@@ -1,8 +1,8 @@
 import { Quote } from "lucide-react"
 import Link from "next/link"
-import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar"
-import { Button } from "./ui/button"
-import { Card } from "./ui/card"
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
+import { Button } from "../ui/button"
+import { Card } from "../ui/card"
 
 type TestimonyCardProps = {
   image: string
