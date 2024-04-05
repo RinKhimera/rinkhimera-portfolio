@@ -136,20 +136,28 @@ export const stacks = [
     name: "TypeScript",
     href: "https://www.typescriptlang.org/",
     icon: (
-      <Image src={icons.typescript} alt={"TypeScript"} className="h-12 w-12" />
+      <Image
+        src={icons.typescript}
+        alt={"TypeScript logo"}
+        className="h-12 w-12"
+      />
     ),
   },
   {
     name: "JavaScript",
     href: "https://www.javascript.com/",
     icon: (
-      <Image src={icons.javascript} alt={"JavaScript"} className="h-12 w-12" />
+      <Image
+        src={icons.javascript}
+        alt={"JavaScript logo"}
+        className="h-12 w-12"
+      />
     ),
   },
   {
     name: "React",
     href: "https://react.dev/",
-    icon: <Image src={icons.react} alt={"React"} className="h-9 w-9" />,
+    icon: <Image src={icons.react} alt={"React logo"} className="h-9 w-9" />,
   },
   {
     name: "Next.js",
@@ -165,29 +173,35 @@ export const stacks = [
     name: "Tailwind",
     href: "https://tailwindcss.com/",
     icon: (
-      <Image src={icons.tailwind} alt={"Tailwind CSS"} className="h-8 w-8" />
+      <Image src={icons.tailwind} alt={"Tailwind logo"} className="h-8 w-8" />
     ),
   },
   {
     name: "Sass",
     href: "https://sass-lang.com/",
-    icon: <Image src={icons.sass} alt={"Sass"} className="h-9 w-9" />,
+    icon: <Image src={icons.sass} alt={"Sass logo"} className="h-9 w-9" />,
   },
   {
     name: "Node.js",
     href: "https://nodejs.org/en",
-    icon: <Image src={icons.node} alt={"Node.js"} className="h-10 w-10" />,
+    icon: <Image src={icons.node} alt={"Node.js logo"} className="h-10 w-10" />,
   },
   {
     name: "MongoDB",
     href: "https://www.mongodb.com/",
-    icon: <Image src={icons.mongodb} alt={"MongoDB"} className="h-12 w-12" />,
+    icon: (
+      <Image src={icons.mongodb} alt={"MongoDB logo"} className="h-12 w-12" />
+    ),
   },
   {
     name: "PostgreSQL",
     href: "https://www.postgresql.org/",
     icon: (
-      <Image src={icons.postgresql} alt={"PostgreSQL"} className="h-9 w-9" />
+      <Image
+        src={icons.postgresql}
+        alt={"PostgreSQL logo"}
+        className="h-9 w-9"
+      />
     ),
   },
   {
@@ -200,12 +214,14 @@ export const stacks = [
   {
     name: "Firebase",
     href: "https://firebase.google.com/",
-    icon: <Image src={icons.firebase} alt={"Firebase"} className="h-12 w-12" />,
+    icon: (
+      <Image src={icons.firebase} alt={"Firebase logo"} className="h-12 w-12" />
+    ),
   },
   {
     name: "Git",
     href: "https://git-scm.com/",
-    icon: <Image src={icons.git} alt={"GitLab"} className="h-12 w-12" />,
+    icon: <Image src={icons.git} alt={"Git logo"} className="h-12 w-12" />,
   },
   {
     name: "GitHub",
@@ -220,17 +236,21 @@ export const stacks = [
   {
     name: "GitLab",
     href: "https://about.gitlab.com/",
-    icon: <Image src={icons.gitlab} alt={"GitLab"} className="h-10 w-10" />,
+    icon: (
+      <Image src={icons.gitlab} alt={"GitLab logo"} className="h-10 w-10" />
+    ),
   },
   {
     name: "Docker",
     href: "https://www.docker.com/",
-    icon: <Image src={icons.docker} alt={"Docker"} className="h-12 w-12" />,
+    icon: (
+      <Image src={icons.docker} alt={"Docker logo"} className="h-12 w-12" />
+    ),
   },
   {
     name: "Figma",
     href: "https://www.figma.com/",
-    icon: <Image src={icons.figma} alt={"Figma"} className="h-8 w-8" />,
+    icon: <Image src={icons.figma} alt={"Figma logo"} className="h-8 w-8" />,
   },
 ]
 
