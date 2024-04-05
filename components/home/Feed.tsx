@@ -29,7 +29,7 @@ const Feed = async () => {
         </div>
 
         <div className="h-[1300px] max-xl:mt-10 sm:h-[720px] xl:flex-1">
-          <div className="grid h-full grid-cols-7 grid-rows-7 gap-1 max-sm:grid-cols-2 max-sm:grid-rows-9">
+          <div className="grid h-full grid-cols-7 grid-rows-7 gap-1.5 max-sm:grid-cols-2 max-sm:grid-rows-9">
             <div className="col-span-3 row-span-4 max-sm:col-span-2 max-sm:row-span-2">
               <CodeActivityCard />
             </div>

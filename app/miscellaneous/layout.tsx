@@ -25,7 +25,9 @@ const MiscellaneousLayout = ({ children }: { children: React.ReactNode }) => {
 
       <MiscNav />
 
-      <div>{children}</div>
+      <div className="mt-5 rounded-md border border-muted p-4 ring   ring-muted">
+        {children}
+      </div>
     </div>
   )
 }

@@ -75,6 +75,7 @@ const SiteHeader = () => {
             target="_blank"
             rel="noopener noreferrer"
             href="https://github.com/RinKhimera"
+            aria-label="GitHub"
           >
             <Github />
           </Link>
@@ -84,6 +85,7 @@ const SiteHeader = () => {
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.linkedin.com/in/samuel-pokam/"
+            aria-label="LinkedIn"
           >
             <FaLinkedin size={24} />
           </Link>
@@ -93,6 +95,7 @@ const SiteHeader = () => {
             target="_blank"
             rel="noopener noreferrer"
             href="mailto:dixiades@gmail.com"
+            aria-label="Email to me"
           >
             <Mail />
           </Link>

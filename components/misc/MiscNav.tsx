@@ -12,8 +12,12 @@ export const MiscNav = () => {
   const defaultTab = miscLinks.find((link) => pathname === link.href)?.text
 
   return (
-    <nav className="mx-auto mt-8 max-w-3xl">
-      <Tabs defaultValue={defaultTab} className="w-full">
+    <nav className="mt-8 w-full">
+      <Tabs
+        defaultValue={defaultTab}
+        activationMode="manual"
+        className="w-full"
+      >
         <TabsList className="grid w-full grid-cols-3">
           {miscLinks.map((link) => (
             <TabsTrigger
