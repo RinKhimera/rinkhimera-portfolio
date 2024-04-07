@@ -1,9 +1,8 @@
-import HoveredCard from "@/components/HoveredCard"
 import { Button } from "@/components/ui/button"
 import { navigationLinks } from "@/constants"
 import Link from "next/link"
 
-const SiteFooter = () => {
+export const SiteFooter = () => {
   const getCurrentYear = () => {
     return new Date().getFullYear()
   }
@@ -26,13 +25,11 @@ const SiteFooter = () => {
             ))}
           </div>
           <p className="text-muted-foreground">
-            © {currentYear} <HoveredCard />{" "}
-            <span className="text-primary">|</span> All rights reserved.
+            © {currentYear} <span className="text-primary">|</span> All rights
+            reserved.
           </p>
         </div>
       </div>
     </footer>
   )
 }
-
-export default SiteFooter

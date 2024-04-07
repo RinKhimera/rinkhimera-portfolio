@@ -1,5 +1,5 @@
-import { MotionDiv } from "@/components/MotionFragment"
 import ProjectCard from "@/components/projects/ProjectCard"
+import { MotionDiv } from "@/components/shared/MotionFragment"
 import { projects } from "@/constants"
 
 const Projects = () => {

@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { ChevronLeft } from "lucide-react"
 import { useRouter } from "next/navigation"
 
-const ArticleButton = () => {
+export const ArticleButton = () => {
   const router = useRouter()
 
   return (
@@ -18,5 +18,3 @@ const ArticleButton = () => {
     </Button>
   )
 }
-
-export default ArticleButton

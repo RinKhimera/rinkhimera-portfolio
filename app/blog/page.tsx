@@ -1,9 +1,21 @@
-import ArticleCardBlog from "@/components/blog/ArticleCardBlog"
-import { MotionDiv } from "@/components/MotionFragment"
-import Skeletoncard from "@/components/SkeletonCard"
+import { ArticleCardBlog } from "@/components/blog/ArticleCardBlog"
+import { MotionDiv } from "@/components/shared/MotionFragment"
+import { Skeleton } from "@/components/ui/skeleton"
 import { fetchBlogArticles } from "@/lib/actions/action"
 import moment from "moment"
 import { Suspense } from "react"
+
+const SkeletonCard = () => {
+  return (
+    <div className="flex items-center space-x-4">
+      <Skeleton className="h-12 w-12 rounded-full" />
+      <div className="space-y-2">
+        <Skeleton className="h-4 w-[250px]" />
+        <Skeleton className="h-4 w-[200px]" />
+      </div>
+    </div>
+  )
+}
 
 const Blog = async () => {
   const posts = await fetchBlogArticles()
@@ -32,7 +44,7 @@ const Blog = async () => {
             const date = moment(post.createdAt).format("MMMM D, YYYY")
 
             return (
-              <Suspense key={index} fallback={<Skeletoncard />}>
+              <Suspense key={index} fallback={<SkeletonCard />}>
                 <ArticleCardBlog
                   title={post.title}
                   content={post.content}

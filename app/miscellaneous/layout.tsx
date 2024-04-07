@@ -1,5 +1,5 @@
 import { MiscNav } from "@/components/misc/MiscNav"
-import { MotionDiv } from "@/components/MotionFragment"
+import { MotionDiv } from "@/components/shared/MotionFragment"
 
 const MiscellaneousLayout = ({ children }: { children: React.ReactNode }) => {
   return (

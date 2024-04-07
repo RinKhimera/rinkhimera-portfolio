@@ -1,5 +1,5 @@
-import Feed from "@/components/home/Feed"
-import Hero from "@/components/home/Hero"
+import { Feed } from "@/components/home/Feed"
+import { Hero } from "@/components/home/Hero"
 import { Metadata } from "next"
 
 // export const metadata: Metadata = {

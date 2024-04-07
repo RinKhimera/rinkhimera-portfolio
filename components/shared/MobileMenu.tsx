@@ -9,13 +9,13 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 import { navigationLinks } from "@/constants"
-import { Menu, MoreHorizontal } from "lucide-react"
+import { MoreHorizontal } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Button } from "./ui/button"
-import { Separator } from "./ui/separator"
+import { Button } from "../ui/button"
+import { Separator } from "../ui/separator"
 
-const MobileMenu = () => {
+export const MobileMenu = () => {
   const pathname = usePathname()
 
   return (
@@ -57,5 +57,3 @@ const MobileMenu = () => {
     </div>
   )
 }
-
-export default MobileMenu

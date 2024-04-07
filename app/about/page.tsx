@@ -1,5 +1,5 @@
-import { MotionDiv, MotionH1 } from "@/components/MotionFragment"
-import TestimonyCard from "@/components/about/TestimonyCard"
+import { TestimonyCard } from "@/components/about/TestimonyCard"
+import { MotionDiv, MotionH1 } from "@/components/shared/MotionFragment"
 import { Button } from "@/components/ui/button"
 import {
   Card,

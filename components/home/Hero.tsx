@@ -1,4 +1,8 @@
-import { MotionDiv, MotionH1, MotionSpan } from "@/components/MotionFragment"
+import {
+  MotionDiv,
+  MotionH1,
+  MotionSpan,
+} from "@/components/shared/MotionFragment"
 import images from "@/public/assets/images"
 import Image from "next/image"
 
@@ -10,7 +14,7 @@ const imageSources = [
   images.image5,
 ]
 
-const Hero = () => {
+export const Hero = () => {
   return (
     <div className="mb-[450px] max-w-4xl max-sm:mb-[370px]">
       <div className="max-w-3xl">
@@ -55,5 +59,3 @@ const Hero = () => {
     </div>
   )
 }
-
-export default Hero

@@ -1,6 +1,8 @@
 "use client"
 
-import { MotionDiv } from "@/components/MotionFragment"
+import { MobileMenu } from "@/components/shared/MobileMenu"
+import { MotionDiv } from "@/components/shared/MotionFragment"
+import { ModeToggle } from "@/components/shared/theme-toggle"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { buttonVariants } from "@/components/ui/button"
 import { navigationLinks } from "@/constants"
@@ -10,10 +12,8 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { FaLinkedin } from "react-icons/fa"
-import MobileMenu from "./MobileMenu"
-import { ModeToggle } from "./theme-toggle"
 
-const SiteHeader = () => {
+export const SiteHeader = () => {
   const [hoveredLink, setHoveredLink] = useState<string | null>(null)
   const pathname = usePathname()
 
@@ -109,5 +109,3 @@ const SiteHeader = () => {
     </header>
   )
 }
-
-export default SiteHeader

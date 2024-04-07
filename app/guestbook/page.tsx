@@ -1,8 +1,8 @@
 import { auth } from "@/auth"
-import { MotionDiv } from "@/components/MotionFragment"
 import { GuestBookForm } from "@/components/guestbook/GuestBookForm"
-import GuestCard from "@/components/guestbook/GuestCard"
+import { GuestCard } from "@/components/guestbook/GuestCard"
 import { SocialLogin } from "@/components/guestbook/SocialLogin"
+import { MotionDiv } from "@/components/shared/MotionFragment"
 import { Skeleton } from "@/components/ui/skeleton"
 import { Suspense } from "react"
 

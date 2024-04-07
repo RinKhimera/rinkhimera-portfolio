@@ -13,7 +13,7 @@ type TestimonyCardProps = {
   link: string
 }
 
-const TestimonyCard = ({
+export const TestimonyCard = ({
   image,
   fallbackImage,
   name,
@@ -51,5 +51,3 @@ const TestimonyCard = ({
     </Card>
   )
 }
-
-export default TestimonyCard
