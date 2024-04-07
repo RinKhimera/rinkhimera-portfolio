@@ -1,4 +1,4 @@
-import { siteTechs } from "@/constants"
+import { desktopUses, laptopUses, softwareUses } from "@/constants"
 import { ArrowUpRight, ChevronRight } from "lucide-react"
 import Link from "next/link"
 
@@ -9,39 +9,71 @@ const UsesPage = () => {
         Regular basis uses
       </h1>
 
-      <div>
-        <h2 className="mb-4 mt-4 text-3xl font-semibold tracking-tight">
-          <span className="text-primary">Technologies</span>
+      <div className="my-8">
+        <h2 className="mb-3 text-3xl font-semibold tracking-tight">
+          <span className="text-primary">Desktop</span>
         </h2>
 
         <div className="ml-0 space-y-2 text-base sm:ml-6 sm:text-lg">
-          {siteTechs.map((tech) => (
+          {desktopUses.map((tech) => (
+            <div key={tech.description} className="group flex space-x-4">
+              <ChevronRight className="shrink-0 transition group-hover:translate-x-2" />
+
+              <span className="text-muted-foreground">{tech.name}: </span>
+              <div className="font-medium decoration-primary decoration-2 underline-offset-2 group-hover:underline">
+                {tech.description}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="mb-8">
+        <h2 className="mb-3 text-3xl font-semibold tracking-tight">
+          <span className="text-primary">Laptop</span>
+        </h2>
+
+        <div className="ml-0 space-y-2 text-base sm:ml-6 sm:text-lg">
+          {laptopUses.map((tech) => (
+            <div key={tech.description} className="group flex space-x-4">
+              <ChevronRight className="shrink-0 transition group-hover:translate-x-2" />
+
+              <span className="text-muted-foreground">{tech.name}: </span>
+              <div className="font-medium decoration-primary decoration-2 underline-offset-2 group-hover:underline">
+                {tech.description}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <h2 className="mb-3 text-3xl font-semibold tracking-tight">
+          <span className="text-primary">Software</span>
+        </h2>
+
+        <div className="ml-0 space-y-2 text-base sm:ml-6 sm:text-lg">
+          {softwareUses.map((tech) => (
             <Link
               key={tech.description}
               href={tech.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-end space-x-4"
+              className="group flex space-x-4"
             >
-              <ChevronRight className="transition group-hover:translate-x-2" />
+              <ChevronRight className="shrink-0 transition group-hover:translate-x-2" />
 
               <span className="text-muted-foreground">{tech.name}: </span>
               <div className="flex items-end font-medium decoration-primary decoration-2 underline-offset-2 group-hover:underline">
                 {tech.description}
                 <ArrowUpRight
-                  className="ml-1 transition group-hover:-translate-y-1 group-hover:translate-x-2"
+                  className="ml-1 shrink-0 transition group-hover:-translate-y-1 group-hover:translate-x-2"
                   size={20}
                 />
               </div>
             </Link>
           ))}
         </div>
-      </div>
-
-      <div>
-        <h2 className="my-4 text-3xl font-semibold tracking-tight">
-          <span className="text-primary">Typography</span>
-        </h2>
       </div>
     </section>
   )

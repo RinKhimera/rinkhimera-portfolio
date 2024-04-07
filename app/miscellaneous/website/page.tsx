@@ -9,8 +9,8 @@ const WebsitePage = () => {
         About this website
       </h1>
 
-      <div>
-        <h2 className="mb-4 mt-4 text-3xl font-semibold tracking-tight">
+      <div className="my-8">
+        <h2 className="mb-3 text-3xl font-semibold tracking-tight">
           <span className="text-primary">Technologies</span>
         </h2>
 
@@ -21,15 +21,15 @@ const WebsitePage = () => {
               href={tech.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-end space-x-4"
+              className="group flex space-x-4"
             >
-              <ChevronRight className="transition group-hover:translate-x-2" />
+              <ChevronRight className="shrink-0 transition group-hover:translate-x-2" />
 
               <span className="text-muted-foreground">{tech.name}: </span>
               <div className="flex items-end font-medium decoration-primary decoration-2 underline-offset-2 group-hover:underline">
                 {tech.description}
                 <ArrowUpRight
-                  className="ml-1 transition group-hover:-translate-y-1 group-hover:translate-x-2"
+                  className="ml-1 shrink-0 transition group-hover:-translate-y-1 group-hover:translate-x-2"
                   size={20}
                 />
               </div>
@@ -38,8 +38,8 @@ const WebsitePage = () => {
         </div>
       </div>
 
-      <div>
-        <h2 className="my-4 text-3xl font-semibold tracking-tight">
+      <div className="mb-8">
+        <h2 className="mb-3 text-3xl font-semibold tracking-tight">
           <span className="text-primary">Inspirations</span>
         </h2>
 
@@ -52,12 +52,12 @@ const WebsitePage = () => {
               rel="noopener noreferrer"
               className="group flex items-end space-x-4"
             >
-              <ChevronRight className="transition group-hover:translate-x-2" />
+              <ChevronRight className="shrink-0 transition group-hover:translate-x-2" />
 
               <div className="flex items-end decoration-primary decoration-2 underline-offset-2 transition group-hover:underline">
                 <span className="font-medium">{website.name}</span>
                 <ArrowUpRight
-                  className="ml-1 transition group-hover:-translate-y-1 group-hover:translate-x-2"
+                  className="ml-1 shrink-0 transition group-hover:-translate-y-1 group-hover:translate-x-2"
                   size={20}
                 />
               </div>
@@ -71,7 +71,7 @@ const WebsitePage = () => {
           <span className="text-primary">Typography</span>
         </h2>
 
-        <div className="px-1 leading-loose text-muted-foreground md:px-8">
+        <div className="px-[1px] leading-loose text-muted-foreground md:px-8">
           For the typography of the entire website, I&apos;m using{" "}
           <div className="group mr-[2px] inline-flex">
             <Link

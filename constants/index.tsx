@@ -320,6 +320,85 @@ export const siteInspirations = [
   },
 ]
 
+export const desktopUses = [
+  {
+    name: "Processor",
+    description: "Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz x 8",
+  },
+  {
+    name: "Memory",
+    description: "16 GB",
+  },
+  {
+    name: "Graphics",
+    description: "AMD Radeon RX 6600 XT 8 GB",
+  },
+  {
+    name: "Storage",
+    description: "512 GB SSD NVMe + 2 TB HDD",
+  },
+  {
+    name: "Main monitor",
+    description: "Dell P2414H",
+  },
+  {
+    name: "Second monitor",
+    url: "https://honghong.me/",
+    description: "Dell U2311H",
+  },
+]
+
+export const laptopUses = [
+  {
+    name: "Device",
+    description: "HP ProBook 440 G6",
+  },
+  {
+    name: "Processor",
+    description: "Intel(R) Core(TM) i5-8265U CPU @ 1.60GHz x 8",
+  },
+  {
+    name: "Memory",
+    description: "16 GB",
+  },
+  {
+    name: "Graphics",
+    description: "Intel(R) UHD Graphics 620",
+  },
+  {
+    name: "Storage",
+    description: "256 GB SSD M2 + 1 TB HDD",
+  },
+]
+
+export const softwareUses = [
+  {
+    name: "Operating System",
+    description: "Windows 11 Pro 22H2",
+    url: "https://www.microsoft.com/en-us/windows/windows-11?r=1",
+  },
+  {
+    name: "Terminal",
+    description: "PowerShell",
+    url: "https://learn.microsoft.com/en-us/powershell/scripting/overview?view=powershell-7.4",
+  },
+  {
+    name: "Code Editor",
+    description: "Visual Studio Code",
+    url: "https://code.visualstudio.com/",
+  },
+  {
+    name: "Browser",
+    description: "Google Chrome",
+    url: "https://www.google.com/intl/en/chrome/",
+  },
+  {
+    name: "API Platform",
+    description: "Postman",
+    url: "https://www.postman.com/",
+  },
+]
+
 export const testimonials = [
   {
     image: "/assets/images/kouakam.jpeg",

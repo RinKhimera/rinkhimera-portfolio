@@ -19,7 +19,7 @@ import { useTransition } from "react"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 
-const GuestBookForm = () => {
+export const GuestBookForm = () => {
   const [isPending, startTransition] = useTransition()
 
   const form = useForm<z.infer<typeof guestbookValidation>>({
@@ -72,5 +72,3 @@ const GuestBookForm = () => {
     </div>
   )
 }
-
-export default GuestBookForm
