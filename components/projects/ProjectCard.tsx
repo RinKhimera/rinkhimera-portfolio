@@ -122,7 +122,7 @@ const ProjectCard = ({
                 </Link>
               </TooltipTrigger>
               <TooltipContent>
-                <p>GitHub Repository</p>
+                <p>Live Project</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
@@ -143,7 +143,7 @@ const ProjectCard = ({
                 </Link>
               </TooltipTrigger>
               <TooltipContent>
-                <p>Live Project</p>
+                <p>GitHub Repository</p>
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>

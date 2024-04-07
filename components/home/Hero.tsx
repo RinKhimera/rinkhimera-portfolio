@@ -13,12 +13,7 @@ const imageSources = [
 const Hero = () => {
   return (
     <div className="mb-[450px] max-w-4xl max-sm:mb-[370px]">
-      <MotionDiv
-        className="max-w-3xl"
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.4 }}
-      >
+      <div className="max-w-3xl">
         <h1 className="mb-2 text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
           Hey! I&apos;m <span className="text-primary">Samuel Pokam.</span>
         </h1>
@@ -35,15 +30,10 @@ const Hero = () => {
           networking innovation, I bring your vision to life with precision and
           flair!
         </p>
-      </MotionDiv>
+      </div>
 
       <div className="absolute left-0 right-0 mt-16 sm:mt-10">
-        <MotionDiv
-          className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8"
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-        >
+        <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
           {imageSources.map((src, index) => (
             <div
               key={index}
@@ -60,7 +50,7 @@ const Hero = () => {
               />
             </div>
           ))}
-        </MotionDiv>
+        </div>
       </div>
     </div>
   )
