@@ -6,11 +6,15 @@ import { format } from "date-fns"
 import { Clock, MapPin } from "lucide-react"
 import Image from "next/image"
 import { useEffect, useState } from "react"
+import { Skeleton } from "../ui/skeleton"
 
 export const DateCard = () => {
-  const [currentTime, setCurrentTime] = useState(new Date())
+  const [currentTime, setCurrentTime] = useState<Date | null>(null)
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
+    setIsClient(true)
+    setCurrentTime(new Date())
     const intervalId = setInterval(() => {
       setCurrentTime(new Date())
     }, 1000) // Update every second
@@ -37,17 +41,26 @@ export const DateCard = () => {
               Douala, CMR
               <MapPin size={20} className="mt-[2px] text-primary" />
             </div>
-            <div>{format(currentTime, "EEE, LLL do")}</div>
+            <div>
+              {currentTime ? (
+                format(currentTime, "EEE, LLL do")
+              ) : (
+                <Skeleton className="h-6 w-[140px]" />
+              )}
+            </div>
           </CardTitle>
         </CardHeader>
 
         <CardFooter className="px-4 py-0">
-          <div
-            className="flex w-full items-center justify-end text-right text-3xl font-medium tracking-tight"
-            suppressHydrationWarning
-          >
+          <div className="flex w-full items-center justify-end text-right text-3xl font-medium tracking-tight">
             <Clock className="mr-1.5 mt-1 text-primary" size={20} />
-            {format(currentTime, "HH:mm:ss")}
+            <span id="clock">
+              {currentTime ? (
+                format(currentTime, "HH:mm:ss")
+              ) : (
+                <Skeleton className="h-7 w-[120px]" />
+              )}
+            </span>
           </div>
         </CardFooter>
       </div>
