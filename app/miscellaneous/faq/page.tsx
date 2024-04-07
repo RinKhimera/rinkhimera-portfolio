@@ -4,7 +4,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { buttonVariants } from "@/components/ui/button"
 import Link from "next/link"
 
 const FaqPage = () => {
