@@ -13,7 +13,11 @@ const FaqPage = () => {
         Frequently asked question
       </h1>
 
-      <Accordion type="single" collapsible className="mt-4 w-full md:px-5">
+      <Accordion
+        type="single"
+        collapsible
+        className="my-4 w-full leading-relaxed md:px-5"
+      >
         <AccordionItem value="item-1">
           <AccordionTrigger>When did you start coding?</AccordionTrigger>
           <AccordionContent>
@@ -23,7 +27,70 @@ const FaqPage = () => {
             committed myself fully to learning coding.
           </AccordionContent>
         </AccordionItem>
+
         <AccordionItem value="item-2">
+          <AccordionTrigger>
+            What setup are you employing for coding?
+          </AccordionTrigger>
+          <AccordionContent>
+            I&apos;ve provided detailed information about my setup on the{" "}
+            <Link
+              href="/miscellaneous/uses"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-800 hover:underline dark:text-zinc-100"
+            >
+              Uses
+            </Link>{" "}
+            page of this site.
+          </AccordionContent>
+        </AccordionItem>
+
+        <AccordionItem value="item-3">
+          <AccordionTrigger>
+            How did you learn to code? Can you share some resources?
+          </AccordionTrigger>
+          <AccordionContent>
+            Having a clear roadmap from the start is key to staying focused and
+            not getting lost in your learning journey.{" "}
+            <Link
+              href="https://www.freecodecamp.org/learn/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="FreeCodeCamp Learn website"
+              className="text-zinc-800 hover:underline dark:text-zinc-100"
+            >
+              FreeCodeCamp
+            </Link>{" "}
+            is a fantastic beginner-friendly resource that has helped me learn
+            the basics of web development for free. After that, it&apos;s all
+            about hands-on practice with mini-projects, trying out different
+            things, and don&apos;t forget to read the documentation.
+          </AccordionContent>
+        </AccordionItem>
+
+        <AccordionItem value="item-4">
+          <AccordionTrigger>
+            What is your favorite web framework?
+          </AccordionTrigger>
+          <AccordionContent>
+            I prefer{" "}
+            <Link
+              href="https://nextjs.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Next.js - The React Framework for the Web"
+              className="text-zinc-800 hover:underline dark:text-zinc-100"
+            >
+              Next.js
+            </Link>{" "}
+            as my go-to framework due to its server-side rendering, smooth
+            routing, and seamless integration with React. It enables the
+            creation of robust and scalable full-stack web applications.
+          </AccordionContent>
+        </AccordionItem>
+
+        <AccordionItem value="item-5">
           <AccordionTrigger>Can I see your resume?</AccordionTrigger>
           <AccordionContent>
             Certainly! If you&apos;re a recruiter, please contact me via email
@@ -48,11 +115,49 @@ const FaqPage = () => {
             profile here.
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="item-3">
-          <AccordionTrigger>Is it animated?</AccordionTrigger>
+
+        <AccordionItem value="item-6">
+          <AccordionTrigger>
+            What are some of your favorite YouTube channels?
+          </AccordionTrigger>
           <AccordionContent>
-            Yes. It&apos;s animated by default, but you can disable it if you
-            prefer.
+            Regarding techs channels, there are plenty of them, but{" "}
+            <Link
+              href="https://www.youtube.com/@Fireship"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-800 hover:underline dark:text-zinc-100"
+            >
+              Fireship
+            </Link>
+            ,{" "}
+            <Link
+              href="https://www.youtube.com/@WebDevSimplified"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-800 hover:underline dark:text-zinc-100"
+            >
+              Web Dev Simplified
+            </Link>
+            ,{" "}
+            <Link
+              href="https://www.youtube.com/@ByteGrad"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-800 hover:underline dark:text-zinc-100"
+            >
+              ByteGrad
+            </Link>
+            , and{" "}
+            <Link
+              href="https://www.youtube.com/@t3dotgg"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-800 hover:underline dark:text-zinc-100"
+            >
+              Theo - t3.gg
+            </Link>{" "}
+            are among my favorites.
           </AccordionContent>
         </AccordionItem>
       </Accordion>

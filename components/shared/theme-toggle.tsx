@@ -55,8 +55,6 @@ export const FooterToggle = () => {
     return null
   }
 
-  console.log(theme)
-
   return (
     <div className="w-fit rounded-full border border-zinc-200 px-1 py-1 dark:border-zinc-600/40">
       <Toggle

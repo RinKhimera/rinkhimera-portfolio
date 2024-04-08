@@ -17,7 +17,7 @@ const UsesPage = () => {
         <div className="ml-0 space-y-2 text-base sm:ml-6 sm:text-lg">
           {desktopUses.map((tech) => (
             <div key={tech.description} className="group flex space-x-4">
-              <ChevronRight className="shrink-0 transition group-hover:translate-x-2" />
+              <ChevronRight className="shrink-0 transition group-hover:translate-x-2 sm:mt-1" />
 
               <span className="text-muted-foreground">{tech.name}: </span>
               <div className="font-medium decoration-primary decoration-2 underline-offset-2 group-hover:underline">
@@ -36,7 +36,7 @@ const UsesPage = () => {
         <div className="ml-0 space-y-2 text-base sm:ml-6 sm:text-lg">
           {laptopUses.map((tech) => (
             <div key={tech.description} className="group flex space-x-4">
-              <ChevronRight className="shrink-0 transition group-hover:translate-x-2" />
+              <ChevronRight className="shrink-0 transition group-hover:translate-x-2 sm:mt-1" />
 
               <span className="text-muted-foreground">{tech.name}: </span>
               <div className="font-medium decoration-primary decoration-2 underline-offset-2 group-hover:underline">
@@ -61,7 +61,7 @@ const UsesPage = () => {
               rel="noopener noreferrer"
               className="group flex space-x-4"
             >
-              <ChevronRight className="shrink-0 transition group-hover:translate-x-2" />
+              <ChevronRight className="shrink-0 transition group-hover:translate-x-2 sm:mt-1" />
 
               <span className="text-muted-foreground">{tech.name}: </span>
               <div className="flex items-end font-medium decoration-primary decoration-2 underline-offset-2 group-hover:underline">

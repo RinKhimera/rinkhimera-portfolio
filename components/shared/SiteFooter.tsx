@@ -1,8 +1,6 @@
-import { Toggle } from "@/components/ui/toggle"
+import { FooterToggle } from "@/components/shared/theme-toggle"
 import { footerLinks } from "@/constants"
-import { Moon, Sun, Tv2 } from "lucide-react"
 import Link from "next/link"
-import { FooterToggle } from "./theme-toggle"
 
 export const SiteFooter = () => {
   const getCurrentYear = () => {

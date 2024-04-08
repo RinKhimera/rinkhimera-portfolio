@@ -23,13 +23,13 @@ const WebsitePage = () => {
               rel="noopener noreferrer"
               className="group flex space-x-4"
             >
-              <ChevronRight className="shrink-0 transition group-hover:translate-x-2" />
+              <ChevronRight className="shrink-0 transition group-hover:translate-x-2 sm:mt-[2px]" />
 
               <span className="text-muted-foreground">{tech.name}: </span>
               <div className="flex items-end font-medium decoration-primary decoration-2 underline-offset-2 group-hover:underline">
                 {tech.description}
                 <ArrowUpRight
-                  className="ml-1 shrink-0 transition group-hover:-translate-y-1 group-hover:translate-x-2"
+                  className="ml-1 shrink-0 transition  group-hover:-translate-y-1 group-hover:translate-x-2"
                   size={20}
                 />
               </div>
