@@ -2,7 +2,7 @@
 
 import { MobileMenu } from "@/components/shared/MobileMenu"
 import { MotionDiv } from "@/components/shared/MotionFragment"
-import { ModeToggle } from "@/components/shared/theme-toggle"
+import { HeaderToggle } from "@/components/shared/theme-toggle"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { buttonVariants } from "@/components/ui/button"
 import { navigationLinks } from "@/constants"
@@ -100,7 +100,7 @@ export const SiteHeader = () => {
             <Mail />
           </Link>
 
-          <ModeToggle />
+          <HeaderToggle />
 
           {/* Mobile Menu */}
           <MobileMenu />

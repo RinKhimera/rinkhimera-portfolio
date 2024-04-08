@@ -6,8 +6,8 @@ import Link from "next/link"
 
 export const ExploreCard = () => {
   const exploreLinks = [
-    { name: "FAQs", link: "/faq" },
-    { name: "Uses", link: "Uses" },
+    { name: "FAQs", link: "/miscellaneous/faq" },
+    { name: "Uses", link: "miscellaneous/uses" },
     { name: "Blog", link: "/blog" },
     { name: "Projects", link: "/projects" },
   ]

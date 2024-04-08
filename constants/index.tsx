@@ -12,6 +12,35 @@ export const navigationLinks = [
   { href: "/guestbook", text: "Guestbook" },
 ]
 
+export const footerLinks = [
+  {
+    name: "Resources",
+    links: [
+      { name: "Home", url: "/" },
+      { name: "About", url: "/about" },
+      { name: "Projects", url: "/projects" },
+      { name: "Blog", url: "/blog" },
+    ],
+  },
+  {
+    name: "More",
+    links: [
+      { name: "Guestbook", url: "/guestbook" },
+      { name: "Uses", url: "/miscellaneous/uses" },
+      { name: "FAQs", url: "/miscellaneous/faq" },
+      { name: "About this website", url: "/miscellaneous/website" },
+    ],
+  },
+  {
+    name: "Socials",
+    links: [
+      { name: "LinkedIn", url: "https://www.linkedin.com/in/samuel-pokam/" },
+      { name: "GitHub", url: "https://github.com/RinKhimera" },
+      { name: "X", url: "https://twitter.com/rin_khimera" },
+    ],
+  },
+]
+
 export const miscLinks = [
   { href: "/miscellaneous/uses", text: "Uses" },
   { href: "/miscellaneous/faq", text: "Faqs" },

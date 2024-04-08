@@ -1,9 +1,5 @@
 "use client"
 
-import { MoonIcon, SunIcon } from "lucide-react"
-import { useTheme } from "next-themes"
-import * as React from "react"
-
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
@@ -11,8 +7,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { Toggle } from "@/components/ui/toggle"
+import { Moon, MoonIcon, Sun, SunIcon, Tv2 } from "lucide-react"
+import { useTheme } from "next-themes"
+import * as React from "react"
 
-export const ModeToggle = () => {
+export const HeaderToggle = () => {
   const { setTheme } = useTheme()
 
   return (
@@ -36,5 +36,65 @@ export const ModeToggle = () => {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
+  )
+}
+
+export const FooterToggle = () => {
+  const { setTheme, theme } = useTheme()
+  const [isLoading, setIsLoading] = React.useState(true)
+
+  React.useEffect(() => {
+    // When the theme is available, set isLoading to false
+    if (theme !== undefined) {
+      setIsLoading(false)
+    }
+  }, [theme]) // Run this effect whenever the theme changes
+
+  // Render loading state until the theme is available
+  if (isLoading) {
+    return null
+  }
+
+  console.log(theme)
+
+  return (
+    <div className="w-fit rounded-full border border-zinc-200 px-1 py-1 dark:border-zinc-600/40">
+      <Toggle
+        className="text-muted-foreground hover:text-inherit"
+        aria-label="Toggle light mode"
+        pressed={theme === "light"}
+        onPressedChange={(pressed) => {
+          if (pressed) {
+            setTheme("light")
+          }
+        }}
+      >
+        <Sun className="h-4 w-4" />
+      </Toggle>
+      <Toggle
+        className="text-muted-foreground hover:text-inherit"
+        aria-label="Toggle system mode"
+        pressed={theme === "system"}
+        onPressedChange={(pressed) => {
+          if (pressed) {
+            setTheme("system")
+          }
+        }}
+      >
+        <Tv2 className="h-4 w-4" />
+      </Toggle>
+      <Toggle
+        className="text-muted-foreground hover:text-inherit"
+        aria-label="Toggle dark mode"
+        pressed={theme === "dark"}
+        onPressedChange={(pressed) => {
+          if (pressed) {
+            setTheme("dark")
+          }
+        }}
+      >
+        <Moon className="h-4 w-4" />
+      </Toggle>
+    </div>
   )
 }
