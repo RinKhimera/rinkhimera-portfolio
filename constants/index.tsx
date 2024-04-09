@@ -127,14 +127,20 @@ export const projects = [
     stacks: ["Next.js", "TypeScript", "Tailwind CSS", "E-Commerce"],
   },
   {
-    name: "Manage",
-    imageSrc: projectsImage.manage,
-    imageAlt: "Project Image",
+    name: "Anime Vault",
+    imageSrc: projectsImage.animevault,
+    imageAlt: "Anime Vault",
     description:
-      "A modern landing page for a startup company with hero section, CTA button, testimonials and navigation links.",
-    demoLink: "https://manage237.vercel.app/",
-    githubLink: "https://github.com/RinKhimera/manage-landing-page",
-    stacks: ["React", "Tailwind CSS", "TypeScript"],
+      "Discover trending anime and ratings on a dynamic platform, keeping you updated with the latest in the anime world.",
+    demoLink: "https://anime-vault237.vercel.app/",
+    githubLink: "https://github.com/RinKhimera/Anime-Vault",
+    stacks: [
+      "Next.js",
+      "Tailwind CSS",
+      "TypeScript",
+      "Framer-Motion",
+      "API Fetching",
+    ],
   },
 
   // {

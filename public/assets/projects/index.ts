@@ -1,3 +1,4 @@
+import animevault from "./animevault.jpg"
 import manage from "./manage.png"
 import nclc from "./nclc.png"
 import nike from "./nike.png"
@@ -14,6 +15,7 @@ const projectsImage = {
   quote,
   threads237,
   rinbnb,
+  animevault,
 }
 
 export default projectsImage
