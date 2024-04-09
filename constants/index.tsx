@@ -52,17 +52,38 @@ export const projects = [
     name: "Quanta Hive",
     imageSrc: projectsImage.quanta,
     imageAlt: "Quanta Hive",
-    description: "Quanta Hive Digital Agency Website.",
+    description:
+      "Quanta Hive: Your digital innovation hub. Elevate your brand with cutting-edge design, development, and marketing solutions tailored to your business goals.",
     demoLink: "https://quanta-hive.vercel.app/",
     githubLink: "https://github.com/RinKhimera/Quanta-Hive",
-    stacks: ["SASS", "JavaScript", "Next.js", "CSS"],
+    stacks: ["SASS", "JavaScript", "Next.js", "CSS", "Bootstrap", "EmailJS"],
+  },
+  {
+    name: "Rinbnb",
+    imageSrc: projectsImage.rinbnb,
+    imageAlt: "Rinbnb",
+    description:
+      "Peer-to-peer rental platform mimicking Airbnb's model, offering unique accommodations for travelers and hosts worldwide.",
+    demoLink: "https://rin-airbnb.vercel.app/",
+    githubLink: "https://github.com/RinKhimera/airbnb-clone",
+    stacks: [
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "Kinde-Auth",
+      "Leaflet",
+      "Edgestore",
+      "Prisma",
+      "PostgreSQL",
+      "Shadcn/ui",
+    ],
   },
   {
     name: "Threads #237",
     imageSrc: projectsImage.threads237,
     imageAlt: "Threads #237",
     description:
-      "A Threads Meta application clone where you create and engage in threads and ongoing conversations.",
+      "Microblogging platform facilitating social interaction, user engagement, and content sharing.",
     demoLink: "https://threads237.vercel.app/",
     githubLink: "https://github.com/RinKhimera/threads-clone",
     stacks: [
@@ -99,32 +120,33 @@ export const projects = [
     name: "Nike",
     imageSrc: projectsImage.nike,
     imageAlt: "Nike",
-    description: "Nike landing page website built with Next.js 13.4",
+    description:
+      "A sleek landing page offering premium athletic footwear and apparel, inspired by Nike's iconic style and performance-driven ethos.",
     demoLink: "https://nike-rin.vercel.app/",
     githubLink: "https://github.com/RinKhimera/nike",
     stacks: ["Next.js", "TypeScript", "Tailwind CSS", "E-Commerce"],
   },
   {
-    name: "Modern UI/UX Webpage",
+    name: "Manage",
     imageSrc: projectsImage.manage,
     imageAlt: "Project Image",
     description:
       "A modern landing page for a startup company with hero section, CTA button, testimonials and navigation links.",
-    demoLink: "https://rinkhimera.github.io/manage-landing-page/",
+    demoLink: "https://manage237.vercel.app/",
     githubLink: "https://github.com/RinKhimera/manage-landing-page",
     stacks: ["React", "Tailwind CSS", "TypeScript"],
   },
 
-  {
-    name: "Random Quote Machine",
-    imageSrc: projectsImage.quote,
-    imageAlt: "Project Image",
-    description:
-      "A web-based application that generates and displays random quotes to the user.",
-    demoLink: "https://rinkhimera.github.io/quotes-generator/",
-    githubLink: "https://github.com/RinKhimera/quotes-generator",
-    stacks: ["Next.js", "React", "Axios", "TypeScript", "API fetching"],
-  },
+  // {
+  //   name: "Random Quote Machine",
+  //   imageSrc: projectsImage.quote,
+  //   imageAlt: "Project Image",
+  //   description:
+  //     "A web-based application that generates and displays random quotes to the user.",
+  //   demoLink: "https://rinkhimera.github.io/quotes-generator/",
+  //   githubLink: "https://github.com/RinKhimera/quotes-generator",
+  //   stacks: ["Next.js", "React", "Axios", "TypeScript", "API fetching"],
+  // },
   // {
   //   name: "Todo List App",
   //   imageSrc: "/assets/projects/project5.png",

@@ -9,6 +9,7 @@ const getCodingHours = async (): Promise<number> => {
   const apiResponse = await fetch(
     "https://wakatime.com/api/v1/users/rinkhimera/stats/last_7_days?per_page=100",
     {
+      next: { revalidate: 3600 },
       headers: {
         Authorization: `Basic ${process.env.WAKATIME_API_KEY}`,
       },

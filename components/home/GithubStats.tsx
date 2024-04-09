@@ -6,7 +6,9 @@ import Image from "next/image"
 import Link from "next/link"
 
 const getData = async () => {
-  const res = await fetch("https://api.github.com/users/rinkhimera")
+  const res = await fetch("https://api.github.com/users/rinkhimera", {
+    next: { revalidate: 60 },
+  })
 
   return res.json()
 }
@@ -14,6 +16,7 @@ const getData = async () => {
 const geStarredRepos = async (): Promise<number> => {
   const response = await fetch(
     "https://api.github.com/users/RinKhimera/starred?per_page=100",
+    { cache: "no-store" },
   )
 
   const data = await response.json()

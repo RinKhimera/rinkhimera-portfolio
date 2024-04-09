@@ -21,6 +21,7 @@ const getData = async () => {
       headers: {
         Authorization: `Basic ${process.env.WAKATIME_API_KEY}`,
       },
+      next: { revalidate: 3600 },
     },
   )
 
