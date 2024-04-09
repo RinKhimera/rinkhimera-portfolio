@@ -4,18 +4,18 @@ Explore my portfolio showcasing projects, skills, and achievements in software d
 
 ## Installation
 
-- Open your terminal or command prompt and navigate to the directory where you want to clone the repository:
+Open your terminal or command prompt and navigate to the directory where you want to clone the repository:
 
 ```bash
 cd path/to/your/directory
 ```
 
-- Use the `git clone` command followed by the URL of the repository:
+Use the `git clone` command followed by the URL of the repository:
 
 ```bash
 cd path/to/your/directory
 ```
-- Install the dependencies:
+Install the dependencies:
 
 ```bash
 npm install
@@ -42,6 +42,14 @@ This app is deployed on [Vercel Platform](https://vercel.com). It is the easiest
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## Author
+
+[Samuel Pokam](https://github.com/RinKhimera)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## ⭐ Like what I'm doing? Give it a star
 
