@@ -1,15 +1,56 @@
 import icons from "@/public/assets/icons"
 import logos from "@/public/assets/logos"
 import projectsImage from "@/public/assets/projects"
+import {
+  ArrowUpRight,
+  BookMarked,
+  Folders,
+  Home,
+  Library,
+  Rss,
+  SquareUser,
+} from "lucide-react"
 import Image from "next/image"
 
 export const navigationLinks = [
   { href: "/about", text: "About" },
   { href: "/projects", text: "Projects" },
-  // { href: "/contact", text: "Contact" },
   { href: "/blog", text: "Blog" },
   { href: "/miscellaneous", text: "Misc" },
   { href: "/guestbook", text: "Guestbook" },
+]
+
+export const mobileLinks = [
+  {
+    href: "/",
+    text: "Home",
+    icon: <Home size={20} />,
+  },
+  {
+    href: "/about",
+    text: "About",
+    icon: <SquareUser size={20} />,
+  },
+  {
+    href: "/projects",
+    text: "Projects",
+    icon: <Folders size={20} />,
+  },
+  {
+    href: "/blog",
+    text: "Blog",
+    icon: <Rss size={20} />,
+  },
+  {
+    href: "/miscellaneous",
+    text: "Misc",
+    icon: <Library size={20} />,
+  },
+  {
+    href: "/guestbook",
+    text: "Guestbook",
+    icon: <BookMarked size={20} />,
+  },
 ]
 
 export const footerLinks = [

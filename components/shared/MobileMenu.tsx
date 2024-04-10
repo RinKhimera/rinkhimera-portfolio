@@ -1,15 +1,19 @@
 "use client"
 
 import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet"
-import { navigationLinks } from "@/constants"
-import { MoreHorizontal } from "lucide-react"
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer"
+import { useMediaQuery } from "@/hooks/use-media-query"
+
+import { mobileLinks, navigationLinks } from "@/constants"
+import { ArrowUpRight, MoreHorizontal } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Button } from "../ui/button"
@@ -18,42 +22,50 @@ import { Separator } from "../ui/separator"
 export const MobileMenu = () => {
   const pathname = usePathname()
 
+  const isDesktop = useMediaQuery("(min-width: 1024px)")
+
+  if (isDesktop) {
+    return null
+  }
+
   return (
     <div className="lg:hidden">
-      <Sheet>
-        <SheetTrigger asChild>
+      <Drawer>
+        <DrawerTrigger asChild>
           <Button variant="ghost" size="icon">
             <MoreHorizontal size={28} />
           </Button>
-        </SheetTrigger>
-        <SheetContent>
-          <SheetHeader>
-            <SheetTitle>Navigation Menu</SheetTitle>
-          </SheetHeader>
+        </DrawerTrigger>
 
-          <Separator className="my-10" />
+        <DrawerContent>
+          <DrawerHeader>
+            <DrawerTitle>Navigation Menu</DrawerTitle>
+          </DrawerHeader>
 
-          <div className="space-y-6">
-            {navigationLinks.map((link) => {
-              const isActive = pathname === link.href
+          <div className="space-y-6 p-4 text-center">
+            {mobileLinks.map((link) => {
+              const isActive =
+                pathname === link.href ||
+                (pathname !== "/" && pathname.startsWith(link.href + "/"))
 
               return (
-                <SheetClose key={link.text} asChild>
+                <DrawerClose key={link.text} asChild>
                   <Link
                     href={link.href}
-                    className={`block text-lg font-semibold ${
+                    className={`flex items-center justify-center gap-x-2 text-lg font-semibold text-muted-foreground ${
                       isActive &&
-                      "underline decoration-primary decoration-4 underline-offset-4"
+                      "text-inherit underline decoration-primary decoration-4 underline-offset-4"
                     }`}
                   >
+                    {link.icon}
                     {link.text}
                   </Link>
-                </SheetClose>
+                </DrawerClose>
               )
             })}
           </div>
-        </SheetContent>
-      </Sheet>
+        </DrawerContent>
+      </Drawer>
     </div>
   )
 }

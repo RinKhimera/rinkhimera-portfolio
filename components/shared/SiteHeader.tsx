@@ -34,6 +34,7 @@ export const SiteHeader = () => {
         <nav className="space-x-1 rounded-3xl border border-muted px-3 py-1.5 font-medium max-lg:hidden">
           {navigationLinks.map((link) => {
             const isActive = pathname.startsWith(link.href)
+
             return (
               <Link
                 className={cn(
