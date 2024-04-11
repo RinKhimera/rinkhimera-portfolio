@@ -1,5 +1,11 @@
 import { desktopUses, laptopUses, softwareUses } from "@/constants"
-import { ArrowUpRight, ChevronRight } from "lucide-react"
+import {
+  ArrowUpRight,
+  ChevronRight,
+  CodeXml,
+  Computer,
+  LaptopMinimal,
+} from "lucide-react"
 import type { Metadata } from "next"
 import Link from "next/link"
 
@@ -16,8 +22,9 @@ const UsesPage = () => {
       </h1>
 
       <div className="my-8">
-        <h2 className="mb-3 text-3xl font-semibold tracking-tight">
+        <h2 className="mb-3 flex items-center text-3xl font-semibold tracking-tight">
           <span className="text-primary">Desktop</span>
+          <Computer className="ml-3 shrink-0" size={28} />
         </h2>
 
         <div className="ml-0 space-y-2 text-base sm:ml-6 sm:text-lg">
@@ -35,8 +42,9 @@ const UsesPage = () => {
       </div>
 
       <div className="mb-8">
-        <h2 className="mb-3 text-3xl font-semibold tracking-tight">
+        <h2 className="mb-3 flex items-center text-3xl font-semibold tracking-tight">
           <span className="text-primary">Laptop</span>
+          <LaptopMinimal className="ml-3 shrink-0" size={28} />
         </h2>
 
         <div className="ml-0 space-y-2 text-base sm:ml-6 sm:text-lg">
@@ -54,8 +62,9 @@ const UsesPage = () => {
       </div>
 
       <div>
-        <h2 className="mb-3 text-3xl font-semibold tracking-tight">
+        <h2 className="mb-3 flex items-center text-3xl font-semibold tracking-tight">
           <span className="text-primary">Software</span>
+          <CodeXml className="ml-3 shrink-0" size={28} />
         </h2>
 
         <div className="ml-0 space-y-2 text-base sm:ml-6 sm:text-lg">

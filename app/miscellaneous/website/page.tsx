@@ -1,5 +1,12 @@
 import { siteInspirations, siteTechs } from "@/constants"
-import { ArrowUpRight, ChevronRight } from "lucide-react"
+import {
+  ArrowUpRight,
+  Blocks,
+  CaseSensitive,
+  ChevronRight,
+  Lightbulb,
+  Sparkles,
+} from "lucide-react"
 import type { Metadata } from "next"
 import Link from "next/link"
 
@@ -15,9 +22,10 @@ const WebsitePage = () => {
         About this website
       </h1>
 
-      <div className="my-8">
-        <h2 className="mb-3 text-3xl font-semibold tracking-tight">
+      <div className="mt-8">
+        <h2 className="mb-3 flex items-center text-3xl font-semibold tracking-tight">
           <span className="text-primary">Technologies</span>
+          <Blocks className="ml-3 shrink-0" size={28} />
         </h2>
 
         <div className="ml-0 space-y-2 text-base sm:ml-6 sm:text-lg">
@@ -44,9 +52,10 @@ const WebsitePage = () => {
         </div>
       </div>
 
-      <div className="mb-8">
-        <h2 className="mb-3 text-3xl font-semibold tracking-tight">
+      <div className="my-8">
+        <h2 className="mb-3 flex items-center text-3xl font-semibold tracking-tight">
           <span className="text-primary">Inspirations</span>
+          <Lightbulb className="ml-3 shrink-0" size={28} />
         </h2>
 
         <div className="ml-0 space-y-2 text-base sm:ml-6 sm:text-lg">
@@ -72,9 +81,10 @@ const WebsitePage = () => {
         </div>
       </div>
 
-      <div>
-        <h2 className="my-4 text-3xl font-semibold tracking-tight">
+      <div className="mb-8">
+        <h2 className="my-1 flex items-end text-3xl font-semibold tracking-tight">
           <span className="text-primary">Typography</span>
+          <CaseSensitive className="ml-3 shrink-0" size={32} />
         </h2>
 
         <div className="px-[1px] leading-loose text-muted-foreground md:px-8">
@@ -106,6 +116,52 @@ const WebsitePage = () => {
           , and the remaining content is{" "}
           <span className="text-zinc-800 dark:text-zinc-100">Regular 400</span>.
         </div>
+      </div>
+
+      <div>
+        <h2 className="my-1 flex items-center text-3xl font-semibold tracking-tight">
+          <span className="text-primary">Icons</span>
+          <Sparkles className="ml-3 shrink-0" size={28} />
+        </h2>
+
+        <div className="px-[1px] leading-loose text-muted-foreground md:px-8">
+          The icons in use are part of the{" "}
+          <div className="group mr-[2px] inline-flex">
+            <Link
+              href={"https://lucide.dev/"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-end space-x-4"
+            >
+              <div className="flex text-zinc-800 decoration-primary decoration-2 underline-offset-2 transition group-hover:underline dark:text-zinc-100">
+                <span className="font-medium">Lucide</span>
+                <ArrowUpRight
+                  className="ml-[1px] transition group-hover:-translate-y-1 group-hover:translate-x-1"
+                  size={20}
+                />
+              </div>
+            </Link>
+          </div>{" "}
+          icons collection.
+        </div>
+      </div>
+
+      <div className="mb-2 mt-8 text-center text-3xl max-sm:text-2xl">
+        Crafted with ❤️ by{" "}
+        <Link
+          href={"https://github.com/RinKhimera"}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group inline-flex items-end space-x-4"
+        >
+          <div className="flex text-zinc-800 decoration-primary decoration-4 underline-offset-4 transition group-hover:underline dark:text-zinc-100">
+            <span className="font-semibold">Rin Khimera</span>
+            <ArrowUpRight
+              className="ml-[1px] transition group-hover:-translate-y-1 group-hover:translate-x-1"
+              size={20}
+            />
+          </div>
+        </Link>
       </div>
     </section>
   )

@@ -166,6 +166,45 @@ const FaqPage = () => {
             are among my favorites.
           </AccordionContent>
         </AccordionItem>
+
+        <AccordionItem value="item-7">
+          <AccordionTrigger>
+            Could I take a look at the source code of your website?
+          </AccordionTrigger>
+          <AccordionContent>
+            Apologies, the source code is currently unavailable for public
+            viewing as the{" "}
+            <Link
+              href="https://github.com/RinKhimera/rinkhimera-portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profile Samuel Pokam"
+              className="text-zinc-800 hover:underline dark:text-zinc-100"
+            >
+              repository
+            </Link>{" "}
+            remains private. If you&apos;re a recruiter, please feel free to
+            reach out via{" "}
+            <Link
+              href="mailto:dixiades@gmail.com"
+              aria-label="Email to me"
+              className="text-zinc-800 hover:underline dark:text-zinc-100"
+            >
+              email
+            </Link>{" "}
+            or{" "}
+            <Link
+              href="https://www.linkedin.com/in/samuel-pokam/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profile Samuel Pokam"
+              className="text-zinc-800 hover:underline dark:text-zinc-100"
+            >
+              LinkedIn
+            </Link>{" "}
+            for further information.
+          </AccordionContent>
+        </AccordionItem>
       </Accordion>
     </section>
   )
