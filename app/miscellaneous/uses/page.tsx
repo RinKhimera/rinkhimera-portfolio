@@ -1,6 +1,12 @@
 import { desktopUses, laptopUses, softwareUses } from "@/constants"
 import { ArrowUpRight, ChevronRight } from "lucide-react"
+import type { Metadata } from "next"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Samuel Pokam | Uses",
+  description: "Software engineer, web developer, and TypeScript enthusiast.",
+}
 
 const UsesPage = () => {
   return (

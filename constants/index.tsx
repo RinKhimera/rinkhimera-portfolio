@@ -2,7 +2,6 @@ import icons from "@/public/assets/icons"
 import logos from "@/public/assets/logos"
 import projectsImage from "@/public/assets/projects"
 import {
-  ArrowUpRight,
   BookMarked,
   Folders,
   Home,

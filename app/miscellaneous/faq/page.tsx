@@ -4,7 +4,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import type { Metadata } from "next"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Samuel Pokam | Faqs",
+  description: "Software engineer, web developer, and TypeScript enthusiast.",
+}
 
 const FaqPage = () => {
   return (

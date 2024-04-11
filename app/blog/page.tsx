@@ -3,7 +3,13 @@ import { MotionDiv } from "@/components/shared/MotionFragment"
 import { Skeleton } from "@/components/ui/skeleton"
 import { fetchBlogArticles } from "@/lib/actions/action"
 import moment from "moment"
+import type { Metadata } from "next"
 import { Suspense } from "react"
+
+export const metadata: Metadata = {
+  title: "Samuel Pokam | Blog",
+  description: "Software engineer, web developer, and TypeScript enthusiast.",
+}
 
 const SkeletonCard = () => {
   return (

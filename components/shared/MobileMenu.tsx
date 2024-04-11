@@ -1,23 +1,19 @@
 "use client"
 
+import { Button } from "@/components/ui/button"
 import {
   Drawer,
   DrawerClose,
   DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer"
+import { mobileLinks } from "@/constants"
 import { useMediaQuery } from "@/hooks/use-media-query"
-
-import { mobileLinks, navigationLinks } from "@/constants"
-import { ArrowUpRight, MoreHorizontal } from "lucide-react"
+import { MoreHorizontal } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Button } from "../ui/button"
-import { Separator } from "../ui/separator"
 
 export const MobileMenu = () => {
   const pathname = usePathname()
@@ -54,7 +50,7 @@ export const MobileMenu = () => {
                     href={link.href}
                     className={`flex items-center justify-center gap-x-2 text-lg font-semibold text-muted-foreground ${
                       isActive &&
-                      "text-inherit underline decoration-primary decoration-4 underline-offset-4"
+                      "text-current underline decoration-primary decoration-4 underline-offset-4"
                     }`}
                   >
                     {link.icon}
