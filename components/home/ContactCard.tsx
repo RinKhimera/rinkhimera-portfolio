@@ -78,7 +78,7 @@ export const ContactCard = () => {
         alt="Cute emo girls"
         priority={true}
         placeholder="blur"
-        className="absolute inset-0 z-10 h-full rounded-lg object-cover brightness-[0.5]"
+        className="absolute inset-0 z-10 h-full rounded-lg object-cover brightness-[0.4]"
       />
 
       {/* Card content */}
