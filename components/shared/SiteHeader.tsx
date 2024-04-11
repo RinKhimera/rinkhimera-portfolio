@@ -124,8 +124,6 @@ export const SiteHeader = () => {
 
           <Link
             className={buttonVariants({ variant: "ghost", size: "icon" })}
-            target="_blank"
-            rel="noopener noreferrer"
             href="mailto:dixiades@gmail.com"
             aria-label="Email to me"
           >

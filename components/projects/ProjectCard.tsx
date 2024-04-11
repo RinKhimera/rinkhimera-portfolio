@@ -64,7 +64,9 @@ const ProjectCard = ({
           </div>
 
           <CardContent className="mt-5">
-            <CardTitle className="text-primary">{name}</CardTitle>
+            <div className="text-2xl font-semibold leading-none tracking-tight text-primary">
+              {name}
+            </div>
             <CardDescription className="mx-auto mt-1 line-clamp-4 max-w-xs text-base">
               {description}
             </CardDescription>

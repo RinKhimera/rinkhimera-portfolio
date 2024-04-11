@@ -103,10 +103,10 @@ const About = () => {
         >
           <Card className="bg-zinc-50 transition hover:bg-zinc-100 dark:bg-zinc-800/50 dark:hover:bg-zinc-700/50">
             <CardHeader>
-              <CardTitle className="leading-tight">
+              <div className="text-2xl font-semibold leading-tight tracking-tight">
                 My key <span className="text-primary">languages</span> and{" "}
                 <span className="text-primary">frameworks</span> I rely on.
-              </CardTitle>
+              </div>
 
               <CardDescription>
                 The primary resources I leverage to complete my various

@@ -145,13 +145,13 @@ export const ContactCard = () => {
 
             {submitting ? (
               <Button disabled>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Please wait
+                <Loader2 className="mr-2 size-6 animate-spin" />
+                <span className="text-xl">Please wait</span>
               </Button>
             ) : (
               <Button type="submit">
-                <Send className="mr-2" size={16} />
-                Send
+                <Send className="mr-2" size={20} />
+                <span className="text-xl">Send</span>
               </Button>
             )}
           </form>
