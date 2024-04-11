@@ -28,7 +28,7 @@ export const MobileMenu = () => {
     <div className="lg:hidden">
       <Drawer>
         <DrawerTrigger asChild>
-          <Button variant="ghost" size="icon">
+          <Button variant="ghost" size="icon" aria-label="Menu drawer">
             <MoreHorizontal size={28} />
           </Button>
         </DrawerTrigger>

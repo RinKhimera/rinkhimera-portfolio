@@ -1,8 +1,3 @@
-import {
-  MotionDiv,
-  MotionH1,
-  MotionSpan,
-} from "@/components/shared/MotionFragment"
 import images from "@/public/assets/images"
 import Image from "next/image"
 

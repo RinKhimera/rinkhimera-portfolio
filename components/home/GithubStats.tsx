@@ -72,11 +72,11 @@ export const GithubStats = async () => {
           {/* Card content */}
           <CardContent className="relative z-20 h-full px-0 py-2 text-zinc-200">
             <ul className="flex h-full flex-col items-center justify-between max-sm:justify-evenly">
-              <div className="flex items-center">
+              <li className="flex items-center">
                 <span className="text-xl font-semibold underline decoration-primary decoration-4 underline-offset-4">
                   GitHub Stats
                 </span>
-              </div>
+              </li>
               <StatItem
                 icon={<Star className="text-primary" size={20} />}
                 label="Stars"

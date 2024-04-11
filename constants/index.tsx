@@ -498,7 +498,7 @@ export const softwareUses = [
 
 export const testimonials = [
   {
-    image: "/assets/images/kouakam.jpeg",
+    image: "/assets/images/kouakam.jpg",
     fallbackImage: "CK",
     name: "Christian Kouakam",
     title: "CEO | Software Engineer MEAN | MERN | Java | AWS | DevOps",

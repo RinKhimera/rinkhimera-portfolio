@@ -40,11 +40,11 @@ export const TestimonyCard = ({
           </Avatar>
 
           <div className="text-center">
-            <h3 className="text-xl font-semibold text-primary">{name}</h3>
+            <h4 className="text-xl font-semibold text-primary">{name}</h4>
 
-            <h4 className="text-sm text-zinc-600 dark:text-zinc-400">
+            <span className="text-sm text-zinc-600 dark:text-zinc-400">
               {title}
-            </h4>
+            </span>
           </div>
         </Link>
       </Button>

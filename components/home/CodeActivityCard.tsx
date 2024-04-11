@@ -77,6 +77,7 @@ export const CodeActivityCard = async () => {
                 <Progress
                   className="h-1.5 bg-neutral-400"
                   value={language.percent}
+                  aria-label={language.name}
                 />
               </div>
             ))}
