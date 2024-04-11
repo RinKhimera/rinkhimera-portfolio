@@ -50,7 +50,7 @@ export const MobileMenu = () => {
                     href={link.href}
                     className={`flex items-center justify-center gap-x-2 text-lg font-semibold text-muted-foreground ${
                       isActive &&
-                      "text-black underline decoration-primary decoration-4 underline-offset-4 dark:text-white"
+                      "text-neutral-950 underline decoration-primary decoration-4 underline-offset-4 dark:text-white"
                     }`}
                   >
                     {link.icon}
