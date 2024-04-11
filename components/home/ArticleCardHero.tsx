@@ -1,4 +1,4 @@
-import { MotionArticle } from "@/components/MotionFragment"
+import { MotionArticle } from "@/components/shared/MotionFragment"
 import { buttonVariants } from "@/components/ui/button"
 import { ChevronRight } from "lucide-react"
 import Link from "next/link"
@@ -9,7 +9,11 @@ type ArticleCardHeroProps = {
   date: string
 }
 
-const ArticleCardHero = ({ title, content, date }: ArticleCardHeroProps) => {
+export const ArticleCardHero = ({
+  title,
+  content,
+  date,
+}: ArticleCardHeroProps) => {
   const formattedTitle = title
     // Remove non-alphanumeric characters and convert to lowercase
     .replace(/[^a-zA-Z0-9\s]/g, "")
@@ -60,5 +64,3 @@ const ArticleCardHero = ({ title, content, date }: ArticleCardHeroProps) => {
     </MotionArticle>
   )
 }
-
-export default ArticleCardHero

@@ -2,7 +2,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { fetchAllSignatures } from "@/lib/actions/action"
 import { format } from "date-fns"
 
-const GuestCard = async () => {
+export const GuestCard = async () => {
   const allSignatures = await fetchAllSignatures()
 
   const createInitials = (name: string): string => {
@@ -41,5 +41,3 @@ const GuestCard = async () => {
     </div>
   )
 }
-
-export default GuestCard

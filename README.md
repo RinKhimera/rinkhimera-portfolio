@@ -15,6 +15,7 @@ Use the `git clone` command followed by the URL of the repository:
 ```bash
 cd path/to/your/directory
 ```
+
 Install the dependencies:
 
 ```bash

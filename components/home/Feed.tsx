@@ -1,4 +1,4 @@
-import ArticleCardHero from "@/components/home/ArticleCardHero"
+import { ArticleCardHero } from "@/components/home/ArticleCardHero"
 import { CodeActivityCard } from "@/components/home/CodeActivityCard"
 import { ContactCard } from "@/components/home/ContactCard"
 import { DateCard } from "@/components/home/DateCard"
@@ -8,7 +8,7 @@ import { SocialCard } from "@/components/home/SocialCard"
 import { fetchHeroArticles } from "@/lib/actions/action"
 import moment from "moment"
 
-const Feed = async () => {
+export const Feed = async () => {
   const posts = await fetchHeroArticles()
 
   return (
@@ -59,5 +59,3 @@ const Feed = async () => {
     </div>
   )
 }
-
-export default Feed

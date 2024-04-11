@@ -1,10 +1,16 @@
 import { auth } from "@/auth"
-import { MotionDiv } from "@/components/MotionFragment"
-import GuestBookForm from "@/components/guestbook/GuestBookForm"
-import GuestCard from "@/components/guestbook/GuestCard"
+import { GuestBookForm } from "@/components/guestbook/GuestBookForm"
+import { GuestCard } from "@/components/guestbook/GuestCard"
 import { SocialLogin } from "@/components/guestbook/SocialLogin"
+import { MotionDiv } from "@/components/shared/MotionFragment"
 import { Skeleton } from "@/components/ui/skeleton"
+import type { Metadata } from "next"
 import { Suspense } from "react"
+
+export const metadata: Metadata = {
+  title: "Samuel Pokam | Guestbook",
+  description: "Software engineer, web developer, and TypeScript enthusiast.",
+}
 
 const SkeletonItem = () => (
   <div className="flex items-center space-x-3">

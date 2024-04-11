@@ -23,7 +23,7 @@ export const MiscNav = () => {
             <TabsTrigger
               key={link.text}
               value={link.text}
-              className="data-[state=active]:bg-primary/50 dark:data-[state=active]:bg-primary/60"
+              className="text-lg data-[state=active]:bg-primary/50 dark:data-[state=active]:bg-primary/60 max-md:text-base"
               onClick={() => router.push(link.href)}
             >
               {link.text}

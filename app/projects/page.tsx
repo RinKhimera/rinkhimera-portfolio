@@ -1,6 +1,12 @@
-import { MotionDiv } from "@/components/MotionFragment"
 import ProjectCard from "@/components/projects/ProjectCard"
+import { MotionDiv } from "@/components/shared/MotionFragment"
 import { projects } from "@/constants"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Samuel Pokam | Projects",
+  description: "Software engineer, web developer, and TypeScript enthusiast.",
+}
 
 const Projects = () => {
   const container = {

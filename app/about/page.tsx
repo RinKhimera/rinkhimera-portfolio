@@ -1,5 +1,5 @@
-import { MotionDiv, MotionH1 } from "@/components/MotionFragment"
-import TestimonyCard from "@/components/about/TestimonyCard"
+import { TestimonyCard } from "@/components/about/TestimonyCard"
+import { MotionDiv, MotionH1 } from "@/components/shared/MotionFragment"
 import { Button } from "@/components/ui/button"
 import {
   Card,
@@ -10,8 +10,14 @@ import {
 } from "@/components/ui/card"
 import { stacks, testimonials } from "@/constants"
 import images from "@/public/assets/images"
+import type { Metadata } from "next"
 import Image from "next/image"
 import Link from "next/link"
+
+export const metadata: Metadata = {
+  title: "Samuel Pokam | About",
+  description: "Software engineer, web developer, and TypeScript enthusiast.",
+}
 
 const About = () => {
   const container = {
