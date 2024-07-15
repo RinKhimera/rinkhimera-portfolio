@@ -8,11 +8,13 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
+import { Skeleton } from "@/components/ui/skeleton"
 import luffy from "@/public/assets/images/luffy.jpg"
 import { ApiResponseProps } from "@/types/wakatimeApiTypes"
 import { ExternalLink } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { Suspense } from "react"
 
 const getData = async () => {
   const res = await fetch(
@@ -28,11 +30,52 @@ const getData = async () => {
   return res.json()
 }
 
-export const CodeActivityCard = async () => {
+const CodingActivity = async () => {
   const apiResponse: ApiResponseProps = await getData()
-
   const codingLanguages = apiResponse.data.languages
 
+  return (
+    <div className="flex flex-col space-y-3 text-zinc-200">
+      {codingLanguages.map((language) => (
+        <div key={language.name} className="flex flex-col space-y-1">
+          <div className="flex justify-between">
+            <div className="flex space-x-2">
+              <div className="font-semibold tracking-tight">
+                {language.name}
+              </div>
+              <div className="font-medium text-zinc-300/90">
+                {language.hours}h{language.minutes}m
+              </div>
+            </div>
+
+            <div className="font-medium text-zinc-200">{language.percent}%</div>
+          </div>
+
+          <Progress
+            className="h-1.5 bg-neutral-400"
+            value={language.percent}
+            aria-label={language.name}
+          />
+        </div>
+      ))}
+    </div>
+  )
+}
+
+const CodingActivitySkeleton = () => {
+  return [...Array(6)].map((_, index) => (
+    <div key={index} className="mb-4 flex flex-col gap-2">
+      <div className="flex justify-between">
+        <Skeleton className="h-4 w-[150px]" />
+        <Skeleton className="h-4 w-[50px]" />
+      </div>
+
+      <Skeleton className="h-2 w-full" />
+    </div>
+  ))
+}
+
+export const CodeActivityCard = () => {
   return (
     <>
       <Card className="relative flex h-full flex-col justify-between">
@@ -56,32 +99,9 @@ export const CodeActivityCard = async () => {
         </CardHeader>
 
         <CardContent className="scrollbar-hide z-20 overflow-auto px-3">
-          <div className="flex flex-col space-y-3 text-zinc-200">
-            {codingLanguages.map((language) => (
-              <div key={language.name} className="flex flex-col space-y-1">
-                <div className="flex justify-between">
-                  <div className="flex space-x-2">
-                    <div className="font-semibold tracking-tight">
-                      {language.name}
-                    </div>
-                    <div className="font-medium text-zinc-300/90">
-                      {language.hours}h{language.minutes}m
-                    </div>
-                  </div>
-
-                  <div className="font-medium text-zinc-200">
-                    {language.percent}%
-                  </div>
-                </div>
-
-                <Progress
-                  className="h-1.5 bg-neutral-400"
-                  value={language.percent}
-                  aria-label={language.name}
-                />
-              </div>
-            ))}
-          </div>
+          <Suspense fallback={<CodingActivitySkeleton />}>
+            <CodingActivity />
+          </Suspense>
         </CardContent>
 
         <CardFooter className="z-20 p-3">

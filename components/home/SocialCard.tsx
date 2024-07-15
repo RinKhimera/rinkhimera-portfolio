@@ -1,11 +1,15 @@
 import { Card, CardContent } from "@/components/ui/card"
+import { Skeleton } from "@/components/ui/skeleton"
 import pochita from "@/public/assets/images/pochita.jpg"
 import { Github, Linkedin } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Suspense } from "react"
 
+// const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
+
 const getCodingHours = async (): Promise<number> => {
+  // await delay(3000)
   const apiResponse = await fetch(
     "https://wakatime.com/api/v1/users/rinkhimera/stats/last_7_days?per_page=100",
     {
@@ -31,7 +35,7 @@ const SocialLink = ({
   children,
 }: {
   href: string
-  children: React.ReactNode
+  children: JSX.Element
 }) => (
   <Link
     href={href}
@@ -43,9 +47,13 @@ const SocialLink = ({
   </Link>
 )
 
-export const SocialCard = async () => {
-  const codingHours = await getCodingHours()
+const CodingHours = async () => {
+  const lastWeekCodingHours = await getCodingHours()
 
+  return <div>{lastWeekCodingHours}h</div>
+}
+
+export const SocialCard = () => {
   return (
     <Card className="relative h-full">
       {/* Background image */}
@@ -59,18 +67,18 @@ export const SocialCard = async () => {
 
       {/* Card content */}
       <CardContent className="relative z-20 flex h-full flex-col justify-between px-0 py-2 text-zinc-200">
-        <div className="flex h-full flex-col justify-around text-xl font-semibold max-sm:justify-around">
+        <div className="flex h-full flex-col items-center justify-around text-xl font-semibold max-sm:justify-around">
           <div className=" text-center leading-5 text-zinc-200">
             Last week&apos;s coding hours
           </div>
 
-          <span className=" text-center text-4xl text-zinc-100 underline decoration-primary decoration-8 underline-offset-8">
-            <Suspense fallback={<p>Loading feed...</p>}>
-              <div>{codingHours}h</div>
+          <div className="text-center text-4xl text-zinc-100 underline decoration-primary decoration-8 underline-offset-8">
+            <Suspense fallback={<Skeleton className="h-10 w-[50px]" />}>
+              <CodingHours />
             </Suspense>
-          </span>
+          </div>
 
-          <div className="mt-0 flex basis-1/3 justify-between gap-1 px-1.5 py-2">
+          <div className="mt-0 flex w-full basis-1/3 justify-between gap-1 px-1.5 py-2">
             <SocialLink href={"https://github.com/RinKhimera"}>
               <Github />
             </SocialLink>

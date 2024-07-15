@@ -1,12 +1,12 @@
 "use client"
 
 import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Skeleton } from "@/components/ui/skeleton"
 import cat from "@/public/assets/images/cat.jpg"
 import { format } from "date-fns"
 import { Clock, MapPin } from "lucide-react"
 import Image from "next/image"
 import { useEffect, useState } from "react"
-import { Skeleton } from "../ui/skeleton"
 
 export const DateCard = () => {
   const [currentTime, setCurrentTime] = useState<Date | null>(null)
@@ -38,7 +38,7 @@ export const DateCard = () => {
         <CardHeader className="px-4 py-0">
           <CardTitle className="space-y-1.5">
             <div className="flex items-center gap-1">
-              Douala, CMR
+              Montréal, QC
               <MapPin size={20} className="mt-[2px] text-primary" />
             </div>
             <div>
