@@ -58,6 +58,16 @@ bun run dev
 pnpm dev
 ```
 
+## Tech Stack
+
+- Next.js
+- TailwindCSS
+- Shadcn UI
+- Prisma
+- Neon
+- MDX
+- Typescript
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Deployment
