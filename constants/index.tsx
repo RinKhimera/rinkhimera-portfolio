@@ -89,6 +89,24 @@ export const miscLinks = [
 
 export const projects = [
   {
+    name: "CarePulse",
+    imageSrc: projectsImage.carepulse,
+    imageAlt: "CarePulse",
+    description:
+      "A healthcare platform that streamlines patient registration, appointment scheduling, and medical records, featuring comprehensive dashboard that provides a quick summary of daily appointments, pending actions, and patient inquiries. Admin credientials: *123456*",
+    demoLink: "https://carepulse237.vercel.app/",
+    githubLink: "https://github.com/RinKhimera/carepulse",
+    stacks: [
+      "Appwrite",
+      "TypeScript",
+      "Next.js",
+      "Sentry",
+      "Twilio",
+      "TailwindCSS",
+      "Shadcn/ui",
+    ],
+  },
+  {
     name: "Quanta Hive",
     imageSrc: projectsImage.quanta,
     imageAlt: "Quanta Hive",
