@@ -4,21 +4,28 @@
 Explore my portfolio showcasing projects, skills, and achievements in software development and design.
 </div>
 
+## Prerequisites
+
+Make sure you have the following installed on your machine:
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en)
+- [npm](https://www.npmjs.com/) or [bun](https://bun.sh/)
+
 ## Installation
 
-**Open your terminal or command prompt and navigate to the directory where you want to clone the repository**
+**Cloning the Repository**
+
+Open your terminal or command prompt, clone the repository, and navigate to the directory:
 
 ```bash
-cd path/to/your/directory
-```
-
-Use the `git clone` command followed by the URL of the repository:
-
-```bash
-cd path/to/your/directory
+git clone https://github.com/RinKhimera/rinkhimera-portfolio.git
+cd rinkhimera-portfolio
 ```
 
 **Install the dependencies**
+
+Install the project dependencies using npm or bun:
 
 ```bash
 npm install
@@ -48,7 +55,7 @@ WAKATIME_API_KEY=
 
 ## Getting Started
 
-First, run the development server:
+Run the development server:
 
 ```bash
 npm run dev
@@ -58,6 +65,8 @@ bun run dev
 pnpm dev
 ```
 
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the project. You're done!
+
 ## Tech Stack
 
 - Next.js
@@ -66,9 +75,7 @@ pnpm dev
 - Prisma
 - Neon
 - MDX
-- Typescript
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- TypeScript
 
 ## Deployment
 
